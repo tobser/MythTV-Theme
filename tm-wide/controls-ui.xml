@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="keygrabpopup">
+        <area>459,110,500,500</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="message" from="basetextarea">
+            <area>18,18,460,380</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <button name="ok" from="basebuttonBorder">
+            <area>0,423,500,40</area>
+            <value>OK</value>
+        </button>
+
+        <button name="cancel" from="basebuttonBorder">
+            <area>0,460,500,40</area>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+    <window name="controls">
+
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Edit Keys</value>
+            </textarea>
+        </shape>
+
+        <textarea name="leftdesc" from="basetextarea">
+            <area>64,60,560,60</area>
+            <font>fontBaseLarge</font>
+            <value>Contexts</value>
+            <align>center</align>
+        </textarea>
+
+        <buttonlist name="leftlist" from="btnListLeft">
+            <area>64,110,550,440</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <drawfrombottom>no</drawfrombottom>
+            <showarrow>no</showarrow>
+        </buttonlist>
+
+        <textarea name="rightdesc" from="leftdesc">
+            <area>656,60,560,60</area>
+            <font>fontBaseLarge</font>
+            <value>Actions</value>
+        </textarea>
+
+        <buttonlist name="rightlist" from="leftlist">
+            <area>661,110,550,440</area>
+            <drawfrombottom>no</drawfrombottom>
+        </buttonlist>
+
+        <textarea name="keyButtonsLabel" from="basetextarea">
+            <area>265,650,100,40</area>
+            <align>right</align>
+            <font>fontBaseLarge</font>
+            <value>Keys: </value>
+        </textarea>
+
+        <button name="action_0" from="basebuttonBorder">
+            <area>391,650,120,40</area>
+        </button>
+
+        <button name="action_1" from="action_0">
+            <area>517,650,120,40</area>
+        </button>
+
+        <button name="action_2" from="action_0">
+            <area>643,650,120,40</area>
+        </button>
+
+        <button name="action_3" from="action_0">
+            <area>769,650,120,40</area>
+        </button>
+
+        <textarea name="description" from="basetextarea">
+            <area>140,540,1000,90</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <font>fontBaseLarge</font>
+        </textarea>
+
+    </window>
+
+</mythuitheme>

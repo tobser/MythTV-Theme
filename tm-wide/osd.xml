@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+
+<mythuitheme>
+
+<!-- MythPopupBox - the OSD menu.  -->
+    <window name="MythPopupBox" >
+        <area>0,0,100%,100%</area>
+        <shape name="t" from="popupBg">
+            <area>390,110,500,400</area>
+         </shape>
+
+         <textarea name="messagearea">
+             <area>395,110,490,150</area>
+             <multiline>yes</multiline>
+             <align>allcenter</align>
+             <font>fontBaseLarge</font>
+         </textarea>
+
+         <buttonlist name="list">
+             <area>390,260,500,250</area>
+
+             <layout>vertical</layout>
+             <wrapstyle>selection</wrapstyle>
+             <buttonarea>0,20,100%,100%-20</buttonarea>
+
+             <drawfrombottom>yes</drawfrombottom>
+             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+
+             <statetype name="upscrollarrow">
+                 <area>30,0,100%-30,20</area>
+                 <state type="off" />
+                 <state type="full">
+                     <area>0,0,100%,20</area>
+                     <textarea name="arrow" from="basetextarea">
+                         <area>0,0,100%,20</area>
+                         <align>allcenter</align>
+                         <font>fontUpDownArrowPop</font>
+                         <value>^</value>
+                     </textarea>
+                 </state>
+             </statetype>
+             <statetype name="buttonitem">
+                 <area>0,0,100%,30</area>
+                 <state name="active">
+                     <area>0,0,100%,30</area>
+                     <textarea name="buttontext" from="basetextarea">
+                         <area>30,0,100%-30,30</area>
+                         <align>center,vcenter</align>
+                         <cutdown>yes</cutdown>
+                     </textarea>
+                     <imagetype name="buttonarrow">
+                         <area>100%-30,0,30,30</area>
+                         <textarea name="arrow" from="basetextarea">
+                             <font>fontLeftRightArrow</font>
+                             <align>allcenter</align>
+                             <value>></value>
+                         </textarea>
+                     </imagetype>
+                 </state>
+                 <state name="selectedactive" from="active">
+                     <shape name="sel" from="shapeSelected" />
+                 </state>
+             </statetype>
+
+             <statetype name="downscrollarrow">
+                 <area>30,100%-20,100%-30,20</area>
+                 <state type="off" />
+                 <state type="full">
+                     <area>0,0,100%,20</area>
+                     <textarea name="arrow" from="basetextarea">
+                         <align>top,center</align>
+                         <font>fontUpDownArrowPop</font>
+                         <value>ˇ</value>
+                     </textarea>
+                 </state>
+             </statetype>
+         </buttonlist>
+     </window>
+
+<!-- osd_message - The OSD text message/notification popup.  -->
+    <window name="osd_message">
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+
+        <shape name="bg" from="popupBg" >
+            <area>0,0,980,40</area>
+        </shape>
+        <textarea name="message_text" from="basetextarea" >
+            <area>0,0,980,40</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <font>fontBaseLarge</font>
+        </textarea>
+    </window>
+
+<!-- osd_input - This window displays the channel number being input during a channel change.  -->
+    <window name="osd_input" >
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+        <shape name="bg" from="popupBg" >
+            <area>0,0,980,40</area>
+        </shape>
+        <textarea  name="osd_number_entry" from="basetextarea" >
+            <area>0,0,980,40</area>
+            <align>allcenter</align>
+            <font>fontBaseLarge</font>
+        </textarea>
+    </window>
+
+<!-- osd_status - The "overall status" window, which usually displays playback progress.  -->
+    <window name="osd_status" >
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+
+        <shape name="bg" from="popupBg" >
+            <area>0,600,100%,120</area>
+        </shape>
+        
+        <textarea name="title" from="basetextarea" >
+            <area>20,600,350,60</area>
+            <multiline>true</multiline>
+            <font>fontBase</font>
+            <align>vcenter</align>
+        </textarea>
+
+        <textarea name="playedtime" from="basetextarea" >
+            <area>0,600,1260,60</area>
+            <multiline>true</multiline>
+            <align>right,vcenter</align>
+            <font>fontBase</font>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+
+        <progressbar name="position" from="progressbarBase">
+            <area>60,665,1160,30</area>
+        </progressbar>
+    </window>
+
+<!-- program_info - The Program Information window.  -->
+    <window name="program_info" >
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+
+        <shape name="bg" from="popupBg" >
+            <area>0,500,100%,220</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>20,505,1000,40</area>
+            <font>fontBaseLarge</font>
+            <align>vcenter</align>
+        </textarea>
+        <textarea name="lentime">
+            <area>500,505,760,40</area>
+            <align>right,vcenter</align>
+            <font>fontBase</font>
+            <template></template>
+            <template>%STARTTIME% - %ENDTIME%</template>
+        </textarea>
+
+        <shape name="iconShape" from="popupBg">
+            <area>20,547,205,150</area>
+        </shape>
+        <textarea name="callsign">
+            <area>20,692,205,30</area>
+            <font>fontBaseTiny</font>
+            <align>allcenter</align>
+        </textarea>
+        <imagetype name="iconpath">
+            <area>30,557,185,130</area>
+        </imagetype>
+
+        <textarea name="subtitle" from="basetextarea">
+            <area>235,545,1000,30</area>
+            <font>fontBaseTiny</font>
+            <align>vcenter</align>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>235,575,1000,150</area>
+            <multiline>yes</multiline>
+            <font>fontBase</font>
+        </textarea>
+    </window>
+
+<!-- browse_info (c&p from program_info) -  The OSD window displayed during channel browsing.  -->
+    <window name="browse_info">
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+        <shape name="bg" from="popupBg" >
+            <area>0,500,100%,220</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>20,505,1000,40</area>
+            <font>fontBaseLarge</font>
+            <align>vcenter</align>
+        </textarea>
+        <textarea name="lentime">
+            <area>500,505,760,40</area>
+            <align>right,vcenter</align>
+            <font>fontBase</font>
+            <template>%STARTTIME% - %ENDTIME%</template>
+        </textarea>
+
+        <shape name="iconShape" from="popupBg">
+            <area>20,547,205,150</area>
+        </shape>
+        <textarea name="callsign">
+            <area>20,692,205,30</area>
+            <font>fontBaseTiny</font>
+            <align>allcenter</align>
+        </textarea>
+        <imagetype name="iconpath">
+            <area>30,557,185,130</area>
+        </imagetype>
+
+        <textarea name="subtitle" from="basetextarea">
+            <area>235,545,1000,30</area>
+            <font>fontBaseTiny</font>
+            <align>vcenter</align>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>235,575,1000,150</area>
+            <multiline>yes</multiline>
+            <font>fontBase</font>
+            <template>%DESCRIPTION%</template>
+            <align></align>
+        </textarea>
+    </window>
+
+<!-- osd_program_editor - The recording editor window -->
+    <window name="osd_program_editor" >
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+
+        <shape name="bg" from="popupBg" >
+            <area>0,0,980,40</area>
+        </shape>
+        <textarea name="sorrytext" from="basetextarea" >
+            <area>0,0,980,40</area>
+            <align>allcenter</align>
+            <font>fontBaseLarge</font>
+            <value>Sorry. Program editor not themed :-( </value>
+        </textarea>
+    </window>
+
+<!-- ChannelEditor - The channel details editor -->
+    <window name="ChannelEditor" >
+        <area>0,0,100%,100%</area>
+        <shape name="clockBox" from="popupBg" >
+            <area>980,0,300,40</area>
+        </shape>
+        <clock name="mclock" from="baseclock">
+            <area>980,0,300,40</area>
+            <font>fontBase</font>
+        </clock>
+        <shape name="bg" from="popupBg" >
+            <area>0,0,980,40</area>
+        </shape>
+        <textarea name="sorrytext" from="basetextarea" >
+            <area>0,0,980,40</area>
+            <align>allcenter</align>
+            <font>fontBaseLarge</font>
+            <value>Sorry. Channel editor not themed :-( </value>
+        </textarea>
+    </window>
+
+</mythuitheme>

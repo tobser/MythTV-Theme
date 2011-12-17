@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="rawsettingseditor">
+        <shape name="Title" from="titleBar" >
+            <shape name="titleSh">
+                <area>0,0,500,40</area>
+            </shape>
+            <textarea name="pagetitle" from="basetextarea">
+                <area>0,0,0,0</area>
+                <value></value>
+            </textarea>
+        </shape>
+
+        <textarea name="heading" >
+            <area>0,0,500,40</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="settings" from="btnListLeft">
+            <area>320,80,640,400</area>
+            <layout>vertical</layout>
+            <spacing>4</spacing>
+
+            <triggerevent context="GLOBAL" action="NEXT">RIGHT</triggerevent>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>none</wrapstyle>
+            <buttonarea>0,0,640,400</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,640,40</area>
+                <state name="active">
+                <area>0,0,640,40</area>
+                <textarea name="buttontext" from="basetextarea">
+                    <area>30,0,590,40</area>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active">
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="sel" from="shapeSelected" />
+            </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="label-shape" from="basebackground">
+            <area>200,500,880,100</area>
+        </shape>
+
+        <textarea name="label-text" from="basetextarea">
+            <area>200,500,880,100</area>
+            <align>allcenter</align>
+        </textarea>
+
+        <shape name="valuebackground" from="basebackground">
+            <area>200,600,880,40</area>
+        </shape>
+
+        <textedit name="settingvalue" from="basetextedit">
+            <area>200,600,880,40</area>
+            <textarea name="text">
+                <area>30,0,820,40</area>
+            </textarea>
+        </textedit>
+
+        <button name="cancel" from="basebuttonBorder">
+            <area>50%-120,660,120,40</area>
+            <value>Cancel</value>
+        </button>
+
+        <button name="save" from="basebuttonBorder">
+            <area>50%,660,120,40</area>
+            <value>Save</value>
+        </button>
+
+    </window>
+
+    <window name="themechooser">
+        <area>0,0,100%,100%</area>
+
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Theme Chooser</value>
+            </textarea>
+        </shape>
+
+        <progressbar name="downloadprogressbar" from="progressbarBase">
+            <area>405,10,470,30</area>
+        </progressbar>
+
+        <shape name="preview-shape" from="basebackground">
+            <area>660,60,590,410</area>
+        </shape>
+
+        <imagetype name="preview">
+            <area>680,80,550,370</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <textarea name="name" from="basetextarea">
+            <area>660,480,280,35</area>
+            <multiline>no</multiline>
+            <font>fontBaseLarge</font>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="resolution" from="basetextarea">
+            <area>680,515,280,30</area>
+            <multiline>no</multiline>
+            <font>fontBaseTiny</font>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="aspect" from="basetextarea">
+            <area>960,515,280,30</area>
+            <multiline>no</multiline>
+            <font>fontBaseTiny</font>
+            <align>left,vcenter</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>660,545,590,155</area>
+            <multiline>yes</multiline>
+            <font>fontBase</font>
+            <align>left,top</align>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <buttonlist name="themes" from="btnListLeft">
+            <area>30,60,600,660</area>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>items</wrapstyle>
+            <layout>vertical</layout>
+            <spacing>2</spacing>
+            <drawfrombottom>false</drawfrombottom>
+            <buttonarea>0,0,100%,620</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,600,66</area>
+                    <imagetype name="buttonimage">
+                        <area>30,5,110,56</area>
+                        <alpha>160</alpha>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>150,5,450,56</area>
+                        <align>left,vcenter</align>
+                        <font>fontBaseLarge</font>
+                    </textarea>
+
+                </state>
+
+                <state name="selectedactive" from="active">
+                    <shape name="background" from="shapeSelected">
+                    </shape>
+                    <textarea name="buttontext" from="basetextarea" >
+                        <area>150,5,450,56</area>
+                        <align>left,vcenter</align>
+                        <font>fontBaseLarge</font>
+                    </textarea>
+                    <imagetype name="buttonimage">
+                    </imagetype>
+                </state>
+                <state name="selectedinactive" from="active" />
+            </statetype>
+        </buttonlist>
+
+        <statetype name="fullpreviewstate">
+            <area>0,0,1280,720</area>
+            <state name="fullscreen">
+                <area>0,0,1280,720</area>
+                <imagetype name="fullscreenpreview">
+                    <area>0,0,1280,720</area>
+                    <filename />
+                </imagetype>
+
+                <shape name="programguideTitle" from="titleBar" >
+                    <textarea name="pagetitle">
+                        <value>Preview</value>
+                    </textarea>
+                </shape>
+            </state>
+        </statetype>
+    </window>
+
+</mythuitheme>

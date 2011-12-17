@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="castpopup">
+        <area>0,42,1280,515</area>
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="label" from="basetextarea">
+            <area>889,93,378,125</area>
+            <align>allcenter</align>
+            <font>fontBase</font>
+            <multiline>yes</multiline>
+            <value>Cast Members</value>
+        </textarea>
+
+        <buttonlist name="cast">
+            <area>900,238,364,307</area>
+            <buttonarea>0,0,378,350</buttonarea>
+            <spacing>3</spacing>
+            <wrapstyle>selection</wrapstyle>
+            <statetype name="buttonitem">
+                <area>0,0,367,53</area>
+                <state name="active">
+                    <area>0,0,367,53</area>
+                    <textarea name="buttontext">
+                        <area>18,0,324,50</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <textarea name="buttontext">
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="descriptionpopup">
+        <area>0,42,1280,515</area>
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="label" from="basetextarea">
+            <area>889,93,378,125</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>Full Plot</value>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>903,242,350,307</area>
+            <multiline>yes</multiline>
+        </textarea>
+    </window>
+
+    <window name="filter">
+        <area>0,42,1280,555</area>
+
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="title" from="basetextarea">
+            <area>251,70,774,40</area>
+            <value>Video List Filters</value>
+            <align>hcenter,vcenter</align>
+        </textarea>
+
+        <textarea name="numvideos_text" from="title">
+            <position>251,120</position>
+            <align>allcenter</align>
+            <font>fontBase</font>
+        </textarea>
+
+        <textarea name="textfilter_text">
+            <area>419,196,180,30</area>
+            <value>Text Filter:</value>
+        </textarea>
+
+        <textarea name="category_text">
+            <area>269,232,220,30</area>
+            <value>Category</value>
+            <align>hcenter</align>
+        </textarea>
+
+        <textarea name="genre_text" from="category_text">
+            <position>269,299</position>
+            <value>Genre</value>
+        </textarea>
+
+        <textarea name="country_text" from="category_text">
+            <position>269,366</position>
+            <value>Country</value>
+        </textarea>
+
+        <textarea name="cast_text" from="category_text">
+            <position>269,433</position>
+            <value>Actor/Actress</value>
+        </textarea>
+
+        <textarea name="year_text" from="category_text">
+            <position>526,232</position>
+            <value>Year</value>
+        </textarea>
+
+        <textarea name="runtime_text" from="category_text">
+            <position>526,299</position>
+            <value>Runtime</value>
+        </textarea>
+
+        <textarea name="userrating_text" from="category_text">
+            <position>526,366</position>
+            <value>User Rating</value>
+        </textarea>
+
+        <textarea name="browse_text" from="category_text">
+            <position>526,433</position>
+            <value>Browse</value>
+        </textarea>
+
+        <textarea name="inetref_text" from="category_text">
+            <position>784,232</position>
+            <value>InetRef</value>
+        </textarea>
+
+        <textarea name="coverfile_text" from="category_text">
+            <position>784,299</position>
+            <value>Cover File</value>
+        </textarea>
+
+        <textarea name="orderby_text" from="category_text">
+            <position>784,366</position>
+            <value>Sort by</value>
+        </textarea>
+
+        <textarea name="watched_text" from="category_text">
+            <position>784,433</position>
+            <value>Watched</value>
+        </textarea>
+
+        <!-- Widgets -->
+        <textedit name="textfilter_input" from="baseshorttextedit">
+            <position>545,185</position>
+        </textedit>
+
+        <buttonlist name="category_select" from="baseselector">
+            <position>269,259</position>
+        </buttonlist>
+
+        <buttonlist name="genre_select" from="baseselector">
+            <position>269,326</position>
+        </buttonlist>
+
+        <buttonlist name="country_select" from="baseselector">
+            <position>269,393</position>
+        </buttonlist>
+
+        <buttonlist name="cast_select" from="baseselector">
+            <position>269,460</position>
+        </buttonlist>
+
+        <buttonlist name="year_select" from="baseselector">
+            <position>526,259</position>
+        </buttonlist>
+
+        <buttonlist name="runtime_select" from="baseselector">
+            <position>526,326</position>
+        </buttonlist>
+
+        <buttonlist name="userrating_select" from="baseselector">
+            <position>526,393</position>
+        </buttonlist>
+
+        <buttonlist name="browse_select" from="baseselector">
+            <position>526,460</position>
+        </buttonlist>
+
+        <buttonlist name="inetref_select" from="baseselector">
+            <position>784,259</position>
+        </buttonlist>
+
+        <buttonlist name="coverfile_select" from="baseselector">
+            <position>784,326</position>
+        </buttonlist>
+
+        <buttonlist name="orderby_select" from="baseselector">
+            <position>784,393</position>
+        </buttonlist>
+
+        <buttonlist name="watched_select" from="baseselector">
+            <position>784,460</position>
+        </buttonlist>
+
+        <button name="done_button" from="basebutton">
+            <position>693,520</position>
+            <value>Done</value>
+        </button>
+
+        <button name="save_button" from="basebutton">
+            <position>363,520</position>
+            <value>Make default</value>
+        </button>
+
+    </window>
+
+    <!-- Manager View -->
+    <window name="manager">
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Manage Videos</value>
+            </textarea>
+        </shape>
+        <shape name="topBox" from="basebackground" >
+            <area>0,36,100%,318</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <textarea name="sorry">
+            <area>0,36,100%,200</area>
+            <multiline>yes</multiline>
+            <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+        </textarea>
+    
+        <textarea name="hint">
+            <area>140,236,1000,118</area>
+            <multiline>yes</multiline>
+            <value>
+                I do not use this screen and I also have no plans on theming this screen.
+                If you would like to have this view themed, please send patches 
+                or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+
+        <textarea name="whatToDo">
+            <area>320,600,640,120</area>
+            <multiline>yes</multiline>
+            <value>
+                Press 'M' or what ever your menu key is.\n
+                Select "Change View".\n
+                Select "Switch to List View".\n
+                (You should also Disable "Flat View")
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="videos">
+            <area>0,0,0,0</area>
+            <buttonarea>0,0,0,0</buttonarea>
+            <buttonitem>
+                <area>0,0,0,0</area>
+                <state name="active">
+                    <area>0,0,0,0</area>
+                </state>
+                <state name="selectedactive" from="active" />
+                <state name="selectedinactive" from="active" />
+            </buttonitem>
+        </buttonlist>
+
+    </window>
+
+    <!-- Browse View -->
+    <window name="browser">
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Browse Videos</value>
+            </textarea>
+        </shape>
+
+        <shape name="topBox" from="basebackground" >
+            <area>0,36,100%,318</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <textarea name="sorry">
+            <area>0,36,100%,200</area>
+            <multiline>yes</multiline>
+            <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+        </textarea>
+    
+        <textarea name="hint">
+            <area>140,236,1000,118</area>
+            <multiline>yes</multiline>
+            <value>
+                I do not use this screen and I also have no plans on theming this screen.
+                If you would like to have this view themed, please send patches 
+                or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+
+        <textarea name="whatToDo">
+            <area>320,600,640,120</area>
+            <multiline>yes</multiline>
+            <value>
+                Press 'M' or what ever your menu key is.\n
+                Select "Change View".\n
+                Select "Switch to List View".\n
+                (You should also Disable "Flat View")
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="videos">
+            <area>0,0,0,0</area>
+            <buttonarea>0,0,0,0</buttonarea>
+            <buttonitem>
+                <area>0,0,0,0</area>
+                <state name="active">
+                    <area>0,0,0,0</area>
+                </state>
+                <state name="selectedactive" from="active" />
+                <state name="selectedinactive" from="active" />
+            </buttonitem>
+        </buttonlist>
+    </window>
+
+    <!-- Gallery View -->
+    <window name="gallery">
+        <shape name="programguideTitle" from="titleBar">
+            <textarea name="pagetitle">
+                <value>Video Gallery</value>
+            </textarea>
+        </shape>
+
+        <shape name="topBox" from="basebackground" >
+            <area>0,36,100%,318</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <textarea name="sorry">
+            <area>0,36,100%,200</area>
+            <multiline>yes</multiline>
+            <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+        </textarea>
+    
+        <textarea name="hint">
+            <area>140,236,1000,118</area>
+            <multiline>yes</multiline>
+            <value>
+                I do not use this screen and I also have no plans on theming this screen.
+                If you would like to have this view themed, please send patches 
+                or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+
+        <textarea name="whatToDo">
+            <area>320,600,640,120</area>
+            <multiline>yes</multiline>
+            <value>
+                Press 'M' or what ever your menu key is.\n
+                Select "Change View".\n
+                Select "Switch to List View".\n
+                (You should also Disable "Flat View")
+            </value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="videos">
+            <area>0,0,0,0</area>
+            <buttonarea>0,0,0,0</buttonarea>
+            <buttonitem>
+                <area>0,0,0,0</area>
+                <state name="active">
+                    <area>0,0,0,0</area>
+                </state>
+                <state name="selectedactive" from="active" />
+                <state name="selectedinactive" from="active" />
+            </buttonitem>
+        </buttonlist>
+
+    </window>
+
+    <!-- List View -->
+    <window name="tree">
+
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Videolist</value>
+            </textarea>
+        </shape>
+
+        <shape name="topBox" from="basebackground" >
+            <area>0,36,100%,318</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+
+        <textarea name="breadcrumbs">
+            <area>50,45,1180,30</area>
+            <font>fontBaseTiny</font>
+        </textarea>
+
+        <buttontree name="videos">
+            <area>40,70,1200,280</area>
+            <numlists>2</numlists>
+            <buttonlist name="listtemplate" from="btnListLeft" >
+                <area>0,0,1200,280</area>
+                <buttonarea>0,0,1200,280</buttonarea>
+                <statetype name="buttonitem">
+                    <area>0,0,600,30</area>
+                </statetype>
+            </buttonlist>
+        </buttontree>
+
+        <textarea name="title" from="basetextarea">
+            <area>40,360,530,40</area>
+            <font>fontBaseLarge</font>
+        </textarea>
+
+        <textarea name="##x##" from="basetextarea">
+            <area>40,400,80,40</area>
+            <font>fontBase</font>
+            <value></value>
+        </textarea>
+
+        <textarea name="subtitle" from="basetextarea">
+            <area>120,400,580,40</area>
+            <font>fontBase</font>
+        </textarea>
+
+        <textarea name="length" from="basetextarea">
+            <area>700,400,290,40</area>
+            <font>fontBase</font>
+            <align>right</align>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>40,440,955,260</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+            <font>fontDescription</font>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="novideos" from="description">
+            <align>allcenter</align>
+            <value>No videos in library, or no files found.  If you have configured a video directory, press "M" (or the MENU key) and select "Scan for Changes."</value>
+        </textarea>
+
+
+        <shape name="coverartBackground" from="basebackground">
+            <area>1015,350,250,280</area>
+        </shape>
+        <imagetype name="coverart">
+            <area>1045,358,182,260</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+
+        <shape name="watchedstateBackground" from="basebackground" >
+            <area>1015,625,250,80</area>
+        </shape>
+        <statetype name="watchedstate" >
+            <area>1015,625,250,80</area>
+
+            <state name="yes">
+                <area>0,0,100%,100%</area>
+                <textarea name="watched" from="basetextarea">
+                    <area>0,0,100%,100%</area>
+                    <value>watched</value>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+
+            <state name="no" from="yes">
+                <textarea name="unwatched" from="basetextarea">
+                    <area>0,0,100%,100%</area>
+                    <value>new</value>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+        </statetype>
+    </window>
+
+    <window name="file_associations">
+        <area>0,42,1280,515</area>
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="extension_text" from="basetextarea">
+            <area>300,97,200,30</area>
+            <value>Extension:</value>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <buttonlist name="extension_select" from="baseselector">
+            <position>520,95</position>
+        </buttonlist>
+
+        <textarea name="command_text" from="extension_text">
+            <position>300,160</position>
+            <value>Command:</value>
+        </textarea>
+
+        <textedit name="command" from="basetextedit">
+            <position>520,155</position>
+        </textedit>
+
+        <textarea name="default_text" from="extension_text">
+            <position>300,215</position>
+            <value>Use default player:</value>
+        </textarea>
+
+        <checkbox name="default_check" from="basecheckbox">
+            <position>520,215</position>
+        </checkbox>
+
+        <textarea name="ignore_text" from="extension_text">
+            <position>300,275</position>
+            <value>Ignore:</value>
+        </textarea>
+
+        <checkbox name="ignore_check" from="basecheckbox">
+            <position>520,275</position>
+        </checkbox>
+
+        <button name="new_button" from="basewidebutton">
+            <position>453,385</position>
+            <value>New</value>
+        </button>
+
+        <button name="delete_button" from="basewidebutton">
+            <position>453,442</position>
+            <value>Delete</value>
+        </button>
+
+        <button name="done_button" from="basewidebutton">
+            <position>453,500</position>
+            <value>Save</value>
+        </button>
+
+    </window>
+
+    <window name="edit_metadata">
+        <textarea name="title_text" from="basetextarea">
+            <area>150,80,250,40</area>
+            <value>Title:</value>
+            <align>right,top</align>
+        </textarea>
+
+        <textarea name="subtitle_text" from="basetextarea">
+            <area>150,138,250,40</area>
+            <value>Subtitle:</value>
+            <align>right,top</align>
+        </textarea>
+
+        <textarea name="season_text" from="basetextarea">
+            <area>200,185,250,40</area>
+            <value>Season:</value>
+            <align>right,top</align>
+        </textarea>
+
+        <textarea name="episode_text" from="basetextarea">
+            <area>520,185,150,40</area>
+            <value>Episode:</value>
+            <align>right,top</align>
+        </textarea>
+
+        <textarea name="category_text" from="title_text">
+            <area>520,232,150,40</area>
+            <align>right</align>
+            <value>Category:</value>
+        </textarea>
+
+        <textarea name="level_text" from="title_text">
+            <area>120,232,200,40</area>
+            <align>right</align>
+            <value>Parental Control:</value>
+        </textarea>
+
+        <textarea name="child_text" from="title_text">
+            <area>120,277,200,40</area>
+            <align>right</align>
+            <value>File to Always Play Next:</value>
+        </textarea>
+
+        <textarea name="browse_text" from="title_text">
+            <area>570,272,280,40</area>
+            <align>left</align>
+            <value>Include while Browsing:</value>
+        </textarea>
+
+        <textarea name="watched_text" from="title_text">
+            <area>570,318,280,40</area>
+            <align>left</align>
+            <value>Item has been Watched:</value>
+        </textarea>
+
+        <textarea name="coverart_text_label" from="title_text">
+            <position>200,358</position>
+            <value>Cover Art:</value>
+        </textarea>
+
+        <textarea name="screenshot_text_label" from="title_text">
+            <position>200,387</position>
+            <value>Screenshot:</value>
+        </textarea>
+
+        <textarea name="banner_text_label" from="title_text">
+            <position>200,416</position>
+            <value>Banner:</value>
+        </textarea>
+
+        <textarea name="fanart_text_label" from="title_text">
+            <position>200,445</position>
+            <value>Fanart:</value>
+        </textarea>
+
+        <textarea name="trailer_text_label" from="title_text">
+            <position>200,477</position>
+            <value>Trailer:</value>
+        </textarea>
+
+        <textarea name="player_text" from="title_text">
+            <position>150,517</position>
+            <value>Unique Player Command:</value>
+        </textarea>
+
+        <textedit name="title_edit" from="basetextedit">
+            <position>410,70</position>
+        </textedit>
+
+        <textedit name="subtitle_edit" from="basetextedit">
+            <position>410,126</position>
+        </textedit>
+
+        <spinbox name="season" from="basespinbox">
+            <position>460,181</position>
+        </spinbox>
+
+        <spinbox name="episode" from="basespinbox">
+            <position>680,181</position>
+        </spinbox>
+
+        <buttonlist name="level_select" from="baseselector">
+            <position>330,225</position>
+        </buttonlist>
+
+        <buttonlist name="category_select" from="baseselector">
+            <position>680,225</position>
+        </buttonlist>
+
+        <buttonlist name="child_select" from="baseselector">
+            <position>330,270</position>
+        </buttonlist>
+
+        <checkbox name="browse_check" from="basecheckbox">
+            <position>835,268</position>
+        </checkbox>
+
+        <checkbox name="watched_check" from="basecheckbox">
+            <position>835,312</position>
+        </checkbox>
+
+        <button name="coverart_button">
+            <area>460,353,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                </state>
+                <state name="selected" from="active">
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="coverart_text" from="basetextarea">
+            <area>500,358,250,40</area>
+        </textarea>
+
+        <button name="screenshot_button">
+            <area>460,382,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                </state>
+                <state name="selected" from="active">
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="screenshot_text" from="basetextarea">
+            <area>500,387,250,40</area>
+        </textarea>
+
+        <button name="banner_button">
+            <area>460,411,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                </state>
+                <state name="selected" from="active">
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="banner_text" from="basetextarea">
+            <area>500,416,250,40</area>
+        </textarea>
+
+        <button name="fanart_button">
+            <area>460,442,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                </state>
+                <state name="selected" from="active">
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="fanart_text" from="basetextarea">
+            <area>500,445,250,40</area>
+        </textarea>
+
+        <button name="trailer_button">
+            <area>460,472,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                </state>
+                <state name="selected" from="active">
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="trailer_text" from="basetextarea">
+            <area>500,477,250,40</area>
+        </textarea>
+
+
+        <textedit name="player_edit" from="basetextedit">
+            <position>410,507</position>
+        </textedit>
+
+        <button name="done_button" from="basebutton">
+            <position>510,567</position>
+            <value>Done</value>
+        </button>
+    </window>
+
+    <window name="itemdetailpopup">
+        <area>0,42,1280,515</area>
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="title" from="basetextarea">
+            <area>270,85,455,35</area>
+            <font>fontBaseLarge</font>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>270,165,455,220</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="cast" from="basetextarea">
+            <area>270,385,455,50</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="dirlbl" from="basetextarea">
+            <area>270,135,120,35</area>
+            <value>Directed by:</value>
+            <align>left</align>
+        </textarea>
+
+        <textarea name="director" from="basetextarea">
+            <area>405,135,250,35</area>
+        </textarea>
+
+        <textarea name="year" from="basetextarea">
+            <area>270,445,80,35</area>
+        </textarea>
+
+        <textarea name="length" from="basetextarea">
+            <area>447,445,278,35</area>
+            <align>right</align>
+        </textarea>
+
+        <button name="done_button" from="basebutton">
+            <position>363,495</position>
+            <value>Done</value>
+        </button>
+
+        <button name="play_button" from="basebutton">
+            <position>693,495</position>
+            <value>Play</value>
+        </button>
+
+    </window>
+
+    <window name="metadatasettings">
+        <area>0,42,1280,555</area>
+
+        <shape name="fade" from="basefadebackground" />
+
+        <textarea name="title" from="basetextarea">
+            <area>251,70,774,90</area>
+            <value>Video Metadata Settings</value>
+            <align>hcenter,vcenter</align>
+            <font>fontBase</font>
+        </textarea>
+
+        <checkbox name="autometaupdatecheck" from="basecheckbox">
+            <position>435,207</position>
+        </checkbox>
+
+        <textarea name="autometacheck_text" from="basetextarea">
+            <area>475,205,500,30</area>
+            <value>Perform metadata update after video scan</value>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <checkbox name="unknownfilecheck" from="basecheckbox">
+            <position>435,267</position>
+        </checkbox>
+
+        <textarea name="unknownfilecheck_text" from="basetextarea">
+            <area>475,265,400,30</area>
+            <value>Display unknown file types</value>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <checkbox name="treeloadsmetacheck" from="basecheckbox">
+            <position>435,327</position>
+        </checkbox>
+
+        <textarea name="treeloadsmetacheck_text" from="basetextarea">
+            <area>475,325,400,30</area>
+            <value>Enable metadata in file browse mode</value>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <checkbox name="randomtrailercheck" from="basecheckbox">
+            <position>435,392</position>
+        </checkbox>
+
+        <textarea name="trailercheck_text" from="basetextarea">
+            <area>475,390,400,30</area>
+            <value>Enable random trailer playback</value>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <spinbox name="trailernum" from="basemediumspinbox">
+            <position>435,450</position>
+            <template type="zero">Play %n trailer(s)</template>
+            <template type="positive">Play %n trailer(s)</template>
+        </spinbox>
+
+        <button name="cancel" from="basebutton">
+            <position>363,520</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>693,520</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+</mythuitheme>

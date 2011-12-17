@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+    <window name="mainmenu">
+
+        <clock name="mclock" from="baseclock">
+             <area>880,40,400,40</area>
+        </clock>
+
+        <buttonlist name="menu" from="basebuttonlist">
+            <layout>vertical</layout>
+            <spacing>6</spacing>
+            <wrapstyle>selection</wrapstyle>
+            <drawfrombottom>no</drawfrombottom>
+            <area>0,130,100%,460</area>
+            <buttonarea>0,0,100%,460</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,100%,60</area>
+                <state name="active">
+                    <area>0,0,100%,60</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,60</area>
+                        <font>fontBaseLarge</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <area>0,0,100%,60</area>
+                    <shape name="sel" from="shapeSelected" />
+                    <textarea name="buttontext">
+                        <area>0,0,100%,60</area>
+                        <font>fontBaseLarge</font>
+                        <alpha>255</alpha>
+                    </textarea>
+                </state>
+            </statetype>
+
+<!-- up/down arrows -->
+        <statetype name="upscrollarrow">
+            <area>0,-40,100%,40</area>
+            <state type="off" />
+            <state type="full">
+                <area>0,0,100%,40</area>
+                <textarea name="arrow" from="basetextarea">
+                    <align>bottom,center</align>
+                    <area>0,0,100%,100%</area>
+                    <font>fontUpDownArrow</font>
+                    <value>^</value>
+                </textarea>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <area>0,480,100%,40 </area>
+            <state type="off" />
+            <state type="full">
+                <area>0,0,100%,40</area>
+                <textarea name="arrow" from="basetextarea">
+                    <align>top,center</align>
+                    <area>0,0,100%,100%</area>
+                    <font>fontUpDownArrow</font>
+                    <value>ˇ</value>
+                </textarea>
+            </state>
+        </statetype>
+        </buttonlist>
+    </window>
+</mythuitheme>

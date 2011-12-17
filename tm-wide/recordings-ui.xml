@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="watchrecordings">
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Watch Recordings</value>
+            </textarea>
+        </shape>
+
+        <shape name="rightBox" from="basebackground" >
+            <area>0,37,100%,370</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <buttonlist name="groups" from="btnListRight">
+            <area>10,90,220,255</area>
+            <shape name="groupBg" from="basebackground">
+                <fill color="#000000" alpha="50" />
+            </shape>
+
+            <statetype name="buttonitem" >
+            </statetype>
+        </buttonlist>
+
+        <buttonlist name="recordings">
+            <area>228,50,1042,340</area>
+            <shape name="recBg" from="basebackground" >
+                <fill color="#000000" alpha="50" />
+            </shape>
+            <layout>vertical</layout>
+            <spacing>1</spacing>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>selection</wrapstyle>
+            <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+            <buttonarea>0,0,1042,350</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,1042,30</area>
+                    <statetype name="watched">
+                        <state name="yes">
+                            <textarea name="wa">
+                                <area>15,0,30,30</area>
+                                <font>fontBaseUltraTiny</font>
+                                <value>W</value>
+                                <align>left,vcenter</align>                
+                            </textarea>
+                        </state>
+                        <state name="no"/>
+                    </statetype>
+                    <statetype name="playlist">
+                        <state name="yes">
+                            <textarea name="wa">
+                                <area>30,0,50,30</area>
+                                <font>fontBaseUltraTiny</font>
+                                <value>P</value>
+                                <align>left,vcenter</align>                
+                            </textarea>
+                        </state>
+                        <state name="no"/>
+                    </statetype>
+                    <statetype name="jobstate">
+                        <state name="recording">
+                            <textarea name="rec">
+                                <area>39,0,50,30</area>
+                                <font>fontBaseUltraTiny</font>
+                                <value>R</value>
+                                <align>left,vcenter</align>                
+                            </textarea>
+                        </state>
+                    </statetype>
+                    <statetype name="bookmark">
+                        <state name="yes">
+                            <textarea name="rec">
+                                <area>48,0,50,30</area>
+                                <font>fontBaseUltraTiny</font>
+                                <value>B</value>
+                                <align>left,vcenter</align>                
+                            </textarea>
+                        </state>
+                    </statetype>
+                    <textarea name="titlesubtitle">
+                        <area>65,0,815,30</area>
+                        <value>foobar</value>
+                        <statetype name="jobstate">
+                            <state name="recording">
+                            </state>
+                        </statetype>
+                        <align>left,vcenter</align>                
+                    </textarea>
+                    <textarea name="shortstartdate">
+                        <area>880,0,80,30</area>
+                        <align>left,vcenter</align>                
+                    </textarea>
+                    <textarea name="starttime">
+                        <area>960,0,80,30</area>
+                        <align>left,vcenter</align>                
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="sel" from="shapeSelected" >
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="selectedactive">
+                    <shape name="sel" from="shapeSelected" >
+                        <area>0,0,100%,100%</area>
+                        <fill color="#000000" alpha="100" />
+                    </shape>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="title" from="basetextarea">
+            <area>25,410,700,40</area>
+            <font>fontBaseLarge</font>
+            <cutdown>yes</cutdown>
+            <align>vcenter</align>
+        </textarea>
+
+        <textarea name="channel" from="basetextarea">
+            <area>25,455,160,30</area>
+        </textarea>
+        <textarea name="timedate" from="basetextarea">
+            <area>195,455,715,30</area>
+            <template>%TIMEDATE%  (%lentime%,  %filesize_str%)</template>
+            <align>right</align>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>25,490,890,220</area>
+            <font>fontDescription</font>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
+        </textarea>
+
+        <!-- the shape around the preview-->
+        <shape name="video_shape" from="basebackground">
+            <area>935,410,320,240</area>
+            <fill color="#000000" alpha="254" />
+        </shape>
+        <imagetype name="preview">
+            <area>945,420,300,220</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <!-- the shape around the video properties -->
+        <shape name="textstuff" from="basebackground">
+            <area>935,646,320,70</area>
+        </shape>
+
+        <statetype name="videoprops">
+            <area>955,652,100%-940,20</area>
+            <showempty>yes</showempty>
+            <state name="hd1080">
+                <area>0,0,100%,100%</area>
+                <textarea name="hd1080" from="basetextarea">
+                    <area>0,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>hd1080</value>
+                </textarea>
+            </state>
+
+            <state name="hd720">
+                <textarea name="hd720" from="basetextarea">
+                    <area>80,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>hd720</value>
+                </textarea>
+            </state>
+            <state name="hdtv">
+                <textarea name="hdtv" from="basetextarea">
+                    <area>12,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>hd</value>
+                </textarea>
+            </state>
+            <state name="widescreen">
+                <textarea name="widescreen" from="basetextarea">
+                    <area>180,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>wide</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="audioprops">
+            <area>955,672,100%-940,20</area>
+            <showempty>no</showempty>
+            <state name="stereo">
+                <area>0,0,100%,100%</area>
+                <textarea name="stereo">
+                    <area>0,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>stereo</value>
+                </textarea>
+            </state>
+            <state name="surround"> 
+                <textarea name="surround">
+                    <area>60,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>surround</value>
+                </textarea>
+            </state>
+            <state name="dolby">
+                <textarea name="dolby">
+                    <area>120,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>DolbyDigital</value>
+                </textarea>
+            </state>
+            <state name="mono">
+                <textarea name="mono">
+                    <area>180,0,100%,100%</area>
+                    <font>fontBaseTiny</font>
+                    <value>mono</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <statetype name="autoexpire">
+            <area>955,690,100%-940,20</area>
+            <state name="yes">
+                <area>0,0,100%,100%</area>
+                <textarea name="ae">
+                    <area>0,0,50,50</area>
+                    <font>fontBaseTiny</font>
+                    <value>ae</value>
+                </textarea>
+            </state>
+            <state name="no" />
+        </statetype>
+
+        <statetype name="commflagged">
+            <area>985,690,100%-940,20</area>
+            <state name="yes">
+                <area>0,0,100%,100%</area>
+                <textarea name="cf">
+                    <area>0,0,50,50</area>
+                    <font>fontBaseTiny</font>
+                    <value>cf</value>
+                </textarea>
+            </state>
+            <state name="no" />
+        </statetype>
+
+        <statetype name="subtitletypes">
+            <area>1015,690,100%-1000,20</area>
+            <showempty>yes</showempty>
+            <state name="cc">
+                <area>0,0,100%,100%</area>
+                <textarea name="cc">
+                    <area>0,0,50,50</area>
+                    <font>fontBaseTiny</font>
+                    <value>cc</value>
+                </textarea>
+            </state>
+            <state name="subtitles">
+                <textarea name="subtitles">
+                    <area>40,0,50,50</area>
+                    <font>fontBaseTiny</font>
+                    <value>sub</value>
+                </textarea>
+            </state>
+            <state name="onscreensub">
+                <textarea name="onscreensub">
+                    <area>80,0,50,50</area>
+                    <font>fontBaseTiny</font>
+                    <value>oss</value>
+                </textarea>
+            </state>
+        </statetype>
+
+        <textarea name="norecordings">
+            <area>20,75,100%,100%</area>
+            <font>fontBase</font>
+            <value>
+            </value>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+    </window>
+
+    <window name="iconhelp">
+        <area>0,0,100%,100%</area>
+        <shape name="t" from="popupBg">
+         </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>0,0,100%,50</area>
+            <value>Status Icons</value>
+            <font>fontBase</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="iconlist">
+            <area>25%,80,50%,100%-80</area>
+            <align>allcenter</align>
+            <layout>vertical</layout>
+            <spacing>4</spacing>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,100%,40</area>
+                <state name="active">
+                    <statetype name="icons">
+                        <state name="commflagged">
+                            <textarea name="statusText">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>cf</value>
+                            </textarea>
+                        </state>
+                        <state name="cutlist">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>cl</value>
+                            </textarea>
+                        </state>
+                        <state name="autoexpire">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>ae</value>
+                            </textarea>
+                        </state>
+                        <state name="processing">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>pr</value>
+                            </textarea>
+                        </state>
+                        <state name="bookmark">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>B</value>
+                            </textarea>
+                        </state>
+
+                        <state name="mono">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>mono</value>
+                            </textarea>
+                        </state>
+                        <state name="stereo">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>stereo</value>
+                            </textarea>
+                        </state>
+                        <state name="surround">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>surround</value>
+                            </textarea>
+                        </state>
+                        <state name="dolby">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>DolbyDigital</value>
+                            </textarea>
+                        </state>
+                        <state name="cc">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>cc</value>
+                            </textarea>
+                        </state>
+                        <state name="subtitles">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>subs</value>
+                            </textarea>
+                        </state>
+                        <state name="onscreensub">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>so</value>
+                            </textarea>
+                        </state>
+                        <state name="hdtv">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>hd</value>
+                            </textarea>
+                        </state>
+                        <state name="hd720">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>hd720</value>
+                            </textarea>
+                        </state>
+                        <state name="hd1080">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>hd1080</value>
+                            </textarea>
+                        </state>
+                        <state name="avchd">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>avchd</value>
+                            </textarea>
+                        </state>
+                        <state name="widescreen">
+                            <textarea name="statusimage">
+                                <area>0,0,120,40</area>
+                                <align>right,vcenter</align>
+                                <value>wide</value>
+                            </textarea>
+                        </state>
+                    </statetype>
+                    <state name="watched">
+                        <textarea name="statusimage">
+                            <area>0,0,120,40</area>
+                            <align>right,vcenter</align>
+                            <value>W</value>
+                        </textarea>
+                    </state>
+                    <textarea name="buttontext">
+                        <area>130,0,1200,40</area>
+                        <font>fontBase</font>
+                        <align>vcenter</align>
+                        <template>- %1</template>
+
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="selectbar">
+                        <area>0,0,650,40</area>
+                        <type>roundbox</type>
+                        <line color="#999999" alpha="255" width="2" />
+                        <cornerradius>13</cornerradius>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active" />
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>590,390</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>620,390</position>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="groupselector">
+        <area>320,110,640,500</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="lable" from="basetextarea">
+            <area>0,0,640,220</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+            <value>Select Recordingroup</value>
+        </textarea>
+
+        <buttonlist name="groups" from="basePopuButtonlist">
+             <area>0,220,640,280</area>
+             <buttonarea>0,20,640,100%-20</buttonarea>
+             <statetype name="buttonitem">
+                <area>0,0,640,30</area>    
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="changeview">
+        <area>0,0,100%,100%</area>
+        <shape name="t" from="popupBg">
+            <area>320,110,640,500</area>
+         </shape>
+
+        <textarea name="who" from="basetextarea">
+            <area>320,110,640,120</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+            <value>Change View</value>
+        </textarea>
+
+        <checkbox name="titles" from="checkboxBase" >
+            <area>440,230,400,40</area>
+            <statetype name="background">
+                <area>0,0,400,40</area>
+                <state name="active">
+                    <area>0,0,400,40</area>
+                </state>
+                <state name="selected" from="active">
+                    <shape name="sel" from="shapeSelected" >
+                    </shape>
+                </state>
+            </statetype>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Titles</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+
+        <checkbox name="categories" from="titles" >
+            <area>440,275,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Categories</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+        <checkbox name="recgroups" from="titles" >
+            <area>440,320,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Recording Groups</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+        <checkbox name="watchlist" from="titles" >
+            <area>440,365,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Watchlist</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+        <checkbox name="searches" from="titles" >
+            <area>440,410,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Searches</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+        <checkbox name="livetv" from="titles" >
+            <area>440,455,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Live TV</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+        <checkbox name="watched" from="titles" >
+            <area>440,500,400,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%,100%</area>
+                <value>Watched</value>
+                <align>vcenter</align>
+            </textarea>
+        </checkbox>
+
+        <button name="save" from="basebuttonBorder">
+            <area>570,560,140,40</area>
+            <value>Save</value>
+        </button>
+    </window>
+
+    <window name="passwordchanger">
+        <area>0,0,100%,100%</area>
+        <shape name="t" from="popupBg">
+            <area>320,110,640,500</area>
+         </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>320,110,640,170</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>Change Recording Group Password</value>
+        </textarea>
+
+        <textarea name="oldPw" from="basetextarea">
+            <area>320,280,640,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Old Password:</value>
+        </textarea>
+        <textedit name="oldpassword" from="basetextedit">
+            <area>345,325,590,40</area>
+            <textarea name="text">
+                <align>allcenter</align>
+            </textarea>
+        </textedit>
+
+        <textarea name="newPw" from="basetextarea">
+            <area>320,370,640,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>NewPassword:</value>
+        </textarea>
+        <textedit name="newpassword" from="basetextedit">
+            <area>345,415,590,40</area>
+            <textarea name="text">
+                <align>allcenter</align>
+            </textarea>
+        </textedit>
+
+        <button name="ok" from="basebuttonBorder">
+            <area>520,540,240,40</area>
+            <value>ok</value>
+        </button>
+    </window>
+
+    <window name="editmetadata">
+        <area>320,110,640,500</area>
+        
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+         </shape>
+
+        <textarea name="Heading" from="basetextarea">
+            <area>0,0,640,80</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+            <value>Edit Metadata</value>
+        </textarea>
+
+        <textarea name="mTitle" from="basetextarea">
+            <area>20,70,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Title</value>
+        </textarea>
+        <textedit name="title" from="basetextedit">
+            <area>120,70,500,40</area>
+        </textedit>
+
+        <textarea name="mSubtitle" from="basetextarea">
+            <area>20,125,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Subitle</value>
+        </textarea>
+        <textedit name="subtitle" from="basetextedit">
+            <area>120,125,500,40</area>
+        </textedit>
+
+        <textarea name="mSeason" from="basetextarea">
+            <area>20,180,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align> <value>Season</value>
+        </textarea>
+        <spinbox name="season" from="spinboxBase">
+            <area>120,180,120,40</area>
+            <layout>horizontal</layout>
+        </spinbox>
+
+        <textarea name="mEpi" from="basetextarea">
+            <area>270,180,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Episode</value>
+        </textarea>
+        <spinbox name="episode" from="spinboxBase">
+            <area>370,180,140,40</area>
+            <layout>horizontal</layout>
+        </spinbox>
+
+        <textedit name="description" from="basetextedit">
+            <area>20,235,600,150</area>
+            <statetype name="background">
+                <area>0,0,100%,150</area>
+                <state name="active">
+                    <area>0,0,100%,150</area>
+                </state>
+                <state name="selected" from="active">
+                    <area>0,0,100%,150</area>
+                    <shape name="foo">
+                        <area>0,0,100%,150</area>
+                    </shape>
+                </state>
+                <state name="inactive" from="active" />
+            </statetype>
+            <textarea name="text" from="basetextarea">
+                <area>12,10,100%-12,100%-10</area>
+                <align>left,vcenter</align>
+                <multiline>yes</multiline>
+            </textarea>
+        </textedit>
+
+        <textarea name="mInet" from="basetextarea">
+            <area>20,400,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Intref</value>
+        </textarea>
+        <textedit name="inetref" from="basetextedit">
+            <area>120,400,500,40</area>
+        </textedit>
+        
+        <button name="ok" from="basebuttonBorder">
+            <area>200,450,240,40</area>
+            <value>ok</value>
+        </button>
+    </window>
+
+</mythuitheme>
