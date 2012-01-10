@@ -388,6 +388,11 @@
 
     <!-- List View -->
     <window name="tree">
+	    <imagetype name="fanart">
+            <area>0,0,100%,100%</area>
+            <preserveaspect>no</preserveaspect>
+            <alpha>60</alpha>
+        </imagetype>
 
         <shape name="programguideTitle" from="titleBar" >
             <textarea name="pagetitle">
