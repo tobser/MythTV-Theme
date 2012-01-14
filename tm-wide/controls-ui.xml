@@ -40,11 +40,24 @@
             <align>center</align>
         </textarea>
 
-        <buttonlist name="leftlist" from="btnListLeft">
+        <buttonlist name="leftlist" from="basebuttonlist">
             <area>64,110,550,440</area>
             <buttonarea>0,0,100%,100%</buttonarea>
             <drawfrombottom>no</drawfrombottom>
             <showarrow>no</showarrow>
+            <statetype name="buttonitem">
+                <area>0,0,600,30</area>
+                <state name="selectedactive">
+                    <area>0,0,100%,30</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,100%,30</area>
+                </state>
+                <state name="active">
+                    <area>0,0,100%,30</area>
+                </state>
+            </statetype>
+
         </buttonlist>
 
         <textarea name="rightdesc" from="leftdesc">
@@ -59,26 +72,26 @@
         </buttonlist>
 
         <textarea name="keyButtonsLabel" from="basetextarea">
-            <area>265,650,100,40</area>
+            <area>65,650,100,40</area>
             <align>right</align>
             <font>fontBaseLarge</font>
             <value>Keys: </value>
         </textarea>
 
         <button name="action_0" from="basebuttonBorder">
-            <area>391,650,120,40</area>
+            <area>191,650,220,40</area>
         </button>
 
         <button name="action_1" from="action_0">
-            <area>517,650,120,40</area>
+            <area>417,650,220,40</area>
         </button>
 
         <button name="action_2" from="action_0">
-            <area>643,650,120,40</area>
+            <area>643,650,220,40</area>
         </button>
 
         <button name="action_3" from="action_0">
-            <area>769,650,120,40</area>
+            <area>869,650,220,40</area>
         </button>
 
         <textarea name="description" from="basetextarea">

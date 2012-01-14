@@ -305,18 +305,16 @@
         <area>0,0,100%,100%</area>
         <layout>vertical</layout>
         <wrapstyle>selection</wrapstyle>
-        <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
-        <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
 
         <buttonarea>0,0,100%,100%</buttonarea>
         <statetype name="buttonitem">
             <area>0,0,100%,100%</area>
             <state name="selectedactive">
-                        <area>0,0,100%,100%</area>
+                <area>0,0,100%,100%</area>
                 <shape name="sel" from="shapeSelected" />
                 <textarea name="buttontext" from="basetextarea">
                     <area>30,0,100%-30,100%</area>
-                    <align>allcenter</align>
+                    <align>left,vcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
                 <imagetype name="buttonarrow">
@@ -331,16 +329,21 @@
             <state name="selectedinactive" from="selectedactive">
                 <area>0,0,100%,100%</area>
                 <shape name="sel">
-                        <area>0,0,100%,100%</area>
-                        <fill alpha="0" />
+                    <fill alpha="0" />
                 </shape>
             </state>
             <state name="active" from="selectedactive">
+                <area>0,0,100%,100%</area>
                 <shape name="sel">
                     <area>0,0,0,0</area>
                 </shape>
             </state>
-
+            <state name="inactive" from="selectedactive">
+                <area>0,0,100%,100%</area>
+                <shape name="sel">
+                    <area>0,0,0,0</area>
+                </shape>
+            </state>
         </statetype>
     </buttonlist>
 
@@ -350,8 +353,6 @@
         <spacing>1</spacing>
         <scrollstyle>center</scrollstyle>
         <wrapstyle>items</wrapstyle>
-
-
         <buttonarea>0,0,100%,100%</buttonarea>
         <statetype name="buttonitem">
             <area>0,0,100%,30</area>
@@ -362,7 +363,7 @@
                 </shape>
                 <textarea name="buttontext" from="basetextarea">
                     <area>15,0,100%-15,30</area>
-                    <align>allcenter</align>                
+                    <align>right, vcenter</align>                
                 </textarea>
             </state>
 
@@ -370,7 +371,7 @@
                 <area>0,0,100%,30</area>
                 <textarea name="buttontext" from="basetextarea">
                     <area>15,0,100%-15,30</area>
-                    <align>allcenter</align>                
+                    <align>right, vcenter</align>                
                 </textarea>
             </state>
             <state name="selectedinactive" from="active">
@@ -380,15 +381,6 @@
                 </shape>
             </state>
         </statetype>
-    </buttonlist>
-
-    <buttonlist name="btnListLeft" from="basebuttonlist">
-        <layout>vertical</layout>
-        <spacing>1</spacing>
-        <scrollstyle>free</scrollstyle>
-        <wrapstyle>selection</wrapstyle>
-        <drawfrombottom>no</drawfrombottom>
-
     </buttonlist>
 
 
@@ -519,24 +511,11 @@
         <drawfrombottom>yes</drawfrombottom>
         <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
         <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
-
-        <statetype name="upscrollarrow">
-            <area>0,0,100%,20</area>
-            <state type="off" />
-            <state type="full">
-                <area>0,0,100%,20</area>
-                <textarea name="arrow" from="basetextarea">
-                    <area>0,0,100%,20</area>
-                    <align>allcenter</align>
-                    <font>fontUpDownArrowPop</font>
-                    <value>^</value>
-                </textarea>
-            </state>
-        </statetype>
         <statetype name="buttonitem">
             <area>0,0,100%,30</area>
-            <state name="active">
+            <state name="selectedactive">
                 <area>0,0,100%,30</area>
+                <shape name="sel" from="shapeSelected" />
                 <textarea name="buttontext" from="basetextarea">
                     <area>30,0,100%,30</area>
                     <align>allcenter</align>
@@ -551,10 +530,19 @@
                     </textarea>
                 </imagetype>
             </state>
-            <state name="selectedactive" from="active">
-                <shape name="sel" from="shapeSelected" />
+            <state name="selectedinactive" from="selectedactive">
+                <shape name="sel">
+                    <fill color="#000000" alpha="0" />
+                </shape>
+            </state>
+            <state name="active" from="selectedactive">
+                <shape name="sel" >
+                    <area>0,0,0,0</area>
+                </shape>
             </state>
         </statetype>
+
+        <!--
 
         <statetype name="downscrollarrow">
             <area>0,100%-20,100%,20</area>
@@ -568,6 +556,7 @@
                 </textarea>
             </state>
         </statetype>
+        -->
     </buttonlist>
 
     <window name="MythPopupBox">

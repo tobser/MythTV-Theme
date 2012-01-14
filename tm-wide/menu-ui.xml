@@ -8,6 +8,8 @@
         </clock>
 
         <buttonlist name="menu" from="basebuttonlist">
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <layout>vertical</layout>
             <spacing>6</spacing>
             <wrapstyle>selection</wrapstyle>
@@ -19,6 +21,7 @@
                 <state name="active">
                     <area>0,0,100%,60</area>
                     <textarea name="buttontext">
+                        <align>allcenter</align>
                         <area>0,0,100%,60</area>
                         <font>fontBaseLarge</font>
                     </textarea>
@@ -29,38 +32,11 @@
                     <textarea name="buttontext">
                         <area>0,0,100%,60</area>
                         <font>fontBaseLarge</font>
+                        <align>allcenter</align>
                         <alpha>255</alpha>
                     </textarea>
                 </state>
             </statetype>
-
-<!-- up/down arrows -->
-        <statetype name="upscrollarrow">
-            <area>0,-40,100%,40</area>
-            <state type="off" />
-            <state type="full">
-                <area>0,0,100%,40</area>
-                <textarea name="arrow" from="basetextarea">
-                    <align>bottom,center</align>
-                    <area>0,0,100%,100%</area>
-                    <font>fontUpDownArrow</font>
-                    <value>^</value>
-                </textarea>
-            </state>
-        </statetype>
-        <statetype name="downscrollarrow">
-            <area>0,480,100%,40 </area>
-            <state type="off" />
-            <state type="full">
-                <area>0,0,100%,40</area>
-                <textarea name="arrow" from="basetextarea">
-                    <align>top,center</align>
-                    <area>0,0,100%,100%</area>
-                    <font>fontUpDownArrow</font>
-                    <value>ˇ</value>
-                </textarea>
-            </state>
-        </statetype>
         </buttonlist>
     </window>
 </mythuitheme>

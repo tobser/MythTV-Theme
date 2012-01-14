@@ -408,40 +408,29 @@
 
         <textarea name="breadcrumbs">
             <area>50,45,1180,30</area>
-            <font>fontBaseTiny</font>
         </textarea>
 
         <buttontree name="videos">
             <area>40,70,1200,280</area>
             <numlists>2</numlists>
-            <buttonlist name="listtemplate" from="btnListLeft" >
+            <buttonlist name="listtemplate" from="basebuttonlist" >
+                <triggerevent context="Global" action="INFO">RIGHT</triggerevent>
                 <area>0,0,1200,280</area>
                 <buttonarea>0,0,1200,280</buttonarea>
                 <statetype name="buttonitem">
                     <area>0,0,600,30</area>
                     <state name="selectedactive">
                         <area>0,0,600,30</area>
-                        <textarea name="buttontext">
-                            <align>left,vcenter</align>
-                        </textarea>
                     </state>
                     <state name="selectedinactive">
                         <area>0,0,600,30</area>
-                        <shape name="sel">
-                            <area>0,0,100%,100%</area>
-                            <fill alpha="0" />
-                        </shape>
-                        <textarea name="buttontext">
-                            <align>left,vcenter</align>
-                        </textarea>
                     </state>
                     <state name="active">
                         <area>0,0,600,30</area>
-                        <textarea name="buttontext">
-                            <align>left,vcenter</align>
-                        </textarea>
                     </state>
-
+                    <state name="inactive">
+                        <area>0,0,600,30</area>
+                    </state>
                 </statetype>
             </buttonlist>
         </buttontree>
