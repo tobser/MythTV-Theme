@@ -27,7 +27,7 @@
              <drawfrombottom>yes</drawfrombottom>
              <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
              <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
-
+             <!--
              <statetype name="upscrollarrow">
                  <area>30,0,100%-30,20</area>
                  <state type="off" />
@@ -41,10 +41,12 @@
                      </textarea>
                  </state>
              </statetype>
+             -->
              <statetype name="buttonitem">
                  <area>0,0,100%,30</area>
-                 <state name="active">
+                 <state name="selectedactive">
                      <area>0,0,100%,30</area>
+                     <shape name="sel" from="shapeSelected" />
                      <textarea name="buttontext" from="basetextarea">
                          <area>30,0,100%-30,30</area>
                          <align>center,vcenter</align>
@@ -59,11 +61,14 @@
                          </textarea>
                      </imagetype>
                  </state>
-                 <state name="selectedactive" from="active">
-                     <shape name="sel" from="shapeSelected" />
+                 <state name="active" from="selectedactive">
+                     <area>0,0,100%,30</area>
+                     <shape name="sel" from="shapeSelected" >
+                     <area>0,0,0,0</area>
+                 </shape>
                  </state>
              </statetype>
-
+             <!--
              <statetype name="downscrollarrow">
                  <area>30,100%-20,100%-30,20</area>
                  <state type="off" />
@@ -76,6 +81,7 @@
                      </textarea>
                  </state>
              </statetype>
+             -->
          </buttonlist>
      </window>
 

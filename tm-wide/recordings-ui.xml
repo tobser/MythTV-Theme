@@ -22,6 +22,7 @@
         </shape>
 
         <buttonlist name="groups" from="btnListRight">
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <area>10,90,220,255</area>
             <shape name="groupBg" from="basebackground">
                 <fill color="#000000" alpha="50" />
@@ -41,10 +42,14 @@
             <scrollstyle>free</scrollstyle>
             <wrapstyle>selection</wrapstyle>
             <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
+
             <buttonarea>0,0,1042,350</buttonarea>
             <statetype name="buttonitem">
-                <state name="active">
+                <state name="selectedactive">
                     <area>0,0,1042,30</area>
+                    <shape name="selIn" from="basebackground" >
+                        <area>0,0,100%,100%</area>
+                    </shape>
                     <statetype name="watched">
                         <state name="yes">
                             <textarea name="wa">
@@ -105,14 +110,17 @@
                         <align>left,vcenter</align>                
                     </textarea>
                 </state>
-                <state name="selectedactive" from="active">
-                    <shape name="sel" from="shapeSelected" >
+                <state name="selectedinactive" from="selectedactive">
+                    <area>0,0,1042,30</area>
+                    <shape name="selIn">
+                        <area>0,0,100%,100%</area>
+                        <fill alpha="0" />
                     </shape>
                 </state>
-                <state name="selectedinactive" from="selectedactive">
-                    <shape name="sel" from="shapeSelected" >
-                        <area>0,0,100%,100%</area>
-                        <fill color="#000000" alpha="100" />
+                <state name="active" from="selectedactive" >
+                    <area>0,0,1042,30</area>
+                    <shape name="selIn">
+                        <area>0,0,0,0</area>
                     </shape>
                 </state>
             </statetype>

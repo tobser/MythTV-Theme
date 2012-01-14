@@ -4,7 +4,6 @@
 
     <fontdef name="fontBase" face="Droid Sans">
         <pixelsize>22</pixelsize>
-        <color>#EEEEEE</color>
         <weight>bold</weight>
     </fontdef>
 
@@ -27,7 +26,6 @@
 
     <fontdef name="fontUpDownArrow" from="fontBase">
         <weight>normal</weight>
-        <color>#858585</color>
         <stretch>9</stretch>
     </fontdef>
 
@@ -47,8 +45,31 @@
         <area>0,0,100%,100%</area>
         <type>roundbox</type>
         <cornerradius>12</cornerradius>
-        <fill color="#000000" alpha="120" />
         <line color="#FFFFFF" alpha="255" width="2" />
+    </shape>
+
+    <shape name="popupBg" >
+        <area>0,0,100%,100%</area>
+        <shape name="popupBackground" from="basebackground" >
+            <fill color="SteelBlue" alpha="230" />
+            <area>0,0,100%,100%</area>
+        </shape>
+        <shape name="pupBackground" from="basebackground" >
+            <fill color="#000000" alpha="120" />
+            <area>0,0,100%,100%</area>
+        </shape>
+    </shape>
+
+    <shape name="shapeSelected" from="popupBg">
+        <area>0,0,100%,100%</area>
+        <shape name="darker" from="basebackground" >
+            <fill color="#000000" alpha="80" />
+            <area>0,0,100%,100%</area>
+        </shape>
+        <!--        <fill style="gradient">
+            <gradient start="#4d6b30" end="#58f833" alpha="100" direction="vertical" />
+        </fill>
+        -->
     </shape>
 
     <shape name="baseSeperator">
@@ -101,12 +122,6 @@
         </clock>
     </shape>
 
-    <shape name="shapeSelected" from="basebackground">
-        <area>0,0,100%,100%</area>
-        <fill style="gradient">
-            <gradient start="#4d6b30" end="#58f833" alpha="100" direction="vertical" />
-        </fill>
-    </shape>
 
     <textedit name="basetextedit">
         <area>0,0,100%,40</area>
@@ -149,22 +164,11 @@
     <spinbox name="spinboxBase">
         <area>0,0,600,40</area>
         <layout>horizontal</layout>
-        <shape name="bg" from="basebackground" >
-            <fill color="#000000" alpha="0" />
-        </shape>
         <statetype name="buttonitem">
             <area>0,0,100%,40</area>
-            <state name="active">
-                <area>0,0,100%,40</area>
-                <textarea name="buttontext">
-                    <area>0,0,100%,100%</area>
-                    <font>fontBase</font>
-                    <cutdown>yes</cutdown>
-                    <align>allcenter</align>
-                </textarea>
-            </state>
-            <state name="selectedactive" from="active" >
-                <shape name="sel" from="shapeSelected" >
+            <state name="selectedactive">
+                <area>0,0,100%,100%</area>
+                <shape name="sele" from="shapeSelected" >
                     <area>0,0,100%,100%</area>
                 </shape>
                 <textarea name="buttontext">
@@ -174,31 +178,39 @@
                     <align>allcenter</align>
                 </textarea>
             </state>
+            <state name="active">
+                <area>0,0,100%,40</area>
+                <textarea name="buttontext">
+                    <area>0,0,100%,100%</area>
+                    <font>fontBase</font>
+                    <cutdown>yes</cutdown>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
             <state name="selectedinactive" from="active" />
         </statetype>
-        <statetype name="downscrollarrow">
+        <statetype name="upscrollarrow">
             <area>560,0,40,40</area>
-            <state type="off" />
             <state type="full">
+                <area>560,0,40,40</area>
                 <textarea name="arrow" from="basetextarea">
                     <align>allcenter</align>
                     <area>560,0,40,40</area>
-                    <font>fontLeftRightArrow</font>
                     <value>&gt;</value>
                 </textarea>
             </state>
+            <state type="off" from="full" />
         </statetype>
-        <statetype name="upscrollarrow">
+        <statetype name="downscrollarrow">
             <area>0,0,40,40</area>
-            <state type="off" />
             <state type="full">
                 <textarea name="arrow" from="basetextarea">
                     <area>0,0,40,40</area>
                     <align>allcenter</align>
-                    <font>fontLeftRightArrow</font>
                     <value>&lt;</value>
                 </textarea>
             </state>
+            <state type="off" from="full" />
         </statetype>
     </spinbox>
 
@@ -206,17 +218,24 @@
         <area>0,0,100%,100%</area>
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
-            <state name="active">
+            <state name="selected">
                 <area>0,0,100%,100%</area>
+                <shape name="background" from="shapeSelected" />
                 <textarea name="text" from="basetextarea" >
                     <align>allcenter</align>
                 </textarea>
             </state>
-            <state name="selected" from="active">
-                <shape name="background" from="shapeSelected" />
-                <textarea name="selectedText" from="text" />
+            <state name="active" from="selected" >
+                <shape name="background" >
+                    <area>0,0,0,0</area>
+                </shape>
             </state>
-            <state name="disabled" from="active" />
+            <state name="disabled" from="active">
+                <textarea name="text">
+                    <align>allcenter</align>
+                    <alpha>60</alpha>
+                </textarea>
+            </state>
             <state name="pushed" from="active" />
             <state name="selectedinactive" from="active" />
         </statetype>
@@ -227,7 +246,16 @@
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
             <shape name="border" from="basebackground">
+                <fill alpha="0" />
             </shape>
+            <state name="selected">
+                <area>0,0,100%,100%</area>
+                <shape name="selShape" from="shapeSelected" />
+                <textarea name="text" from="basetextarea" >
+                    <area>0,0,100%,100%</area>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
             <state name="active">
                 <area>0,0,100%,100%</area>
                 <textarea name="text" from="basetextarea" >
@@ -235,12 +263,6 @@
                 </textarea>
             </state>
 
-            <state name="selected" from="active" >
-                <shape name="selShape" from="shapeSelected" />
-                <textarea name="text" from="basetextarea" >
-                    <align>allcenter</align>
-                </textarea>
-            </state>
             <state name="disabled" from="active" >
             </state>
             <state name="pushed" from="active" >
@@ -251,7 +273,7 @@
     </button>
 
 
-    <button name="scheduleButton">
+    <button name="scheduleButton" from="basebutton">
         <area>0,0,60%,40</area>
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
@@ -279,43 +301,42 @@
     </button>
 
     <buttonlist name="basebuttonlist">
-        <area>0,0,600,300</area>
+        <area>0,0,100%,100%</area>
         <layout>vertical</layout>
         <wrapstyle>selection</wrapstyle>
-        <buttonarea>0,0,600,300</buttonarea>
-        <drawfrombottom>yes</drawfrombottom>
         <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
-        <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+        <triggerevent context="Global" action="BACK">LEFT</triggerevent>
+
+        <buttonarea>0,0,100%,100%</buttonarea>
         <statetype name="buttonitem">
-            <state name="active">
-                <area>0,0,600,30</area> 
+            <area>0,0,100%,100%</area>
+            <state name="selectedactive">
+                        <area>0,0,100%,100%</area>
+                <shape name="sel" from="shapeSelected" />
                 <textarea name="buttontext" from="basetextarea">
-                    <area>0,0,560,30</area>
-                    <font>fontBase</font>
-                    <align>center,vcenter</align>
+                    <area>30,0,100%-30,100%</area>
+                    <align>allcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
                 <imagetype name="buttonarrow">
-                    <area>560,0,30,30</area>
+                    <area>100%-30,0,30,30</area>
                     <textarea name="arrow" from="basetextarea">
-                        <align>right,vcenter</align>
                         <area>0,0,30,30</area>
-                        <font>fontLeftRightArrow</font>
-                        <value>></value>
+                        <align>allcenter</align>
+                        <value>&gt;</value>
                     </textarea>
                 </imagetype>
             </state>
-            <state name="selectedactive" from="active">
-                <shape name="sel" from="shapeSelected" />
-                <textarea name="buttontext" from="basetextarea">
-                    <area>0,0,560,30</area>
-                    <align>center,vcenter</align>
-                    <cutdown>yes</cutdown>
-                </textarea>
+            <state name="selectedinactive" from="selectedactive">
+                <area>0,0,100%,100%</area>
+                <shape name="sel">
+                        <area>0,0,100%,100%</area>
+                        <fill alpha="0" />
+                </shape>
             </state>
-            <state name="selectedinactive" from="active">
-                <shape name="sel" from="shapeSelected" >
-                    <fill alpha="0" />
+            <state name="active" from="selectedactive">
+                <shape name="sel">
+                    <area>0,0,0,0</area>
                 </shape>
             </state>
 
@@ -333,27 +354,28 @@
         <buttonarea>0,0,100%,100%</buttonarea>
         <statetype name="buttonitem">
             <area>0,0,100%,30</area>
-            <state name="active">
+            <state name="selectedactive">
                 <area>0,0,100%,30</area>
-                <textarea name="buttontext" from="basetextarea">
-                    <area>15,0,100%-15,30</area>
-                    <align>right,vcenter</align>                
-                    <cutdown>yes</cutdown>
-                </textarea>
-            </state>
-            <state name="selectedactive" from="active">
                 <shape name="sel" from="shapeSelected">
                     <area>0,0,100%,30</area>
                 </shape>
                 <textarea name="buttontext" from="basetextarea">
                     <area>15,0,100%-15,30</area>
-                    <align>right,vcenter</align>                
+                    <align>allcenter</align>                
                 </textarea>
             </state>
-            <state name="selectedinactive" from="selectedactive">
-                <shape name="sel" from="shapeSelected" >
-                    <area>0,0,100%,30</area>
-                    <fill color="#000000" alpha="160" />
+
+            <state name="active">
+                <area>0,0,100%,30</area>
+                <textarea name="buttontext" from="basetextarea">
+                    <area>15,0,100%-15,30</area>
+                    <align>allcenter</align>                
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active">
+                <shape name="sel" from="basebackground" >
+                    <area>0,0,100%,100%</area>
+                    <fill color="#000000" alpha="0" />
                 </shape>
             </state>
         </statetype>
@@ -366,26 +388,6 @@
         <wrapstyle>selection</wrapstyle>
         <drawfrombottom>no</drawfrombottom>
 
-        <statetype name="buttonitem">
-            <state name="active">
-                <area>0,0,600,30</area>
-                <textarea name="buttontext">
-                    <area>25,0,100%-25,100%</area>
-                    <align>left,vcenter</align>                
-                    <cutdown>yes</cutdown>
-                </textarea>
-            </state>
-            <state name="selectedactive" from="active">
-                <shape name="sel" from="shapeSelected" >
-                </shape>
-            </state>
-            <state name="selectedinactive" from="selectedactive">
-                <shape name="sel" from="shapeSelected" >
-                    <area>0,0,100%,100%</area>
-                    <fill color="#000000" alpha="160" />
-                </shape>
-            </state>
-        </statetype>
     </buttonlist>
 
 
@@ -459,46 +461,41 @@
 
 
     <checkbox name="checkboxBase">
-        <area>0,0,100%,40</area>
-        <statetype name="background">
-            <area>0,0,100%,40</area>
-            <state name="active">
-                <area>0,0,100%,40</area>
-            </state>
-            <state name="selected" from="active">
-                <shape name="sel" from="shapeSelected" >
-                    <area>0,0,100%,40</area>
-                </shape>
-                <textarea name="seltext" from="basetextarea" >
-                    <area>100,0,100%,40</area>
-                    <align>vcenter</align>
-                </textarea>
-            </state>
-            <state name="disabled" />
-        </statetype>
-        <textarea name="text" from="basetextarea" >
-            <area>100,0,100%,40</area>
-            <align>vcenter</align>
-        </textarea>
-        <statetype name="checkstate">
-            <area>0,0,30,40</area>
-            <shape name="box" from="basebackground" >
-                <area>0,0,40,40</area>
-                <fill color="#000000" alpha="0" />
-                <line color="#FFFFFF" alpha="255" width="2"/>
-            </shape>
-            <state type="off" />
-            <state type="half">
-            </state>
-            <state type="full">
-                <textarea name="X" from="basetextarea" >
-                    <area>5,0,30,40</area>
-                    <value>X</value>
-                    <align>allcenter</align>
-                </textarea>
-            </state>
-        </statetype>
-
+        <!-- TODO checkbox is broken in storage options and probably everywhere else! -->
+        <area>0,0,100%,100%</area>
+             <statetype name="background">
+                 <area>0,0,100%,100%</area>
+                 <state name="active">
+                     <textarea name="text" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <align>allcenter</align>
+                        <value>dummy text override in deived checkbox!</value>
+                     </textarea>
+                 </state>
+                 <state name="selected" from="active">
+                     <shape name="sel" from="shapeSelected" />
+                     <textarea name="text" from="basetextarea" />
+                 </state>
+                 <state name="disabled" />
+             </statetype>
+             <statetype name="checkstate">
+                 <area>40,0,30,100%</area>
+                 <shape name="box" from="basebackground" >
+                     <area>35,0,40,40</area>
+                     <fill color="#000000" alpha="0" />
+                     <line color="#FFFFFF" alpha="255" width="2"/>
+                 </shape>
+                 <state type="off" />
+                 <state type="half">
+                 </state>
+                 <state type="full">
+                     <textarea name="X" from="basetextarea" >
+                         <area>40,0,30,100%</area>
+                         <value>X</value>
+                        <align>allcenter</align>
+                     </textarea>
+                 </state>
+             </statetype>
     </checkbox>
 
 
@@ -510,20 +507,8 @@
     </window>
 
 
-    <shape name="popupBg" >
-        <area>0,0,100%,100%</area>
-        <shape name="popupBackground" from="basebackground" >
-            <fill color="SteelBlue" alpha="230" />
-            <area>0,0,100%,100%</area>
-        </shape>
-        <shape name="pupBackground" from="basebackground" >
-            <fill alpha="255" />
-            <fill color="#000000" alpha="120" />
-            <area>0,0,100%,100%</area>
-        </shape>
-    </shape>
 
-    <buttonlist name="basePopuButtonlist">
+    <buttonlist name="basePopuButtonlist" from="basebuttonlist">
         <!-- Todo: start with 0,0,100%,100%  -->
         <area>0,0,100%,100%</area>
         <layout>vertical</layout>
@@ -553,7 +538,7 @@
                 <area>0,0,100%,30</area>
                 <textarea name="buttontext" from="basetextarea">
                     <area>30,0,100%,30</area>
-                    <align>center,vcenter</align>
+                    <align>allcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
                 <imagetype name="buttonarrow">

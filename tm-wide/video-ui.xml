@@ -419,6 +419,29 @@
                 <buttonarea>0,0,1200,280</buttonarea>
                 <statetype name="buttonitem">
                     <area>0,0,600,30</area>
+                    <state name="selectedactive">
+                        <area>0,0,600,30</area>
+                        <textarea name="buttontext">
+                            <align>left,vcenter</align>
+                        </textarea>
+                    </state>
+                    <state name="selectedinactive">
+                        <area>0,0,600,30</area>
+                        <shape name="sel">
+                            <area>0,0,100%,100%</area>
+                            <fill alpha="0" />
+                        </shape>
+                        <textarea name="buttontext">
+                            <align>left,vcenter</align>
+                        </textarea>
+                    </state>
+                    <state name="active">
+                        <area>0,0,600,30</area>
+                        <textarea name="buttontext">
+                            <align>left,vcenter</align>
+                        </textarea>
+                    </state>
+
                 </statetype>
             </buttonlist>
         </buttontree>
