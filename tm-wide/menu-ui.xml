@@ -6,6 +6,11 @@
         <clock name="mclock" from="baseclock">
              <area>880,40,400,40</area>
         </clock>
+        
+        <!--        <checkbox name="ruleactive" from="checkboxBase" >
+            <area>290,600,700,40</area>
+        </checkbox>
+        -->
 
         <buttonlist name="menu" from="basebuttonlist">
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
@@ -36,6 +41,8 @@
                         <alpha>255</alpha>
                     </textarea>
                 </state>
+                <state name="selectedinactive" from="active"/>
+                <state name="inactive" from="active"/>
             </statetype>
         </buttonlist>
     </window>
