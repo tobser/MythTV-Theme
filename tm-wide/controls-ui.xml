@@ -56,6 +56,9 @@
                 <state name="active">
                     <area>0,0,100%,30</area>
                 </state>
+                <state name="inactive">
+                    <area>0,0,100%,30</area>
+                </state>
             </statetype>
 
         </buttonlist>

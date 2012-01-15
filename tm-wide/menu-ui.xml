@@ -6,9 +6,17 @@
         <clock name="mclock" from="baseclock">
              <area>880,40,400,40</area>
         </clock>
-        
-        <!--        <checkbox name="ruleactive" from="checkboxBase" >
+
+        <!--
+        <checkbox name="ruleactive" from="checkboxBase" >
             <area>290,600,700,40</area>
+            <statetype name="background">
+                <state name="selected">
+                    <textarea name="text">
+                        <value>new text</value>
+                    </textarea>
+                </state>
+            </statetype>
         </checkbox>
         -->
 

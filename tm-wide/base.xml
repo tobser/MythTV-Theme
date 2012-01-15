@@ -328,8 +328,11 @@
             </state>
             <state name="selectedinactive" from="selectedactive">
                 <area>0,0,100%,100%</area>
-                <shape name="sel">
-                    <fill alpha="0" />
+                <shape name="sel" >
+                    <area>0,0,0,0</area>
+                </shape>
+                <shape name="sel2" from="basebackground" >
+                    <fill color="#000000" alpha="0" />
                 </shape>
             </state>
             <state name="active" from="selectedactive">
