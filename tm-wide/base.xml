@@ -163,10 +163,10 @@
     </textedit>
 
     <spinbox name="spinboxBase">
-        <area>0,0,600,40</area>
+        <area>0,0,100%,100%</area>
         <layout>horizontal</layout>
         <statetype name="buttonitem">
-            <area>0,0,100%,40</area>
+            <area>0,0,100%,100%</area>
             <state name="selectedactive">
                 <area>0,0,100%,100%</area>
                 <shape name="sele" from="shapeSelected" >
@@ -176,27 +176,25 @@
                     <area>0,0,100%,100%</area>
                     <font>fontBase</font>
                     <cutdown>yes</cutdown>
+                    <value>test text</value>
                     <align>allcenter</align>
                 </textarea>
             </state>
-            <state name="active">
+            <state name="active" from="selectedactive">
                 <area>0,0,100%,40</area>
-                <textarea name="buttontext">
-                    <area>0,0,100%,100%</area>
-                    <font>fontBase</font>
-                    <cutdown>yes</cutdown>
-                    <align>allcenter</align>
-                </textarea>
+                <shape name="sele">
+                    <area>0,0,0,0</area>
+                </shape>
             </state>
             <state name="selectedinactive" from="active" />
         </statetype>
         <statetype name="upscrollarrow">
-            <area>560,0,40,40</area>
+            <area>100%-40,0,40,40</area>
             <state type="full">
-                <area>560,0,40,40</area>
+                <area>100%-40,0,40,40</area>
                 <textarea name="arrow" from="basetextarea">
+                    <area>0,0,40,40</area>
                     <align>allcenter</align>
-                    <area>560,0,40,40</area>
                     <value>&gt;</value>
                 </textarea>
             </state>
