@@ -497,7 +497,31 @@
 
         <checkbox name="autoexpire" from="checkboxBase">
             <area>290,600,700,40</area>
-         </checkbox>
+            <statetype name="background">
+                <state name="selected">
+                    <textarea name="text">
+                        <value>Allow recordings to expire?</value>
+                    </textarea>
+                </state>
+                <state name="active">
+                    <textarea name="text">
+                        <value>Allow recordings to expire?</value>
+                    </textarea>
+                </state>
+                <state name="disabled">
+                    <textarea name="text">
+                        <value>Allow recordings to expire?</value>
+                    </textarea>
+                </state>
+            </statetype>
+            <statetype name="checkstate">
+                <state type="full">
+                    <textarea name="X">
+                        <value>X</value>
+                    </textarea>
+                </state>
+            </statetype>
+        </checkbox>
 
          <button name="back" from="basebuttonBorder">
              <area>570,660,140,40</area>
@@ -579,6 +603,30 @@
         </spinbox>
         <checkbox name="ruleactive" from="checkboxBase" >
             <area>290,600,700,40</area>
+            <statetype name="background">
+                <state name="selected">
+                    <textarea name="text">
+                        <value>Recording Rule Active</value>
+                    </textarea>
+                </state>
+                <state name="active">
+                    <textarea name="text">
+                        <value>Recording Rule Active</value>
+                    </textarea>
+                </state>
+                <state name="disabled">
+                    <textarea name="text">
+                        <value>Recording Rule Active</value>
+                    </textarea>
+                </state>
+            </statetype>
+            <statetype name="checkstate">
+                <state type="full">
+                    <textarea name="X">
+                        <value>X</value>
+                    </textarea>
+                </state>
+            </statetype>
         </checkbox>
 
          <button name="back" from="basebuttonBorder">
