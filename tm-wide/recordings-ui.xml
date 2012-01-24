@@ -126,8 +126,12 @@
             </statetype>
         </buttonlist>
 
+        <shape name="shapeSelected" from="popupBg">
+            <area>25,410,885,40</area>
+        </shape>
+
         <textarea name="title" from="basetextarea">
-            <area>25,410,700,40</area>
+            <area>25,410,885,40</area>
             <font>fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>vcenter</align>
