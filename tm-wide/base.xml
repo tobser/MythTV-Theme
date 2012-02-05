@@ -116,7 +116,6 @@
 
         <shape name="clockBox" from="basebackground" >
             <area>980,0,300,40</area>
-            <fill color="#000000" alpha="80" />
         </shape>
         <clock name="mclock" from="baseclock">
             <area>980,0,300,40</area>
@@ -615,21 +614,22 @@
             <triggerevent context="Global" action="BACK">LEFT</triggerevent>
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
             <statetype name="buttonitem">
+                <area>0,0,100%,30</area>
                 <state name="active">
+                    <area>0,0,100%,30</area>
                     <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
+                    <area>0,0,100%,30</area>
                     <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
+                    <area>0,0,100%,30</area>
                     <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
                         <align>allcenter</align>
                     </textarea>
                 </state>

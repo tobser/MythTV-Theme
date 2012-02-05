@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="status">
+
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>System Status</value>
+            </textarea>
+        </shape>
+
+        <shape name="categoryBackground" from="basebackground">
+            <area>20,50,100%-20,60</area>
+        </shape>
+
+
+        <buttonlist name="category" from="basebuttonlist">
+            <area>20,50,100%-20,60</area>
+            <layout>horizontal</layout>
+            <wrapstyle>selection</wrapstyle>
+            <spacing>0</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="selectedactive">
+                    <area>0,0,20%,60</area>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="active" >
+                    <area>0,0,20%,60</area>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                
+                <state name="selectedinactive">
+                    <area>0,0,20%,60</area>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                
+                <state name="inactive">
+                    <area>0,0,20%,60</area>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="list_background" from="basebackground">
+            <area>20,115,100%-20,390</area>
+        </shape>
+
+        <buttonlist name="log" from="basebuttonlist">
+            <area>20,115,100%-20,390</area>
+            <buttonarea>0,0,100%+5,100%</buttonarea>
+            <statetype name="buttonitem">
+                <state name="inactive">
+                    <area>0,0,100%,30</area>
+                </state>
+                <state name="active" from="inactive" />
+                <state name="selectedinactive">
+                    <area>0,0,100%,30</area>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,100%,30</area>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="helplabel">
+            <area>30,500,100%-30,60</area>
+            <value>Details:</value>
+            <align>vcenter</align>
+            <font>fontBaseLarge</font>
+        </textarea>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>40,550,100%-40,160</area>
+            <value>This screen displays the status of various system components</value>
+            <multiline>yes</multiline>
+            <font>fontDescription</font>
+        </textarea>
+
+    </window>
+
+</mythuitheme>
+
