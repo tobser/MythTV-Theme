@@ -51,12 +51,20 @@
             </statetype>
         </buttonlist>
 
+        <textarea name="justhelptext">
+            <area>30,110,100%-30,60</area>
+            <template>%1:</template>
+            <align>vcenter</align>
+            <multiline>yes</multiline>
+            <font>fontDescription</font>
+        </textarea>
+
         <shape name="list_background" from="basebackground">
-            <area>20,115,100%-20,390</area>
+            <area>20,170,100%-20,335</area>
         </shape>
 
         <buttonlist name="log" from="basebuttonlist">
-            <area>20,115,100%-20,390</area>
+            <area>20,170,100%-20,335</area>
             <buttonarea>0,0,100%+5,100%</buttonarea>
             <statetype name="buttonitem">
                 <state name="inactive">
