@@ -455,21 +455,17 @@
 
     <checkbox name="checkboxBase">
         <area>0,0,100%,100%</area>
+
         <statetype name="background">
             <area>0,0,100%,100%</area>
             <state name="selected">
                 <area>0,0,100%,100%</area>
                 <shape name="cboxSel" from="shapeSelected" />
                 <shape name="smallBox" from="basebackground" >
-                    <area>30,0,40,40</area>
+                    <area>0,0,40,40</area>
                     <fill color="#000000" alpha="0" />
                     <line color="#FFFFFF" alpha="255" width="2"/>
                 </shape>
-                <textarea name="text" from="basetextarea" >
-                    <area>0,0,100%,100%</area>
-                    <align>allcenter</align>
-                    <value>dummy text</value>
-                </textarea>
             </state>
             <state name="active" from="selected">
                 <shape name="cboxSel">
@@ -485,9 +481,8 @@
                 </textarea>
             </state>
         </statetype>
-
         <statetype name="checkstate">
-            <area>35,0,30,100%</area>
+            <area>5,0,30,100%</area>
             <state type="full">
                 <area>0,0,30,100%</area>
                 <textarea name="X" from="basetextarea" >
@@ -499,6 +494,7 @@
             <state type="off" />
             <state type="half" from="full" />
         </statetype>
+
     </checkbox>
 
 

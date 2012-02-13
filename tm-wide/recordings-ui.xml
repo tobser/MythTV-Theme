@@ -510,18 +510,9 @@
             <value>Change View</value>
         </textarea>
 
+
         <checkbox name="titles" from="checkboxBase" >
             <area>440,230,400,40</area>
-            <statetype name="background">
-                <area>0,0,400,40</area>
-                <state name="active">
-                    <area>0,0,400,40</area>
-                </state>
-                <state name="selected" from="active">
-                    <shape name="sel" from="shapeSelected" >
-                    </shape>
-                </state>
-            </statetype>
             <textarea name="text" from="basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Titles</value>
@@ -537,6 +528,7 @@
                 <align>vcenter</align>
             </textarea>
         </checkbox>
+
         <checkbox name="recgroups" from="titles" >
             <area>440,320,400,40</area>
             <textarea name="text" from="basetextarea" >
@@ -545,6 +537,7 @@
                 <align>vcenter</align>
             </textarea>
         </checkbox>
+
         <checkbox name="watchlist" from="titles" >
             <area>440,365,400,40</area>
             <textarea name="text" from="basetextarea" >
