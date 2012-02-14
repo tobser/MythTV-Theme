@@ -790,4 +790,125 @@
         </webbrowser>
      </window>
 
+    <window name="metadataoptions">
+        <!-- <imagetype name="fanart">
+            <area>0,0,100%,100%</area>
+            <preserveaspect>no</preserveaspect>
+            <alpha>60</alpha>
+        </imagetype>
+       --> 
+        <shape name="mytitle" from="titleBar" >
+            <textarea name="pagetitle">
+               <value>Metadata Options</value>
+            </textarea>
+        </shape>
+        <shape name="rightBox" from="basebackground" >
+            <area>0,37,100%,100%</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <textarea name="mInet" from="basetextarea">
+            <area>20,70,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Intref</value>
+        </textarea>
+        <textedit name="inetref_edit" from="basetextedit">
+            <area>120,70,390,40</area>
+        </textedit>
+
+
+        <textarea name="mSeason" from="basetextarea">
+            <area>20,125,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align> <value>Season</value>
+        </textarea>
+        <spinbox name="season_spinbox" from="spinboxBase">
+            <area>120,125,120,40</area>
+            <layout>horizontal</layout>
+        </spinbox>
+
+        <textarea name="mEpi" from="basetextarea">
+            <area>270,125,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Episode</value>
+        </textarea>
+        <spinbox name="episode_spinbox" from="spinboxBase">
+            <area>370,125,140,40</area>
+            <layout>horizontal</layout>
+        </spinbox>
+        
+        <button name="query_button" from="basebuttonBorder">
+            <area>800,90,240,40</area>
+            <value>Query All</value>
+        </button>
+
+
+    <!-- fan art -->
+        <shape name="fanartBgShape" from="basebackground">
+            <area>16,180,400,500</area>
+            <fill color="#000000" alpha="0" />
+        </shape>
+        <button name="local_fanart_button" from="basebuttonBorder">
+            <area>41,180,350,40</area>
+            <value>Find Local Fanart</value>
+        </button>
+        <button name="online_fanart_button" from="basebuttonBorder">
+            <area>41,220,350,40</area>
+            <value>Find Online Fanart</value>
+        </button>
+
+	    <imagetype name="fanart">
+            <area>21,260,390,415</area>
+            <preserveaspect>yes</preserveaspect>
+            <alpha>255</alpha>
+        </imagetype>
+        
+        
+    <!-- cover art -->
+        <shape name="coverBg" from="fanartBgShape">
+            <area>432,180,400,500</area>
+        </shape>
+        <button name="local_coverart_button" from="basebuttonBorder">
+            <area>457,180,350,40</area>
+            <value>Find Local Coverart</value>
+        </button>
+        <button name="online_coverart_button" from="basebuttonBorder">
+            <area>457,220,350,40</area>
+            <value>Find Online Coverart</value>
+        </button>
+	    <imagetype name="coverart">
+            <area>437,260,390,415</area>
+            <preserveaspect>yes</preserveaspect>
+            <alpha>255</alpha>
+        </imagetype>
+
+
+    <!-- banner art -->
+        <shape name="bannerBG" from="fanartBgShape">
+            <area>848,180,400,500</area>
+        </shape>
+
+        <button name="local_banner_button" from="basebuttonBorder">
+            <area>873,180,350,40</area>
+            <value>Find Local Bannerart</value>
+        </button>
+        <button name="online_banner_button" from="basebuttonBorder">
+            <area>873,220,350,40</area>
+            <value>Find Online Bannerart</value>
+        </button>
+	    <imagetype name="banner">
+            <area>853,260,390,415</area>
+            <preserveaspect>yes</preserveaspect>
+            <alpha>255</alpha>
+        </imagetype>
+        
+
+        <button name="back" from="basebuttonBorder">
+            <area>520,680,240,40</area>
+            <value>Back</value>
+        </button>
+    </window>
+
 </mythuitheme>
