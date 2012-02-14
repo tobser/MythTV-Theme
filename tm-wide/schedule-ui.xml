@@ -497,29 +497,23 @@
 
         <checkbox name="autoexpire" from="checkboxBase">
             <area>290,600,700,40</area>
-            <statetype name="background">
-                <state name="selected">
-                    <textarea name="text">
-                        <value>Allow recordings to expire?</value>
-                    </textarea>
-                </state>
-                <state name="active">
-                    <textarea name="text">
-                        <value>Allow recordings to expire?</value>
-                    </textarea>
-                </state>
-                <state name="disabled">
-                    <textarea name="text">
-                        <value>Allow recordings to expire?</value>
-                    </textarea>
-                </state>
-            </statetype>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                <value>Autoexpire</value>
+                <align>allcenter</align>
+            </textarea>
             <statetype name="checkstate">
+                <area>5,0,30,100%</area>
                 <state type="full">
-                    <textarea name="X">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
                         <value>X</value>
+                        <align>allcenter</align>
                     </textarea>
                 </state>
+                <state type="off" />
+                <state type="half" from="full" />
             </statetype>
         </checkbox>
 
@@ -533,7 +527,7 @@
     <area>0,0,100%,100%</area>
         <shape name="mytitle" from="titleBar" >
             <textarea name="pagetitle">
-                <value>Storage Options</value>
+                <value>Schedule Options</value>
             </textarea>
         </shape>
 
@@ -601,31 +595,26 @@
             <area>290,560,700,40</area>
             <helptext />
         </spinbox>
+
         <checkbox name="ruleactive" from="checkboxBase" >
             <area>290,600,700,40</area>
-            <statetype name="background">
-                <state name="selected">
-                    <textarea name="text">
-                        <value>Recording Rule Active</value>
-                    </textarea>
-                </state>
-                <state name="active">
-                    <textarea name="text">
-                        <value>Recording Rule Active</value>
-                    </textarea>
-                </state>
-                <state name="disabled">
-                    <textarea name="text">
-                        <value>Recording Rule Active</value>
-                    </textarea>
-                </state>
-            </statetype>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                <value>Recording Rule Active</value>
+                <align>allcenter</align>
+            </textarea>
             <statetype name="checkstate">
+                <area>5,0,30,100%</area>
                 <state type="full">
-                    <textarea name="X">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
                         <value>X</value>
+                        <align>allcenter</align>
                     </textarea>
                 </state>
+                <state type="off" />
+                <state type="half" from="full" />
             </statetype>
         </checkbox>
 
@@ -639,13 +628,13 @@
         <area>0,0,100%,100%</area>
         <shape name="mytitle" from="titleBar" >
             <textarea name="pagetitle">
-                <value>Postprocessing Options</value>
+                <value>Postprocessing</value>
             </textarea>
         </shape>
 
         <!-- program details: -->
         <shape name="asdf" from="basebackground" >
-            <area>100,36,1080,320</area>
+            <area>100,36,1080,280</area>
         </shape>
 
         <textarea name="title" from="basetextarea">
@@ -664,52 +653,115 @@
         </textarea>
 
         <textarea name="description" from="basetextarea">
-            <area>130,130,1040,210</area>
+            <area>130,130,1040,170</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         <shape name="buttonsBg" from="basebackground">
-            <area>250,352,780,360</area>
+            <area>250,312,780,400</area>
         </shape>
 
         <!-- Options: -->
          <checkbox name="autocommflag" from="checkboxBase" >
+            <area>290,320,700,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                 <value>Commercial Flag new recordings</value>
+                <align>allcenter</align>
+            </textarea>
+            <statetype name="checkstate">
+                <area>5,0,30,100%</area>
+                <state type="full">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <value>X</value>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state type="off" />
+                <state type="half" from="full" />
+            </statetype>
+        </checkbox>
+
+         <checkbox name="metadatalookup" from="autocommflag" >
             <area>290,360,700,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                <align>allcenter</align>
+                <value>Do Metadata lookup</value>
+            </textarea>
         </checkbox>
-         <checkbox name="autotranscode" from="checkboxBase" >
+        
+
+         <checkbox name="autotranscode" from="autocommflag" >
             <area>290,400,700,40</area>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                <align>allcenter</align>
+                <value>Transcode new recordings</value>
+            </textarea>
         </checkbox>
+        
          <buttonlist name="transcodeprofile" from="scheduleList" >
             <area>290,440,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
+            <textarea name="text" from="basetextarea" >
+                <area>50,0,100%-50,100%</area>
+                <align>allcenter</align>
+            </textarea>
         </buttonlist>
-         <checkbox name="userjob1" from="checkboxBase" >
+
+        <checkbox name="userjob1" from="checkboxBase" >
             <area>290,480,700,40</area>
-            <statetype name="background">
-                <state name="active">
-                    <textarea name="text">
-                        <value>userjob1</value>
-                    </textarea>
-                </state>
-            </statetype>
             <statetype name="checkstate">
+                <area>5,0,30,100%</area>
                 <state type="full">
-                    <textarea name="X">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
                         <value>X</value>
+                        <align>allcenter</align>
                     </textarea>
                 </state>
+                <state type="off" />
+                <state type="half" from="full" />
             </statetype>
         </checkbox>
-         <checkbox name="userjob2" from="checkboxBase" >
+        <textarea name="userjob1text" from="basetextarea" >
+            <area>290,480,700,40</area>
+            <align>allcenter</align>
+            <value>Userjob 1</value>
+        </textarea>
+
+
+        <checkbox name="userjob2" from="userjob1" >
             <area>290,520,700,40</area>
         </checkbox>
-         <checkbox name="userjob3" from="checkboxBase" >
+        <textarea name="userjob2text" from="basetextarea" >
+            <area>290,520,700,40</area>
+            <align>allcenter</align>
+            <value>Userjob 2</value>
+        </textarea>
+
+        <checkbox name="userjob3" from="userjob1" >
             <area>290,560,700,40</area>
         </checkbox>
-         <checkbox name="userjob4" from="checkboxBase" >
+        <textarea name="userjob3text" from="basetextarea" >
+            <area>290,560,700,40</area>
+            <align>allcenter</align>
+            <value>Userjob 3</value>
+        </textarea>
+
+        <checkbox name="userjob4" from="userjob1" >
             <area>290,600,700,40</area>
         </checkbox>
+        <textarea name="userjob4text" from="basetextarea" >
+            <area>290,600,700,40</area>
+            <align>allcenter</align>
+            <value>Userjob 4</value>
+        </textarea>
 
          <button name="back" from="basebuttonBorder">
              <area>570,660,140,40</area>
