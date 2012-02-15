@@ -2,62 +2,112 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
+    <!-- "I"-> Video Info -> View Cast --> 
     <window name="castpopup">
-        <area>0,42,1280,515</area>
-        <shape name="fade" from="basefadebackground" />
+        <area>320,110,640,500</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,640,500</area>
+        </shape>
 
         <textarea name="label" from="basetextarea">
-            <area>889,93,378,125</area>
+            <area>0,0,640,80</area>
             <align>allcenter</align>
-            <font>fontBase</font>
+            <font>fontBaseLarge</font>
             <multiline>yes</multiline>
             <value>Cast Members</value>
         </textarea>
 
-        <buttonlist name="cast">
-            <area>900,238,364,307</area>
-            <buttonarea>0,0,378,350</buttonarea>
-            <spacing>3</spacing>
+        <buttonlist name="cast" from="basePopuButtonlist">
+            <area>0,100,100%,400</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
             <wrapstyle>selection</wrapstyle>
-            <statetype name="buttonitem">
-                <area>0,0,367,53</area>
-                <state name="active">
-                    <area>0,0,367,53</area>
-                    <textarea name="buttontext">
-                        <area>18,0,324,50</area>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedinactive" from="active" />
-                <state name="selectedactive" from="active">
-                    <textarea name="buttontext">
-                    </textarea>
-                </state>
-            </statetype>
         </buttonlist>
     </window>
 
+    <!-- "I"-> Video Info -> View Full Plot --> 
     <window name="descriptionpopup">
-        <area>0,42,1280,515</area>
-        <shape name="fade" from="basefadebackground" />
+        <area>320,110,640,500</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,640,500</area>
+        </shape>
 
         <textarea name="label" from="basetextarea">
-            <area>889,93,378,125</area>
+            <area>0,0,640,80</area>
             <align>allcenter</align>
+            <font>fontBaseLarge</font>
             <multiline>yes</multiline>
             <value>Full Plot</value>
         </textarea>
 
         <textarea name="description" from="basetextarea">
-            <area>903,242,350,307</area>
+            <area>20,100,100%-20,380</area>
             <multiline>yes</multiline>
+            <align>vcenter, justify</align>
         </textarea>
+    </window>
+
+    <!-- "I"-> Video Info -> View Details --> 
+    <window name="itemdetailpopup">
+        <area>100,36,1080,100%-36</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+        <imagetype name="banner" >
+            <area>2,5,1081,200</area>
+            <preserveaspect>no</preserveaspect>
+            <alpha>255</alpha>
+        </imagetype> 
+        <shape name="asdf" from="basebackground" >
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>20,205,100%-20,60</area>
+            <font>fontBaseLarge</font>
+            <align>vcenter</align>
+        </textarea>
+        <textarea name="episode" from="basetextarea">
+            <area>20,260,100%,40</area>
+            <font>fontDescription</font>
+            <template>%SEASON%%x|EPISODE| % %SUBTITLE%</template>
+            <value></value>
+        </textarea>
+
+        <textarea name="length" from="basetextarea">
+            <area>760,260,300,40</area>
+            <font>fontDescription</font>
+            <align>right</align>
+        </textarea>
+
+ 
+        <textarea name="genres" from="basetextarea">
+            <area>20,300,100%-20,35</area>
+            <template>%GENRES% %COUNTRIES% %YEAR%%, Userrating: |USERRATING%%, Directed by: |DIRECTOR%</template>
+            <font>fontBaseTiny</font>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>20,335,100%-20,290</area>
+            <multiline>yes</multiline>
+            <align>justify</align>
+            <font>fontDescription</font>
+            <template>%DESCRIPTION% \n\n%Cast: |CAST%</template>
+        </textarea>
+
+        <button name="play_button" from="basebutton">
+            <area>50%-120,100%-45,120,40</area>
+            <value>Play</value>
+        </button>
+
+        <button name="done_button" from="basebutton">
+            <area>50%,100%-45,120,40</area>
+            <value>Done</value>
+        </button>
     </window>
 
     <window name="filter">
         <area>0,42,1280,555</area>
 
-        <shape name="fade" from="basefadebackground" />
 
         <textarea name="title" from="basetextarea">
             <area>251,70,774,40</area>
@@ -506,7 +556,6 @@
 
     <window name="file_associations">
         <area>0,42,1280,515</area>
-        <shape name="fade" from="basefadebackground" />
 
         <textarea name="extension_text" from="basetextarea">
             <area>300,97,200,30</area>
@@ -562,7 +611,7 @@
 
     </window>
 
-    <window name="edit_metadata">
+   <window name="edit_metadata">
         <textarea name="title_text" from="basetextarea">
             <area>150,80,250,40</area>
             <value>Title:</value>
@@ -779,60 +828,10 @@
         </button>
     </window>
 
-    <window name="itemdetailpopup">
-        <area>0,42,1280,515</area>
-        <shape name="fade" from="basefadebackground" />
-
-        <textarea name="title" from="basetextarea">
-            <area>270,85,455,35</area>
-            <font>fontBaseLarge</font>
-        </textarea>
-
-        <textarea name="description" from="basetextarea">
-            <area>270,165,455,220</area>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <textarea name="cast" from="basetextarea">
-            <area>270,385,455,50</area>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <textarea name="dirlbl" from="basetextarea">
-            <area>270,135,120,35</area>
-            <value>Directed by:</value>
-            <align>left</align>
-        </textarea>
-
-        <textarea name="director" from="basetextarea">
-            <area>405,135,250,35</area>
-        </textarea>
-
-        <textarea name="year" from="basetextarea">
-            <area>270,445,80,35</area>
-        </textarea>
-
-        <textarea name="length" from="basetextarea">
-            <area>447,445,278,35</area>
-            <align>right</align>
-        </textarea>
-
-        <button name="done_button" from="basebutton">
-            <position>363,495</position>
-            <value>Done</value>
-        </button>
-
-        <button name="play_button" from="basebutton">
-            <position>693,495</position>
-            <value>Play</value>
-        </button>
-
-    </window>
 
     <window name="metadatasettings">
         <area>0,42,1280,555</area>
 
-        <shape name="fade" from="basefadebackground" />
 
         <textarea name="title" from="basetextarea">
             <area>251,70,774,90</area>
@@ -881,7 +880,7 @@
             <align>left,vcenter</align>
         </textarea>
 
-        <spinbox name="trailernum" from="basemediumspinbox">
+        <spinbox name="trailernum" from="spinboxBase">
             <position>435,450</position>
             <template type="zero">Play %n trailer(s)</template>
             <template type="positive">Play %n trailer(s)</template>
