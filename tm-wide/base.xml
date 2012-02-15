@@ -524,7 +524,7 @@
                 <area>0,0,100%,30</area>
                 <shape name="sel" from="shapeSelected" />
                 <textarea name="buttontext" from="basetextarea">
-                    <area>30,0,100%,30</area>
+                    <area>30,0,100%-30,30</area>
                     <align>allcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
