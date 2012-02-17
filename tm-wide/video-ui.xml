@@ -611,221 +611,358 @@
 
     </window>
 
+   <!-- "I"-> Change Video Details -> Edit Details --> 
    <window name="edit_metadata">
-        <textarea name="title_text" from="basetextarea">
-            <area>150,80,250,40</area>
-            <value>Title:</value>
-            <align>right,top</align>
-        </textarea>
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Videolist</value>
+            </textarea>
+        </shape>
 
-        <textarea name="subtitle_text" from="basetextarea">
-            <area>150,138,250,40</area>
-            <value>Subtitle:</value>
-            <align>right,top</align>
-        </textarea>
+        <shape name="topBox" from="basebackground" >
+            <area>0,36,100%,100%</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
 
-        <textarea name="season_text" from="basetextarea">
-            <area>200,185,250,40</area>
-            <value>Season:</value>
-            <align>right,top</align>
+        <textarea name="mTitle" from="basetextarea">
+            <area>40,70,100,40</area>
+            <font>fontBase</font>
+            <align>vcenter</align>
+            <value>Title</value>
         </textarea>
-
-        <textarea name="episode_text" from="basetextarea">
-            <area>520,185,150,40</area>
-            <value>Episode:</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="category_text" from="title_text">
-            <area>520,232,150,40</area>
-            <align>right</align>
-            <value>Category:</value>
-        </textarea>
-
-        <textarea name="level_text" from="title_text">
-            <area>120,232,200,40</area>
-            <align>right</align>
-            <value>Parental Control:</value>
-        </textarea>
-
-        <textarea name="child_text" from="title_text">
-            <area>120,277,200,40</area>
-            <align>right</align>
-            <value>File to Always Play Next:</value>
-        </textarea>
-
-        <textarea name="browse_text" from="title_text">
-            <area>570,272,280,40</area>
-            <align>left</align>
-            <value>Include while Browsing:</value>
-        </textarea>
-
-        <textarea name="watched_text" from="title_text">
-            <area>570,318,280,40</area>
-            <align>left</align>
-            <value>Item has been Watched:</value>
-        </textarea>
-
-        <textarea name="coverart_text_label" from="title_text">
-            <position>200,358</position>
-            <value>Cover Art:</value>
-        </textarea>
-
-        <textarea name="screenshot_text_label" from="title_text">
-            <position>200,387</position>
-            <value>Screenshot:</value>
-        </textarea>
-
-        <textarea name="banner_text_label" from="title_text">
-            <position>200,416</position>
-            <value>Banner:</value>
-        </textarea>
-
-        <textarea name="fanart_text_label" from="title_text">
-            <position>200,445</position>
-            <value>Fanart:</value>
-        </textarea>
-
-        <textarea name="trailer_text_label" from="title_text">
-            <position>200,477</position>
-            <value>Trailer:</value>
-        </textarea>
-
-        <textarea name="player_text" from="title_text">
-            <position>150,517</position>
-            <value>Unique Player Command:</value>
-        </textarea>
-
         <textedit name="title_edit" from="basetextedit">
-            <position>410,70</position>
+            <area>120,70,500,40</area>
         </textedit>
 
+        <textarea name="mSubtitle" from="basetextarea">
+            <area>40,125,100,40</area>
+            <font>fontBase</font>
+            <align>vcenter</align>
+            <value>Subitle</value>
+        </textarea>
         <textedit name="subtitle_edit" from="basetextedit">
-            <position>410,126</position>
+            <area>120,125,500,40</area>
         </textedit>
 
-        <spinbox name="season" from="basespinbox">
-            <position>460,181</position>
+        <textarea name="mSeason" from="basetextarea">
+            <area>40,180,100,40</area>
+            <font>fontBase</font>
+            <align>vcenter</align> 
+            <value>Season</value>
+        </textarea>
+        <spinbox name="season" from="spinboxBase">
+            <area>120,180,120,40</area>
+            <layout>horizontal</layout>
         </spinbox>
 
-        <spinbox name="episode" from="basespinbox">
-            <position>680,181</position>
+        <textarea name="mEpi" from="basetextarea">
+            <area>270,180,100,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Episode</value>
+        </textarea>
+        <spinbox name="episode" from="spinboxBase">
+            <area>370,180,140,40</area>
+            <layout>horizontal</layout>
         </spinbox>
 
-        <buttonlist name="level_select" from="baseselector">
-            <position>330,225</position>
+        <textedit name="description_edit" from="basetextedit">
+            <area>640,70,600,150</area>
+            <statetype name="background">
+                <area>0,0,100%,150</area>
+                <state name="active">
+                    <area>0,0,100%,150</area>
+                </state>
+                <state name="selected" from="active">
+                    <area>0,0,100%,150</area>
+                    <shape name="foo">
+                        <area>0,0,100%,150</area>
+                    </shape>
+                </state>
+                <state name="inactive" from="active" />
+            </statetype>
+            <textarea name="text" from="basetextarea">
+                <area>12,10,100%-12,100%-10</area>
+                <align>left,vcenter</align>
+                <multiline>yes</multiline>
+            </textarea>
+        </textedit>
+
+        <textarea name="mInet" from="basetextarea">
+            <area>40,235,100,40</area>
+            <font>fontBase</font>
+            <align>vcenter</align>
+            <value>Intref</value>
+        </textarea>
+        <textedit name="inetref_edit" from="basetextedit">
+            <area>120,235,180,40</area>
+        </textedit>
+
+
+        <buttonlist name="level_select" from="scheduleList">
+            <area>320,235,300,40</area>
+            <buttonarea>0,0,300,40</buttonarea>
+            <layout>horizontal</layout>
+
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="active">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <template>Parental %1</template>
+                        <area>0,0,100%,40</area>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <area>0,0,100%,40</area>
+                    <shape name="act" from="shapeSelected" >
+                        <area>0,0,100%,40</area>
+                    </shape>
+                </state>
+
+
+                <state name="selectedinactive"  from="active">
+                </state>
+
+                <state name="inactive"  from="active">
+                </state>
+            </statetype>
+
+            <statetype name="upscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>0,0,40,40</area>
+                        <value>&lt;</value>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>260,0,40,40</area>
+                        <value>&gt;</value>
+                    </textarea>
+                </state>
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="category_select" from="baseselector">
-            <position>680,225</position>
+        <buttonlist name="category_select" from="level_select">
+            <area>640,235,600,40</area>
+            <buttonarea>0,0,600,40</buttonarea>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="active">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <template>Category %1</template>
+                        <area>0,0,100%,40</area>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <area>0,0,100%,40</area>
+                    <shape name="act" from="shapeSelected" >
+                        <area>0,0,100%,40</area>
+                    </shape>
+                </state>
+
+                <state name="selectedinactive"  from="active">
+                </state>
+
+                <state name="inactive"  from="active">
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>560,0,40,40</area>
+                        <value>&gt;</value>
+                    </textarea>
+                </state>
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="child_select" from="baseselector">
-            <position>330,270</position>
-        </buttonlist>
-
-        <checkbox name="browse_check" from="basecheckbox">
-            <position>835,268</position>
+        <checkbox name="watched_check" from="checkboxBase">
+            <area>40,290,260,40</area>
+            <statetype name="checkstate">
+                <area>5,0,30,100%</area>
+                <state type="full">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <value>X</value>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state type="off" />
+                <state type="half" from="full" />
+            </statetype>
         </checkbox>
+        <textarea name="watched_t" from="basetextarea">
+            <area>75,290,190,40</area>
+            <font>fontBase</font>
+            <align>allcenter</align>
+            <value>Watched</value>
+        </textarea>
 
-        <checkbox name="watched_check" from="basecheckbox">
-            <position>835,312</position>
+        <checkbox name="browse_check" from="watched_check">
+            <area>320,290,300,40</area>
         </checkbox>
-
-        <button name="coverart_button">
-            <area>460,353,32,32</area>
-            <statetype name="buttonstate">
-                <state name="active">
-                </state>
-                <state name="selected" from="active">
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
-                </state>
-            </statetype>
-        </button>
-
-        <textarea name="coverart_text" from="basetextarea">
-            <area>500,358,250,40</area>
+        <textarea name="brows_t" from="watched_t">
+            <area>355,290,230,40</area>
+            <value>Browsable</value>
         </textarea>
 
-        <button name="screenshot_button">
-            <area>460,382,32,32</area>
-            <statetype name="buttonstate">
+        <buttonlist name="child_select" from="level_select">
+            <area>640,290,600,40</area>
+            <buttonarea>0,0,600,40</buttonarea>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
                 <state name="active">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <template>Play Next: %1</template>
+                        <area>0,0,100%,40</area>
+                    </textarea>
                 </state>
-                <state name="selected" from="active">
+                <state name="selectedactive" from="active">
+                    <area>0,0,100%,40</area>
+                    <shape name="act" from="shapeSelected" >
+                        <area>0,0,100%,40</area>
+                    </shape>
                 </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
+
+                <state name="selectedinactive"  from="active">
+                </state>
+
+                <state name="inactive"  from="active">
                 </state>
             </statetype>
-        </button>
-
-        <textarea name="screenshot_text" from="basetextarea">
-            <area>500,387,250,40</area>
-        </textarea>
-
-        <button name="banner_button">
-            <area>460,411,32,32</area>
-            <statetype name="buttonstate">
-                <state name="active">
+            <statetype name="downscrollarrow">
+                <state type="off">
                 </state>
-                <state name="selected" from="active">
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>560,0,40,40</area>
+                        <value>&gt;</value>
+                    </textarea>
                 </state>
             </statetype>
-        </button>
+        </buttonlist>
 
-        <textarea name="banner_text" from="basetextarea">
-            <area>500,416,250,40</area>
+        <textarea name="play_edit_t" from="basetextarea">
+            <area>40,345,140,40</area>
+            <font>fontBase</font>
+            <cutdown>yes</cutdown>
+            <align>vcenter</align>
+            <value>Play Command</value>
         </textarea>
-
-        <button name="fanart_button">
-            <area>460,442,32,32</area>
-            <statetype name="buttonstate">
-                <state name="active">
-                </state>
-                <state name="selected" from="active">
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
-                </state>
-            </statetype>
-        </button>
-
-        <textarea name="fanart_text" from="basetextarea">
-            <area>500,445,250,40</area>
-        </textarea>
-
-        <button name="trailer_button">
-            <area>460,472,32,32</area>
-            <statetype name="buttonstate">
-                <state name="active">
-                </state>
-                <state name="selected" from="active">
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
-                </state>
-            </statetype>
-        </button>
-
-        <textarea name="trailer_text" from="basetextarea">
-            <area>500,477,250,40</area>
-        </textarea>
-
 
         <textedit name="player_edit" from="basetextedit">
-            <position>410,507</position>
+            <area>200,345,420,40</area>
         </textedit>
 
-        <button name="done_button" from="basebutton">
-            <position>510,567</position>
+    <!-- Trailer -->
+        <button name="trailer_button" from="basebuttonBorder">
+            <area>640,345,600,40</area>
+         </button>
+
+        <textarea name="trailer_text" from="basetextarea">
+              <area>645,345,590,40</area>
+              <font>fontBaseTiny</font>
+              <template>Change Trailer (%1)</template>
+              <value>No Trailer Assosiated</value>
+              <cutdown>yes</cutdown>
+              <align>allcenter</align>
+
+        </textarea>
+
+
+    <!-- fan art -->
+	    <imagetype name="fanart">
+            <area>16,400,400,260</area>
+            <preserveaspect>yes</preserveaspect>
+            <alpha>180</alpha>
+        </imagetype>
+        <shape name="fanartBgShape" from="basebackground">
+            <area>16,400,400,260</area>
+            <fill color="#000000" alpha="0" />
+        </shape>
+        <button name="fanart_button" from="basebuttonBorder">
+            <area>41,560,350,40</area>
+            <value>Find Local Fanart</value>
+        </button>
+        <button name="net_fanart_button" from="basebuttonBorder">
+            <area>41,600,350,40</area>
+            <value>Find Online Fanart</value>
+        </button>
+        
+        
+    <!-- cover art -->
+        <imagetype name="coverart" from="fanart">
+            <area>432,400,400,260,</area>
+        </imagetype>
+        <shape name="coverBg" from="fanartBgShape">
+            <area>432,400,400,260,</area>
+        </shape>
+        <button name="coverart_button" from="basebuttonBorder">
+            <area>457,560,350,40</area>
+            <value>Find Local Coverart</value>
+        </button>
+        <button name="net_coverart_button" from="basebuttonBorder">
+            <area>457,600,350,40</area>
+            <value>Find Online Coverart</value>
+        </button>
+
+
+    <!-- banner art -->
+	    <imagetype name="banner" from="fanart">
+            <area>848,400,400,260</area>
+        </imagetype>
+        <shape name="bannerBG" from="fanartBgShape">
+            <area>848,400,400,260</area>
+        </shape>
+        <button name="banner_button" from="basebuttonBorder">
+            <area>873,560,350,40</area>
+            <value>Find Local Bannerart</value>
+        </button>
+        <button name="net_banner_button" from="basebuttonBorder">
+            <area>873,600,350,40</area>
+            <value>Find Online Bannerart</value>
+        </button>
+        
+        <button name="done_button" from="basebuttonBorder">
+            <area>520,100%-60,240,40</area>
             <value>Done</value>
         </button>
+
+        <!-- myth forces us to use this text, but i don't want them... so i don't show them :-p -->
+        <textarea name="screenshot_text" >
+            <area>0,0,0,0</area>
+        </textarea>
+
+        <textarea name="banner_text" from="screenshot_text" />
+        <textarea name="fanart_text" from="screenshot_text" />
+        <textarea name="coverart_text" from="screenshot_text" />
+        <button name="screenshot_button">
+            <!-- this is stupid i'm forced to create this button
+                 although in don't use the screenshot anywhere :-( --> 
+            <area>0,0,0,0</area>
+        </button>
+
     </window>
 
 
