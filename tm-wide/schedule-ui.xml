@@ -62,7 +62,7 @@
             <area>40,580,1200,138</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
-            <align>left,top</align>
+            <align>justify</align>
             <template>%LONGREPEAT% %YEARSTARS% %DESCRIPTION%</template>
         </textarea>
 
@@ -237,7 +237,7 @@
             <area>335,580,905,138</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
-            <align>left,top</align>
+            <align>justify</align>
             <template>%LONGREPEAT% %YEARSTARS% %DESCRIPTION%</template>
         </textarea>
 
@@ -372,6 +372,7 @@
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         <shape name="buttonsBg" from="basebackground">
@@ -458,6 +459,7 @@
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         <shape name="buttonsBg" from="basebackground">
@@ -555,6 +557,7 @@
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         <shape name="buttonsBg" from="basebackground">
@@ -656,6 +659,7 @@
             <area>130,130,1040,170</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
+            <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
         <shape name="buttonsBg" from="basebackground">

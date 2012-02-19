@@ -154,7 +154,7 @@
             <multiline>true</multiline>
             <align>right,vcenter</align>
             <font>fontBase</font>
-            <template>%DESCRIPTION%</template>
+             <template>%DESCRIPTION%</template>
         </textarea>
 
         <progressbar name="position" from="progressbarBase">
@@ -211,6 +211,7 @@
         <textarea name="description" from="basetextarea">
             <area>235,575,1000,150</area>
             <multiline>yes</multiline>
+            <align>justify</align>
             <font>fontBase</font>
         </textarea>
     </window>
@@ -263,6 +264,7 @@
             <area>235,575,1000,150</area>
             <multiline>yes</multiline>
             <font>fontBase</font>
+            <align>justify</align>
             <template>%DESCRIPTION%</template>
             <align></align>
         </textarea>

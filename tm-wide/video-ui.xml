@@ -509,7 +509,7 @@
 
         <textarea name="description" from="basetextarea">
             <area>40,440,955,260</area>
-            <align>left,top</align>
+            <align>justify</align>
             <multiline>yes</multiline>
             <font>fontDescription</font>
             <cutdown>yes</cutdown>
@@ -949,19 +949,17 @@
             <value>Done</value>
         </button>
 
-        <!-- myth forces us to use this text, but i don't want them... so i don't show them :-p -->
+        <!-- myth forces us to use this text, but i don't want them... so i don't show them :-p 
         <textarea name="screenshot_text" >
             <area>0,0,0,0</area>
         </textarea>
-
         <textarea name="banner_text" from="screenshot_text" />
         <textarea name="fanart_text" from="screenshot_text" />
         <textarea name="coverart_text" from="screenshot_text" />
         <button name="screenshot_button">
-            <!-- this is stupid i'm forced to create this button
-                 although in don't use the screenshot anywhere :-( --> 
             <area>0,0,0,0</area>
         </button>
+        -->
 
     </window>
 

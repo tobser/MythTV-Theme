@@ -146,6 +146,7 @@
             <area>25,490,890,220</area>
             <font>fontDescription</font>
             <multiline>yes</multiline>
+            <align>justify</align>
             <cutdown>yes</cutdown>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
