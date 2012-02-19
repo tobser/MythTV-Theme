@@ -949,7 +949,9 @@
             <value>Done</value>
         </button>
 
-        <!-- myth forces us to use this text, but i don't want them... so i don't show them :-p 
+        <!--
+             myth forces us to use this text, but i don't want them... so i don't show them :-p 
+        -->
         <textarea name="screenshot_text" >
             <area>0,0,0,0</area>
         </textarea>
@@ -959,7 +961,6 @@
         <button name="screenshot_button">
             <area>0,0,0,0</area>
         </button>
-        -->
 
     </window>
 
