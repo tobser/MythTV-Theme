@@ -6,8 +6,38 @@
         <shape name="bg" from="popupBg" />
 
         <!-- top row -->
-        <button name="key_1" from="basebuttonBorder">
+        <button name="key_1" >
             <area>10,10,35,35</area>
+            <statetype name="buttonstate">
+                <area>0,0,100%,100%</area>
+                <shape name="border" from="basebackground">
+                    <fill alpha="0" />
+                </shape>
+                <state name="selected">
+                    <area>-5,-5,100%+5,100%+5</area>
+                    <shape name="selShape" from="shapeSelected" />
+                    <textarea name="text" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <align>allcenter</align>
+                        <font>fontBaseLarge</font>
+                    </textarea>
+                </state>
+                <state name="active">
+                    <area>0,0,100%,100%</area>
+                    <textarea name="text" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+
+                <state name="disabled" from="active" >
+                </state>
+                <state name="pushed" from="active" >
+                    <area>0,0,100%,100%</area>
+                </state>
+                <state name="selectedinactive" from="active" >
+                </state>
+            </statetype>
         </button>
 
         <button name="key_2" from="key_1">
