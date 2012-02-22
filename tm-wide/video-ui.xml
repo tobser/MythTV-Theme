@@ -105,148 +105,279 @@
         </button>
     </window>
 
+    <!-- "M"-> "Filter Display" --> 
     <window name="filter">
-        <area>0,42,1280,555</area>
+        <area>100,36,1080,100%-36</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
 
+        <shape name="asdf" from="basebackground" >
+            <area>0,0,100%,100%</area>
+        </shape>
 
         <textarea name="title" from="basetextarea">
-            <area>251,70,774,40</area>
+            <area>20,20,100%-20,60</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
             <value>Video List Filters</value>
-            <align>hcenter,vcenter</align>
         </textarea>
 
-        <textarea name="numvideos_text" from="title">
-            <position>251,120</position>
+        <textarea name="numvideos_text" from="basetextarea">
+            <area>20,80,100%-20, 40</area>
+            <font>fontDescription</font>
             <align>allcenter</align>
             <font>fontBase</font>
         </textarea>
 
-        <textarea name="textfilter_text">
-            <area>419,196,180,30</area>
-            <value>Text Filter:</value>
-        </textarea>
-
-        <textarea name="category_text">
-            <area>269,232,220,30</area>
-            <value>Category</value>
-            <align>hcenter</align>
-        </textarea>
-
-        <textarea name="genre_text" from="category_text">
-            <position>269,299</position>
-            <value>Genre</value>
-        </textarea>
-
-        <textarea name="country_text" from="category_text">
-            <position>269,366</position>
-            <value>Country</value>
-        </textarea>
-
-        <textarea name="cast_text" from="category_text">
-            <position>269,433</position>
-            <value>Actor/Actress</value>
-        </textarea>
-
-        <textarea name="year_text" from="category_text">
-            <position>526,232</position>
-            <value>Year</value>
-        </textarea>
-
-        <textarea name="runtime_text" from="category_text">
-            <position>526,299</position>
-            <value>Runtime</value>
-        </textarea>
-
-        <textarea name="userrating_text" from="category_text">
-            <position>526,366</position>
-            <value>User Rating</value>
-        </textarea>
-
-        <textarea name="browse_text" from="category_text">
-            <position>526,433</position>
-            <value>Browse</value>
-        </textarea>
-
-        <textarea name="inetref_text" from="category_text">
-            <position>784,232</position>
-            <value>InetRef</value>
-        </textarea>
-
-        <textarea name="coverfile_text" from="category_text">
-            <position>784,299</position>
-            <value>Cover File</value>
-        </textarea>
-
-        <textarea name="orderby_text" from="category_text">
-            <position>784,366</position>
-            <value>Sort by</value>
-        </textarea>
-
-        <textarea name="watched_text" from="category_text">
-            <position>784,433</position>
-            <value>Watched</value>
-        </textarea>
 
         <!-- Widgets -->
-        <textedit name="textfilter_input" from="baseshorttextedit">
-            <position>545,185</position>
+        <textedit name="textfilter_input" from="basetextedit">
+            <area>315,140,450,40</area>
         </textedit>
+        <textarea name="textfilter_text" from="basetextarea">
+            <area>315,140,450,40</area>
+            <value>Text Filter</value>
+            <align>allcenter</align>
+            <alpha>60</alpha>
+        </textarea>
 
-        <buttonlist name="category_select" from="baseselector">
-            <position>269,259</position>
+        <buttonlist name="category_select" from="scheduleList">
+            <area>50,200,480,40</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive"  from="active">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <template>Category: %1</template>
+                        <area>0,0,100%,40</area>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <shape name="act" from="shapeSelected" >
+                        <area>0,0,100%,40</area>
+                    </shape>
+                </state>
+
+                <state name="inactive"  from="selectedinactive">
+                    <textarea name="buttontext">
+                        <alpha>60</alpha>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <statetype name="upscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>0,0,40,40</area>
+                        <value>&lt;</value>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <statetype name="downscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>440,0,40,40</area>
+                        <value>&gt;</value>
+                    </textarea>
+                </state>
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="genre_select" from="baseselector">
-            <position>269,326</position>
+        <buttonlist name="genre_select" from="category_select">
+            <position>50,260</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Genre: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="country_select" from="baseselector">
-            <position>269,393</position>
+        <buttonlist name="country_select" from="category_select">
+            <position>50,320</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Country: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="cast_select" from="baseselector">
-            <position>269,460</position>
+        <buttonlist name="cast_select" from="category_select">
+            <position>50,380</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Cast: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="year_select" from="baseselector">
-            <position>526,259</position>
+        <buttonlist name="year_select" from="category_select">
+            <position>50,440</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Year: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="runtime_select" from="baseselector">
-            <position>526,326</position>
+        <buttonlist name="runtime_select" from="category_select">
+            <position>50,500</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Runtime: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="userrating_select" from="baseselector">
-            <position>526,393</position>
+        <buttonlist name="userrating_select" from="category_select">
+            <position>100%-530,200</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>User Rating: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="browse_select" from="baseselector">
-            <position>526,460</position>
+        <buttonlist name="browse_select" from="category_select">
+            <position>100%-530,260</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Browse: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="inetref_select" from="baseselector">
-            <position>784,259</position>
+        <buttonlist name="inetref_select" from="category_select">
+            <position>100%-530,320</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>InetRef: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="coverfile_select" from="baseselector">
-            <position>784,326</position>
+        <buttonlist name="coverfile_select" from="category_select">
+            <position>100%-530,380</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Cover File: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="orderby_select" from="baseselector">
-            <position>784,393</position>
+        <buttonlist name="orderby_select" from="category_select">
+            <position>100%-530,440</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Sort by: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <buttonlist name="watched_select" from="baseselector">
-            <position>784,460</position>
+        <buttonlist name="watched_select" from="category_select">
+            <position>100%-530,500</position>
+            <statetype name="buttonitem" >
+                <area>0,0,100%,40</area>
+                <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <template>Watched: %1</template>
+                    </textarea>
+                </state>
+                <state name="active" from="selectedinactive" />
+                <state name="selectedactive" from="selectedinactive" /> 
+                <state name="inactive"  from="selectedinactive" />
+            </statetype>
         </buttonlist>
 
-        <button name="done_button" from="basebutton">
-            <position>693,520</position>
+        <button name="done_button" from="basebuttonBorder">
+            <area>260,100%-60,240,40</area>
             <value>Done</value>
         </button>
 
-        <button name="save_button" from="basebutton">
-            <position>363,520</position>
+        <button name="save_button" from="done_button">
+            <area>100%-500,100%-60,240,40</area>
             <value>Make default</value>
         </button>
 
@@ -949,8 +1080,11 @@
             <value>Done</value>
         </button>
 
+
         <!--
-             myth forces us to use this text, but i don't want them... so i don't show them :-p 
+             myth forces us to use this text, but i don't want them...
+             thus setting their area to 0 until the patch to make those
+             optional is commited to myth master
         -->
         <textarea name="screenshot_text" >
             <area>0,0,0,0</area>
@@ -961,6 +1095,7 @@
         <button name="screenshot_button">
             <area>0,0,0,0</area>
         </button>
+
 
     </window>
 
