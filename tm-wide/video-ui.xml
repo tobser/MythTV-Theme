@@ -744,9 +744,9 @@
 
    <!-- "I"-> Change Video Details -> Edit Details --> 
    <window name="edit_metadata">
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="mtitle" from="titleBar" >
             <textarea name="pagetitle">
-                <value>Videolist</value>
+                <value>Edit Metadata</value>
             </textarea>
         </shape>
 
