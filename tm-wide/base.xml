@@ -722,7 +722,7 @@
     </window>
 
     <window name="MythSearchListDialog" >
-        <area>320,10,640,100</area>
+        <area>320,100%-110,640,100</area>
         <shape name="t" from="popupBg">
             <area>0,0,640,100</area>
         </shape>
