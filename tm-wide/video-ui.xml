@@ -569,19 +569,6 @@
 
     <!-- List View -->
     <window name="tree">
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <zoom start="200" end="100"  easingcurve="InCubic"  />
-                <alpha start="0" end="200" easingcurve="InCubic" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="500">
-                <zoom start="100" end="200"  easingcurve="InCubic"  />
-                <alpha start="255" end="0" easingcurve="InCubic" />
-            </section>
-        </animation>
-
 	    <imagetype name="fanart">
             <area>0,0,100%,100%</area>
             <preserveaspect>no</preserveaspect>
