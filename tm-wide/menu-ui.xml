@@ -2,12 +2,6 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="mainmenu">
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <zoom start="200" end="100"  easingcurve="InCubic"  />
-                <alpha start="0" end="255" easingcurve="InCubic" />
-            </section>
-        </animation>
 
         <clock name="mclock" from="baseclock">
              <area>880,40,400,40</area>

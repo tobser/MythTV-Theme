@@ -584,20 +584,6 @@
                 <area>0,0,640,30</area>    
             </statetype>
         </buttonlist>
-
-        <!-- popup animation -->
-        <animation name="popupAboutToShow" trigger="AboutToShow">
-            <section duration="200">
-                <position start="0,100%" end="0,0" easingcurve="InCubic" />
-            </section>
-        </animation>
-        <animation name="popupAboutToHide" trigger="AboutToHide">
-            <section duration="500">
-                <zoom start="100" end="200"  easingcurve="InCubic"  />
-                <alpha start="255" end="0" easingcurve="InCubic" />
-            </section>
-        </animation>
-
     </window>
 
     <window name="MythDialogBox">
@@ -645,24 +631,12 @@
                 </state>
             </statetype>
         </buttonlist>
-
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <position start="0,100%" end="0,0" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="200">
-                <horizontalzoom start="100" end="0" />
-            </section>
-        </animation>
-
     </window>
 
     <window name="MythBusyDialog">
-        <area>0,0,100%,100%</area>
+        <area>320,235,640,250</area>
         <shape name="t" from="popupBg">
-            <area>320,235,640,250</area>
+            <area>0,0,100%,100%</area>
         </shape>
 
         <textarea name="message" from="basetextarea">
@@ -670,18 +644,6 @@
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
-
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <position start="0,100%" end="0,0" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="5000">
-                <horizontalzoom start="100" end="500" />
-                <alpa start="255" end="0" />
-            </section>
-        </animation>
     </window>
 
     <window name="MythProgressDialog">
@@ -802,7 +764,6 @@
 
 
     <window name="MythSearchDialog">
-
         <area>320,110,640,500</area>
         <shape name="t" from="popupBg">
             <area>0,0,640,500</area>
@@ -939,31 +900,19 @@
     </window>
 
     <window name="videowindow">
-       <area>0,0,100%,100%</area>
+        <area>320,235,640,250</area>
 
         <shape name="t" from="popupBg">
-            <area>320,235,640,250</area>
+            <area>0,0,100%,100%</area>
         </shape>
 
         <textarea name="message" from="basetextarea">
-            <area>320,235,640,250</area>
+            <area>0,0,100%,100%</area>
             <multiline>yes</multiline>
             <font>fontBaseLarge</font>
             <align>allcenter</align>
             <value>Please Wait...</value>
         </textarea>
-
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <position start="0,100%" end="0,0" easingcurve="InCubic" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="500">
-                <zoom start="100" end="200"  easingcurve="InCubic"  />
-                <alpha start="255" end="0" easingcurve="InCubic" />
-            </section>
-        </animation>
 
     </window>
 

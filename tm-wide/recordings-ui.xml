@@ -15,18 +15,6 @@
             </textarea>
         </shape>
 
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <zoom start="200" end="100"  easingcurve="InCubic"  />
-                <alpha start="0" end="200" easingcurve="InCubic" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="500">
-                <zoom start="100" end="200"  easingcurve="InCubic"  />
-                <alpha start="255" end="0" easingcurve="InCubic" />
-            </section>
-        </animation>
 
         <shape name="rightBox" from="basebackground" >
             <area>0,37,100%,370</area>
@@ -311,18 +299,6 @@
     </window>
 
     <window name="iconhelp">
-        <animation trigger="AboutToShow">
-            <section duration="200">
-                <zoom start="200" end="100"  easingcurve="InCubic"  />
-                <alpha start="0" end="200" easingcurve="InCubic" />
-            </section>
-        </animation>
-        <animation trigger="AboutToHide">
-            <section duration="500">
-                <zoom start="100" end="200"  easingcurve="InCubic"  />
-                <alpha start="255" end="0" easingcurve="InCubic" />
-            </section>
-        </animation>
         <area>0,0,100%,100%</area>
         <shape name="t" from="popupBg">
          </shape>
