@@ -955,23 +955,6 @@
     </window>
 
     <window name="MythMetadataResults">
-        <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
-            <area>0,0,640,500</area>
-        </shape>
-
-        <textarea name="who" from="basetextarea">
-            <value>MythMetadataResults</value>
-            <font>fontBaseLarge</font>
-        </textarea>
-
-        <buttonlist name="results" from="basebuttonlist">
-            <area>20,22,357,378</area>
-            <showarrow>no</showarrow>
-        </buttonlist>
-    </window>
-
-    <window name="MythArtworkResults">
         <area>-1,-1,940,640</area>
         <shape name="mythPopupBox" from="popupBg" />
 
@@ -999,6 +982,54 @@
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <textarea name="resolution" from="basetextarea">
+                        <area>0,0,100%,100%-4</area>
+                        <align>hcenter,bottom</align>
+                        <font>fontBaseTiny</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <area>-40,-40,240,200</area>
+                    <shape name="background" from="shapeSelected">
+                        <area>0,0,100%,100%</area>
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>4,4,100%-4,100%-4</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="MythArtworkResults">
+        <area>-1,-1,1000,700</area>
+        <shape name="mythPopupBox" from="popupBg" />
+
+        <buttonlist name="results">
+            <area>50,50,900,650</area>
+            <layout>grid</layout>
+            <buttonarea>0,150,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,160,160</area>
+                <state name="active">
+                    <area>0,0,160,160</area>
+                    <shape name="background" />
+                    <statetype name="nodetype">
+                        <state name="folder">
+                        </state>
+                        <state name="upfolder" from="folder">
+                        </state>
+                        <state name="executable" from="folder">
+                        </state>
+                        <state name="file" from="folder">
+                        </state>
+                    </statetype>
+                    <imagetype name="buttonimage">
+                        <area>4,4,152,152</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="title" from="basetextarea">
                         <area>0,0,100%,100%-4</area>
                         <align>hcenter,bottom</align>
                         <font>fontBaseTiny</font>
