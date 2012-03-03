@@ -105,6 +105,115 @@
         </button>
     </window>
 
+    <!-- "M"-> "Settings" -> "Player Settings" --> 
+    <window name="playersettings">
+        <area>100,36,1080,100%-36</area>
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>-1,20,100%,40</area>
+            <value>Player Settings</value>
+            <align>allcenter</align>
+            <font>baselarge</font>
+        </textarea>
+
+        <textarea name="default_text" from="basetextarea">
+            <area>40,95,200,40</area>
+            <align>right,vcenter</align>
+            <value>Default Player:</value>
+        </textarea>
+
+        <textedit name="defaultplayer" from="basetextedit">
+            <area>250,95,790,40</area>
+        </textedit>
+
+        <textarea name="dvd_text" from="default_text">
+            <area>40,145,200,40</area>
+            <value>DVD Player:</value>
+        </textarea>
+
+        <textedit name="dvdplayer" from="basetextedit">
+            <area>250,145,790,40</area>
+        </textedit>
+
+        <textarea name="dvddrive_text" from="default_text">
+            <area>40,195,200,40</area>
+            <value>DVD Drive:</value>
+        </textarea>
+
+        <textedit name="dvddrive" from="basetextedit">
+            <area>250,195,790,40</area>
+        </textedit>
+
+        <textarea name="blu_text" from="default_text">
+            <area>40,245,200,40</area>
+            <value>Blu-ray Mount:</value>
+        </textarea>
+
+        <textedit name="bluraymount" from="basetextedit">
+            <area>250,245,790,40</area>
+        </textedit>
+
+        <textarea name="blureg_text" from="default_text">
+            <area>40,295,200,40</area>
+            <value>Blu-ray Region:</value>
+        </textarea>
+
+        <buttonlist name="blurayregionlist" from="scheduleList">
+            <area>250,295,790,40</area>
+            <buttonarea>0,0,100%,100%</buttonarea>
+        </buttonlist>
+
+        <checkbox name="altcheck" from="checkboxBase">
+            <area>250,345,790,40</area>
+            <statetype name="checkstate">
+                <area>5,0,30,100%</area>
+                <state type="full">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <value>X</value>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state type="off" />
+                <state type="half" from="full" />
+            </statetype>
+        </checkbox>
+        <textarea name="altcheck_text" from="default_text">
+            <area>300,345,600,40</area>
+            <align>left,vcenter</align>
+            <value>Enable Alternate Player</value>
+        </textarea>
+
+        <textarea name="alt_text" from="default_text">
+            <area>40,395,200,40</area>
+            <value>Alternate Player:</value>
+        </textarea>
+
+        <textedit name="altplayer" from="basetextedit">
+            <area>250,395,790,40</area>
+        </textedit>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>50,450,100%-50,120</area>
+            <align>vcenter</align>
+            <multiline>true</multiline>
+        </textarea>
+
+        <button name="ok" from="basebuttonBorder">
+            <area>400,100%-60,120,40</area>
+            <value>OK</value>
+        </button>
+
+        <button name="cancel" from="ok">
+            <area>560,100%-60,120,40</area>
+            <value>Cancel</value>
+        </button>
+    </window>
+
     <!-- "M"-> "Filter Display" --> 
     <window name="filter">
         <area>100,36,1080,100%-36</area>
