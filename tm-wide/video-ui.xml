@@ -1024,7 +1024,7 @@
 
     <!-- fan art -->
 	    <imagetype name="fanart">
-            <area>16,400,400,260</area>
+            <area>20,404,392,252</area>
             <preserveaspect>yes</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
@@ -1044,7 +1044,7 @@
         
     <!-- cover art -->
         <imagetype name="coverart" from="fanart">
-            <area>432,400,400,260,</area>
+            <area>436,404,392,252,</area>
         </imagetype>
         <shape name="coverBg" from="fanartBgShape">
             <area>432,400,400,260,</area>
@@ -1061,7 +1061,7 @@
 
     <!-- banner art -->
 	    <imagetype name="banner" from="fanart">
-            <area>848,400,400,260</area>
+            <area>852,404,392,252</area>
         </imagetype>
         <shape name="bannerBG" from="fanartBgShape">
             <area>848,400,400,260</area>
@@ -1084,7 +1084,6 @@
 
     <window name="metadatasettings">
         <area>0,42,1280,555</area>
-
 
         <textarea name="title" from="basetextarea">
             <area>251,70,774,90</area>
