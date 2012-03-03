@@ -214,6 +214,94 @@
         </button>
     </window>
 
+
+
+    <!-- "M"-> "Settings" -> "Metadata Settings" --> 
+    <window name="metadatasettings">
+        <area>-1,-1,900,640</area>
+        <shape name="t" from="popupBg" />
+
+        <textarea name="title" from="basetextarea">
+            <area>-1,20,100%,40</area>
+            <value>Video Metadata Settings</value>
+            <align>allcenter</align>
+            <font>baselarge</font>
+        </textarea>
+
+        <checkbox name="autometaupdatecheck" from="checkboxBase">
+            <area>150,120,600,40</area>
+            <statetype name="checkstate">
+                <area>5,0,30,100%</area>
+                <state type="full">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <value>X</value>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state type="off" />
+                <state type="half" from="full" />
+            </statetype>
+        </checkbox>
+        <textarea name="autometa_text" from="basetextarea">
+            <area>185,120,530,40</area>
+            <align>allcenter</align>
+            <value>Perform metadata update after video scan</value>
+        </textarea>
+
+        <checkbox name="unknownfilecheck" from="autometaupdatecheck">
+            <area>150,180,600,40</area>
+        </checkbox>
+        <textarea name="unknownfilecheck_text" from="autometa_text">
+            <area>185,180,530,40</area>
+            <value>Display unknown file types</value>
+        </textarea>
+
+        <checkbox name="treeloadsmetacheck" from="autometaupdatecheck">
+            <area>150,240,600,40</area>
+        </checkbox>
+        <textarea name="treeloadsmetacheck_text" from="autometa_text">
+            <area>185,240,530,40</area>
+            <value>Enable metadata in file browse mode</value>
+        </textarea>
+
+
+        <checkbox name="randomtrailercheck" from="autometaupdatecheck">
+            <area>150,300,600,40</area>
+        </checkbox>
+        <textarea name="trailercheck_text" from="autometa_text">
+            <area>185,300,530,40</area>
+            <value>Enable Random Trailer Playback</value>
+        </textarea>
+
+        <textarea name="trailerplay_text" from="autometa_text">
+            <area>210,360,200,40</area>
+            <value>Trailers to Play:</value>
+        </textarea>
+        <spinbox name="trailernum" from="spinboxBase">
+            <area>410,360,120,40</area>
+        </spinbox>
+
+        <textarea name="helptext" from="basetextarea">
+            <area>50,420,100%-50,150</area>
+            <align>vcenter</align>
+            <multiline>true</multiline>
+        </textarea>
+
+        <button name="ok" from="basebuttonBorder">
+            <area>310,100%-60,120,40</area>
+            <value>OK</value>
+        </button>
+
+        <button name="cancel" from="ok">
+            <area>470,100%-60,120,40</area>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+
+
     <!-- "M"-> "Filter Display" --> 
     <window name="filter">
         <area>100,36,1080,100%-36</area>
