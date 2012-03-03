@@ -1079,24 +1079,6 @@
             <area>520,100%-60,240,40</area>
             <value>Done</value>
         </button>
-
-
-        <!--
-             myth forces us to use this text, but i don't want them...
-             thus setting their area to 0 until the patch to make those
-             optional is commited to myth master
-        -->
-        <textarea name="screenshot_text" >
-            <area>0,0,0,0</area>
-        </textarea>
-        <textarea name="banner_text" from="screenshot_text" />
-        <textarea name="fanart_text" from="screenshot_text" />
-        <textarea name="coverart_text" from="screenshot_text" />
-        <button name="screenshot_button">
-            <area>0,0,0,0</area>
-        </button>
-
-
     </window>
 
 
