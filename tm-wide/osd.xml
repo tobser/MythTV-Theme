@@ -198,8 +198,13 @@
             <font>fontBaseTiny</font>
             <align>allcenter</align>
         </textarea>
-        <imagetype name="iconpath">
+        <imagetype name="iconpath" depends="channum">
             <area>30,557,185,130</area>
+            <preserveaspect>yes</preserveaspect>
+        </imagetype>
+        <imagetype name="coverart" depends="!channum">
+            <area>30,557,185,130</area>
+            <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <textarea name="subtitle" from="basetextarea">
