@@ -301,6 +301,133 @@
 
     </window>
 
+    <!-- "M"-> "Settings" -> "File Type Settings" --> 
+    <window name="file_associations">
+        <area>-1,-1,900,640</area>
+        <shape name="t" from="popupBg" />
+
+        <textarea name="title" from="basetextarea">
+            <area>-1,20,100%,40</area>
+            <value>MythVideo File Associations</value>
+            <align>allcenter</align>
+            <font>baselarge</font>
+        </textarea>
+
+        <textarea name="extension_text" from="basetextarea">
+            <area>40,120,200,40</area>
+            <value>Extension:</value>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <buttonlist name="extension_select">
+            <area>250,120,600,40</area>
+            <buttonarea>0,0,600,40</buttonarea>
+            <layout>horizontal</layout>
+
+            <statetype name="buttonitem" >
+                <area>0,0,600,40</area>
+                <state name="selectedactive">
+                    <area>0,0,600,40</area>
+                    <shape name="borderSh" from="shapeSelected"/>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>0,0,100%,40</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive"> 
+                    <area>0,0,600,40</area>
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>0,0,100%,40</area>
+                    </textarea>
+                </state>
+            </statetype>
+
+            <statetype name="upscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>0,0,40,40</area>
+                        <value>&lt;</value>
+                    </textarea>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <state type="off">
+                </state>
+                <state type="full" >
+                    <textarea name="buttontext" from="basetextarea">
+                        <align>allcenter</align>
+                        <area>560,0,40,40</area>
+                        <value>&gt;</value>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="command_text" from="extension_text">
+            <area>40,180,200,40</area>
+            <value>Command:</value>
+        </textarea>
+        <textedit name="command" from="basetextedit">
+            <area>250,180,600,40</area>
+        </textedit>
+
+        <checkbox name="default_check" from="checkboxBase">
+            <area>250,240,600,40</area>
+            <statetype name="checkstate">
+                <area>5,0,30,100%</area>
+                <state type="full">
+                    <area>0,0,30,100%</area>
+                    <textarea name="X" from="basetextarea" >
+                        <area>0,0,100%,100%</area>
+                        <value>X</value>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state type="off" />
+                <state type="half" from="full" />
+            </statetype>
+        </checkbox>
+        <textarea name="default_text" from="basetextarea">
+            <area>285,240,530,40</area>
+            <align>allcenter</align>
+            <value>Use default player</value>
+        </textarea>
+
+        <checkbox name="ignore_check" from="default_check">
+            <area>250,300,600,40</area>
+        </checkbox>
+        <textarea name="ignore_text" from="default_text">
+            <area>285,300,530,40</area>
+            <value>Ignore</value>
+        </textarea>
+
+
+        <textarea name="helptext" from="basetextarea">
+            <area>50,360,100%-50,210</area>
+            <align>vcenter</align>
+            <multiline>true</multiline>
+        </textarea>
+
+        <button name="new_button" from="basebuttonBorder">
+            <area>250,100%-60,120,40</area>
+            <value>New</value>
+        </button>
+
+        <button name="delete_button" from="new_button">
+            <area>390,100%-60,120,40</area>
+            <value>Delete</value>
+        </button>
+
+        <button name="done_button" from="new_button">
+            <area>530,100%-60,120,40</area>
+            <value>Done</value>
+        </button>
+
+    </window>
 
     <!-- "M"-> "Filter Display" --> 
     <window name="filter">
