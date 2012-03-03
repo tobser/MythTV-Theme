@@ -972,68 +972,47 @@
     </window>
 
     <window name="MythArtworkResults">
-        <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
-            <area>0,0,640,500</area>
-        </shape>
-
-        <textarea name="who" from="basetextarea">
-            <value>MythArtworkResults</value>
-            <font>fontBaseLarge</font>
-        </textarea>
+        <area>-1,-1,940,640</area>
+        <shape name="mythPopupBox" from="popupBg" />
 
         <buttonlist name="results">
-            <area>20,22,363,378</area>
-            <layout>vertical</layout>
-            <spacing>5</spacing>
-            <wrapstyle>selection</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <area>50,50,900,600</area>
+            <layout>grid</layout>
+            <buttonarea>0,0,100%,100%</buttonarea>
             <statetype name="buttonitem">
+                <area>0,0,160,160</area>
                 <state name="active">
-                    <area>0,0,100%,85</area>
-                    <shape name="buttonbackground">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical"  />
-                        </fill>
-                    </shape>
+                    <area>0,0,160,160</area>
+                    <shape name="background" />
+                    <statetype name="nodetype">
+                        <state name="folder">
+                        </state>
+                        <state name="upfolder" from="folder">
+                        </state>
+                        <state name="executable" from="folder">
+                        </state>
+                        <state name="file" from="folder">
+                        </state>
+                    </statetype>
                     <imagetype name="buttonimage">
-                        <area>5,2,150,80</area>
+                        <area>4,4,152,152</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="resolution">
-                        <area>160,0,175,85</area>
-                        <font>fontBase</font>
-                        <cutdown>yes</cutdown>
-                        <align>left,vcenter</align>
+                    <textarea name="resolution" from="basetextarea">
+                        <area>0,0,100%,100%-4</area>
+                        <align>hcenter,bottom</align>
+                        <font>fontBaseTiny</font>
                     </textarea>
                 </state>
+                <state name="selectedinactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255" />
-                        </fill>
+                    <area>-40,-40,240,200</area>
+                    <shape name="background" from="shapeSelected">
+                        <area>0,0,100%,100%</area>
                     </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="resolution">
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>10,96%</position>
-                <state type="off">
-                    <imagetype name="upon">
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
+                    <imagetype name="buttonimage">
+                        <area>4,4,100%-4,100%-4</area>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
                 </state>
             </statetype>
