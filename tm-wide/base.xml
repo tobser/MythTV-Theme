@@ -819,22 +819,23 @@
     </window>
 
     <window name="MythFileBrowser">
-        <area>-1,-1,730,510</area>
-        <shape name="mythPopupBox" from="popupBg" />
+        <area>0,0,100%,100%</area>
+        <shape name="mythPopupBox" from="popupBg" >
+            <area>30,38,1220,682</area>
+        </shape>
 
         <textedit name="location" from="basetextedit">
-            <position>40,14</position>
+            <area>100,38,1120,40</area>
         </textedit>
 
         <buttonlist name="filelist">
-            <area>4,70,500,440</area>
+            <area>40,80,800,640</area>
             <layout>grid</layout>
-            <buttonarea>0,0,500,430</buttonarea>
-            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <buttonarea>0,0,100%,100%</buttonarea>
             <statetype name="buttonitem">
-                <area>0,0,166,106</area>
+                <area>0,0,160,160</area>
                 <state name="active">
-                    <area>0,0,166,106</area>
+                    <area>0,0,160,160</area>
                     <shape name="background" />
                     <statetype name="nodetype">
                         <state name="folder">
@@ -847,53 +848,55 @@
                         </state>
                     </statetype>
                     <imagetype name="buttonimage">
-                        <area>4,4,150,74</area>
+                        <area>4,4,152,152</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>2,80,160,26</area>
-                        <align>allcenter</align>
-                    </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
                 <state name="selectedactive" from="active">
-                    <shape name="background">
-                        <area>0,0,166,106</area>
-                        <fill style="gradient">
-                            <gradient start="#999999" end="#666666" alpha="220" />
-                        </fill>
+                    <area>-40,-40,240,200</area>
+                    <shape name="background" from="shapeSelected">
+                        <area>0,0,100%,100%</area>
                     </shape>
+                    <imagetype name="buttonimage">
+                        <area>4,4,100%-4,100%-4</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
                 </state>
             </statetype>
         </buttonlist>
 
+        <shape name="previewBack" from="shapeSelected">
+            <area>844,100,390,384</area>
+        </shape>
+
         <imagetype name="preview">
-            <area>510,126,200,230</area>
+            <area>845,105,374,374</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
+        <shape name="inf" from="shapeSelected">
+            <area>844,500,390,120</area>
+        </shape>
+
         <textarea name="info" from="basetextarea">
-            <area>520,356,180,26</area>
+            <area>844,500,390,120</area>
             <align>allcenter</align>
         </textarea>
 
-        <button name="back" from="basebutton">
-            <position>530,16</position>
-            <value>Up Level</value>
-        </button>
 
-        <button name="home" from="basebutton">
-            <position>530,70</position>
+        <button name="home" from="basebuttonBorder">
+            <area>844,100%-70,120,40</area>
             <value>Home</value>
         </button>
 
-        <button name="cancel" from="basebutton">
-            <position>530,386</position>
+        <button name="cancel" from="home">
+            <area>974,100%-70,120,40</area>
             <value>Cancel</value>
         </button>
 
-        <button name="ok" from="basebutton">
-            <position>530,440</position>
+        <button name="ok" from="home">
+            <area>1104,100%-70,120,40</area>
             <value>OK</value>
         </button>
 
