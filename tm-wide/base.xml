@@ -640,10 +640,28 @@
         </shape>
 
         <textarea name="message" from="basetextarea">
-            <area>0,0,100%,100%</area>
+            <area>0,0,100%,160</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
+
+        <shape name="filled" from="basebackground">
+            <area>20,180,60,20</area>
+            <type>box</type>
+            <fill color="SteelBlue" alpha="220" />
+            <line color="#000000" alpha="0" />
+            <animation trigger="AboutToShow">
+                <section duration="900">
+                    <position start="20,180" end="560,180" reversible="yes" />
+                </section>
+            </animation>
+        </shape>
+        <shape name="barHorizontal" from="basebackground">
+            <type>box</type>
+            <area>20,180,100%-20,20</area>
+            <fill color="White" alpha="0" />
+        </shape>
+
     </window>
 
     <window name="MythProgressDialog">
@@ -910,12 +928,29 @@
         </shape>
 
         <textarea name="message" from="basetextarea">
-            <area>0,0,100%,100%</area>
+            <area>0,0,100%,180</area>
             <multiline>yes</multiline>
             <font>fontBaseLarge</font>
             <align>allcenter</align>
             <value>Please Wait...</value>
         </textarea>
+
+        <shape name="filled" from="basebackground">
+            <area>20,180,60,20</area>
+            <type>box</type>
+            <fill color="SteelBlue" alpha="220" />
+            <line color="#000000" alpha="0" />
+            <animation trigger="AboutToShow">
+                <section duration="900">
+                    <position start="20,180" end="560,180" reversible="yes" />
+                </section>
+            </animation>
+        </shape>
+        <shape name="barHorizontal" from="basebackground">
+            <type>box</type>
+            <area>20,180,100%-20,20</area>
+            <fill color="White" alpha="0" />
+        </shape>
 
     </window>
 

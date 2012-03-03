@@ -19,7 +19,7 @@
             <align>allcenter</align>
         </textarea>
 
-        <buttonlist name="settings" from="btnListLeft">
+        <buttonlist name="settings" >
             <area>320,80,640,400</area>
             <layout>vertical</layout>
             <spacing>4</spacing>
@@ -131,7 +131,7 @@
             <cutdown>yes</cutdown>
         </textarea>
 
-        <buttonlist name="themes" from="btnListLeft">
+        <buttonlist name="themes" >
             <area>30,60,600,660</area>
             <scrollstyle>free</scrollstyle>
             <wrapstyle>items</wrapstyle>
@@ -159,6 +159,7 @@
 
                 <state name="selectedactive" from="active">
                     <shape name="background" from="shapeSelected">
+                        <fill color="#000000" alpha="0" />
                     </shape>
                     <textarea name="buttontext" from="basetextarea" >
                         <area>150,5,450,56</area>
