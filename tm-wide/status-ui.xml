@@ -51,20 +51,13 @@
             </statetype>
         </buttonlist>
 
-        <textarea name="justhelptext">
-            <area>30,110,100%-30,60</area>
-            <template>%1:</template>
-            <align>vcenter</align>
-            <multiline>yes</multiline>
-            <font>fontDescription</font>
-        </textarea>
 
         <shape name="list_background" from="basebackground">
-            <area>20,170,100%-20,335</area>
+            <area>20,130,100%-20,410</area>
         </shape>
 
         <buttonlist name="log" from="basebuttonlist">
-            <area>20,170,100%-20,335</area>
+            <area>20,130,100%-20,410</area>
             <buttonarea>0,0,100%+5,100%</buttonarea>
             <statetype name="buttonitem">
                 <state name="inactive">
@@ -80,18 +73,12 @@
             </statetype>
         </buttonlist>
 
-        <textarea name="helplabel">
-            <area>30,500,100%-30,60</area>
-            <value>Details:</value>
-            <align>vcenter</align>
-            <font>fontBaseLarge</font>
-        </textarea>
-
         <textarea name="helptext" from="basetextarea">
-            <area>40,550,100%-40,160</area>
+            <area>40,560,100%-40,150</area>
             <value>This screen displays the status of various system components</value>
             <multiline>yes</multiline>
             <font>fontDescription</font>
+            <align>top,hcenter</align>
         </textarea>
 
     </window>
