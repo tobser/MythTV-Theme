@@ -751,7 +751,7 @@
         
         <button name="ok" from="basebuttonBorder">
             <area>200,450,240,40</area>
-            <value>ok</value>
+            <value>OK</value>
         </button>
     </window>
 
