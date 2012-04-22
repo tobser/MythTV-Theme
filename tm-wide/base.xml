@@ -104,11 +104,11 @@
 
     <shape name="titleBar" >
         <shape name="titleSh" from="basebackground">
-            <area>0,0,300,40</area>
+            <area>0,0,350,40</area>
         </shape>
 
         <textarea name="pagetitle" from="basetextarea">
-            <area>0,0,300,40</area>
+            <area>0,0,350,40</area>
             <font>fontBaseLarge</font>
             <value>Title</value>
             <align>allcenter</align>
