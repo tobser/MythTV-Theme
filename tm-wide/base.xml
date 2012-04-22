@@ -782,58 +782,70 @@
 
 
     <window name="MythSearchDialog">
-        <area>320,110,640,500</area>
         <shape name="t" from="popupBg">
-            <area>0,0,640,500</area>
+            <area>0,0,100%,100%</area>
+            <shape name="pupBackground">
+                <alpha>200</alpha>
+            </shape>
         </shape>
 
-        <textarea name="who" from="basetextarea">
-            <area>0,0,640,500</area>
-            <value>MythSearchDialog</value>
+        <shape name="t2" from="popupBg">
+            <area>320,110,640,500</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>320,110,100%-320, 80</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
             <font>fontBaseLarge</font>
         </textarea>
 
-        <textarea name="title" from="basetextarea">
-            <area>12,20,470,60</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
-
         <textedit name="input" from="basetextedit">
-            <area>58,84,100%,40</area>
+            <area>360,190,100%-360,40</area>
         </textedit>
 
         <buttonlist name="itemlist" from="basebuttonlist">
-            <area>0,0,100%,100%</area>
+            <area>360,240,100%,100%-80</area>
             <showarrow>no</showarrow>
             <statetype name="buttonitem">
+                <area>360,0,100%,40</area>
                 <state name="active">
+                    <area>0,0,100%,40</area>
                     <textarea name="buttontext">
-                        <area>4,0,460,30</area>
+                        <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedinactive">
+                    <area>0,0,100%,40</area>
                     <textarea name="buttontext">
-                        <area>4,0,460,30</area>
+                        <align>allcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive">
+                    <area>0,0,100%,40</area>
                     <textarea name="buttontext">
-                        <area>4,0,460,30</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="inactive">
+                    <area>0,0,100%,40</area>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
                     </textarea>
                 </state>
             </statetype>
         </buttonlist>
 
-        <button name="cancel" from="basebutton">
-            <position>30,436</position>
+        <button name="ok" from="basebuttonBorder">
+            <area>460,530,160,40</area>
+            <value>OK</value>
+        </button>
+
+        <button name="cancel" from="basebuttonBorder">
+            <area>660,530,160,40</area>
             <value>Cancel</value>
         </button>
 
-        <button name="ok" from="basebutton">
-            <position>316,436</position>
-            <value>OK</value>
-        </button>
     </window>
 
     <window name="MythFileBrowser">
