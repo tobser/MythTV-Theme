@@ -96,5 +96,56 @@
 
     </window>
 
+    <window name="standbymode">
+        <shape name="t" from="popupBg">
+            <area>0,0,100%,100%</area>
+            <shape name="pupBackground">
+                <alpha>200</alpha>
+            </shape>
+        </shape>
+        <shape name="programguideTitle" from="titleBar" >
+            <alpha>120</alpha>
+            <shape name="titleSh">
+                <alpha>120</alpha>
+                <alpha>120</alpha>
+                <area>0,0,450,40</area>
+            </shape>
+            <textarea name="pagetitle">
+                <area>0,0,450,40</area>
+                <alpha>120</alpha>
+                <value>Frontend in standby mode</value>
+            </textarea>
+        </shape>
+
+        <statetype name="backendstatus">
+            <alpha>120</alpha>
+            <area>0,0,100%,100%</area>
+            <state name="idle">
+                <area>0,0,100%,100%</area>
+                <textarea name="status">
+                    <area>0,0,100%,100%</area>
+                    <font>fontBaseLarge</font>
+                    <align>allcenter</align>
+                    <value>Backend is idle</value>
+                </textarea>
+            </state>
+            <state name="recording" from="idle">
+                <textarea name="status">
+                    <value>Backend is recording</value>
+                </textarea>
+            </state>
+            <state name="shuttingdown" from="idle">
+                <textarea name="status">
+                    <value>Backend is recording</value>
+                </textarea>
+            </state>
+            <state name="offline" from="idle">
+                <textarea name="status">
+                    <value>Backend is recording</value>
+                </textarea>
+            </state>
+        </statetype>
+    </window>
+
 </mythuitheme>
 
