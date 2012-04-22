@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="bookmarkmanager">
+
+        <shape name="programguideTitle" from="titleBar" >
+            <textarea name="pagetitle">
+                <value>Bookmark Manager</value>
+            </textarea>
+        </shape>
+
+        <shape name="bgBox" from="basebackground" >
+            <area>0,60,100%,100%-60</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+
+        <buttonlist name="grouplist" from="btnListRight">
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <area>10,120,320,100%-120</area>
+            <shape name="groupBg" from="basebackground">
+                <fill color="#000000" alpha="50" />
+            </shape>
+            <statetype name="buttonitem">
+                <area>0,0,100%,40</area>
+            </statetype>
+        </buttonlist>
+
+        <shape name="recBg" from="basebackground" >
+            <fill color="#000000" alpha="50" />
+            <area>328,70,946,100%-70</area>
+        </shape>
+        <buttonlist name="bookmarklist">
+            <area>328,70,946,100%-70</area>
+            <layout>vertical</layout>
+            <arrange>stack</arrange>
+            <spacing>1</spacing>
+            <scrollstyle>free</scrollstyle>
+            <wrapstyle>selection</wrapstyle>
+
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <buttonarea>0,0,945,100%</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,100%,100%</area>
+                <state name="active">
+                    <area>0,0,945,60</area>
+                    <textarea name="name" from="basetextarea">
+                        <area>25,0,100%,100%</area>
+                        <align>vcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,945,120</area>
+                    <shape name="selIn" from="basebackground" >
+                        <area>0,0,945,120</area>
+                    </shape>
+                    <textarea name="name" from="basetextarea">
+                        <align>vcenter</align>
+                        <font>fontBaseLarge</font>
+                        <area>25,0,945,80</area>
+                        <template>%1:</template>
+                    </textarea>
+                    <textarea name="url" from="basetextarea">
+                        <align>vcenter</align>
+                        <area>150,60,895,60</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active" >
+                    <area>0,0,945,60</area>
+                    <textarea name="name" from="basetextarea">
+                        <area>25,0,100%,100%</area>
+                        <align>vcenter</align>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <textarea name="messagetext" from="basetextarea">
+            <font>basemedium</font>
+            <area>328,70,946,100%-70</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <value>No Bookmarks</value>
+        </textarea>
+
+    </window>
+
+    <window name="browser">
+        <shape name="programguideTitle" from="titleBar" >
+            <shape name="titleSh">
+                <area>0,0,0,0</area>
+            </shape>
+            <textarea name="pagetitle" from="basetextarea">
+                <area>0,0,0,0</area>
+            </textarea>
+        </shape>
+        <!--<shape name="bgBox" from="basebackground" >
+            <area>0,60,100%,100%-20</area>
+            <fill color="#000000" alpha="100" />
+        </shape>
+        -->
+
+        <buttonlist name="pagelist" from="btnListRight">
+            <area>0,0,980,40</area>
+            <layout>horizontal</layout>
+            <wrapstyle>selection</wrapstyle>
+            <scrollstyle>free</scrollstyle>
+            <spacing>0</spacing>
+            <buttonarea>0,0,100%,100%</buttonarea>
+
+            <statetype name="buttonitem">
+                <area>0,0,245,40</area>
+
+                <state name="selectedactive">
+                    <area>0,0,245,40</area>
+                    <shape name="sel" from="shapeSelected">
+                        <area>0,0,245,40</area>
+                    </shape>
+                    <imagetype name="favicon">
+                        <area>15,5,30,30</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>53,0,192,40</area>
+                        <align>left,vcenter</align>                
+                    </textarea>
+                </state>
+
+                <state name="active">
+                    <area>0,0,245,40</area>
+                    <imagetype name="favicon">
+                        <area>15,5,30,30</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>53,0,192,40</area>
+                        <align>left,vcenter</align>                
+                        <alpha>120</alpha>
+                    </textarea>
+                </state>
+
+                <state name="selectedinactive">
+                    <area>0,0,245,40</area>
+                    <imagetype name="favicon">
+                        <area>15,5,30,30</area>
+                    </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>53,0,192,40</area>
+                        <align>left,vcenter</align>                
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="recBg" from="basebackground" >
+            <fill color="#000000" alpha="50" />
+            <area>10,37,100%-10,681</area>
+        </shape>
+
+        <webbrowser name="webbrowser">
+            <area>18,44,100%-18,636</area>
+            <zoom>0.7</zoom>
+        </webbrowser>
+
+        <progressbar name="progressbar" from="progressbarBase">
+            <area>18,680,100%-18,30</area>
+        </progressbar>
+
+        <textarea name="status" from="basetextarea">
+            <area>18,680,100%-18,30</area>
+            <align>allcenter</align>
+            <font>fontBaseUltraTiny</font>
+        </textarea>
+
+    </window>
+
+    <window name="browserconfig">
+        <imagetype name="topbar" from="basetopbar" />
+        <textarea name="title" from="baseheading">
+            <value>Rating Settings</value>
+        </textarea>
+
+        <textarea name="commandlabel" from="basetextarea">
+            <area>130,150,300,30</area>
+            <align>right,vcenter</align>
+            <value>Browser Command:</value>
+        </textarea>
+
+        <textedit name="command" from="basetextedit">
+            <position>445,140</position>
+        </textedit>
+
+        <textarea name="zoomlabel" from="commandlabel">
+            <position>130,250</position>
+            <align>right,vcenter</align>
+            <value>Text Size:</value>
+        </textarea>
+
+        <textedit name="zoom" from="basetextedit">
+            <position>445,240</position>
+        </textedit>
+
+        <textarea name="pluginlabel" from="commandlabel">
+           <position>130,350</position>
+            <value>Enable plugins:</value>
+        </textarea>
+
+        <checkbox name="enablepluginscheck" from="basecheckbox">
+            <position>445,350</position>
+        </checkbox>
+
+        <shape name="background">
+            <area>200,420,800,140</area>
+            <type>roundbox</type>
+            <fill color="#000000" alpha="70" />
+            <cornerradius>8</cornerradius>
+        </shape>
+
+        <textarea name="description" from="basetextarea">
+            <area>210,430,780,120</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <button name="cancel" from="basebutton">
+            <position>250,620</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>880,620</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="bookmarkeditor" >
+        <area>240,110,800,500</area>
+        <shape name="a" from="popupBg">
+            <area>-240,-110,1280,720</area>
+         </shape>
+
+        
+        <shape name="t" from="popupBg">
+            <area>0,0,800,500</area>
+         </shape>
+
+        <textarea name="Heading" from="basetextarea">
+            <area>0,0,800,100</area>
+            <font>fontBaseLarge</font>
+            <align>allcenter</align>
+            <value>Edit Bookmark</value>
+        </textarea>
+
+        <textarea name="mCategory" from="basetextarea" >
+            <area>20,145,180,40</area>
+            <font>fontBase</font>
+            <align>vcenter,right</align>
+            <value>Category</value>
+        </textarea>
+        <textedit name="category" from="basetextedit">
+            <area>210,145,500,40</area>
+        </textedit>
+
+        <button name="findcategory" from="basebuttonBorder">
+            <area>210,195,500,40</area>
+            <value>Select Category</value>
+        </button>
+
+        <textarea name="mName" from="mCategory">
+            <area>20,250,180,40</area>
+            <value>Name</value>
+        </textarea>
+        <textedit name="name" from="basetextedit">
+            <area>210,250,500,40</area>
+        </textedit>
+
+
+        <textarea name="mUrl" from="mCategory">
+            <area>20,300,180,40</area>
+            <value>URL</value>
+        </textarea>
+        <textedit name="url" from="basetextedit">
+            <area>210,300,500,40</area>
+        </textedit>
+
+        <button name="ok" from="basebuttonBorder">
+            <area>120,430,240,40</area>
+            <value>OK</value>
+        </button>
+        <button name="cancel" from="basebuttonBorder">
+            <area>420,430,240,40</area>
+            <value>Cancel</value>
+        </button>
+
+    </window>
+</mythuitheme>
