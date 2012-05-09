@@ -86,10 +86,6 @@
             </textarea>
         </shape>
 
-        <progressbar name="downloadprogressbar" from="progressbarBase">
-            <area>405,10,470,30</area>
-        </progressbar>
-
         <shape name="preview-shape" from="basebackground">
             <area>660,60,590,410</area>
         </shape>
@@ -143,31 +139,35 @@
             <triggerevent context="Global" action="MENU">RIGHT</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
-                    <area>0,0,600,66</area>
+                    <area>0,0,600,120</area>
                     <imagetype name="buttonimage">
-                        <area>30,5,110,56</area>
+                        <area>30,5,200,100%-5</area>
                         <alpha>160</alpha>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                     <textarea name="buttontext" from="basetextarea">
-                        <area>150,5,450,56</area>
+                        <area>250,5,350,100%-5</area>
                         <align>left,vcenter</align>
-                        <font>fontBaseLarge</font>
+                        <font>fontDescription</font>
                     </textarea>
 
                 </state>
 
-                <state name="selectedactive" from="active">
+                <state name="selectedactive">
+                    <area>0,0,600,120</area>
                     <shape name="background" from="shapeSelected">
                         <fill color="#000000" alpha="0" />
                     </shape>
-                    <textarea name="buttontext" from="basetextarea" >
-                        <area>150,5,450,56</area>
-                        <align>left,vcenter</align>
-                        <font>fontBaseLarge</font>
-                    </textarea>
                     <imagetype name="buttonimage">
+                        <area>30,5,200,100%-5</area>
+                        <alpha>160</alpha>
+                        <preserveaspect>true</preserveaspect>
                     </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>250,5,350,100%-5</area>
+                        <align>left,vcenter</align>
+                        <font>fontDescription</font>
+                    </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
             </statetype>
