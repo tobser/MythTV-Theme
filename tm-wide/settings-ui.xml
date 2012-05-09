@@ -20,37 +20,41 @@
         </textarea>
 
         <buttonlist name="settings" >
-            <area>320,80,640,400</area>
+            <area>200,80,880,400</area>
             <layout>vertical</layout>
             <spacing>4</spacing>
 
             <triggerevent context="GLOBAL" action="NEXT">RIGHT</triggerevent>
             <scrollstyle>free</scrollstyle>
             <wrapstyle>none</wrapstyle>
-            <buttonarea>0,0,640,400</buttonarea>
+            <buttonarea>0,0,880,400</buttonarea>
             <statetype name="buttonitem">
-                <area>0,0,640,40</area>
+                <area>0,0,880,40</area>
                 <state name="active">
-                <area>0,0,640,40</area>
+                <area>0,0,880,40</area>
                 <textarea name="buttontext" from="basetextarea">
-                    <area>30,0,590,40</area>
+                <area>0,0,880,40</area>
                     <align>allcenter</align>
                 </textarea>
             </state>
             <state name="selectedinactive" from="active">
             </state>
-            <state name="selectedactive" from="active">
+            <state name="selectedactive" >
                 <shape name="sel" from="shapeSelected" />
+                <textarea name="buttontext" from="basetextarea">
+                <area>0,0,880,40</area>
+                    <align>allcenter</align>
+                </textarea>
             </state>
             </statetype>
         </buttonlist>
 
         <shape name="label-shape" from="basebackground">
-            <area>200,500,880,100</area>
+            <area>200,480,880,100</area>
         </shape>
 
         <textarea name="label-text" from="basetextarea">
-            <area>200,500,880,100</area>
+            <area>200,480,880,100</area>
             <align>allcenter</align>
         </textarea>
 
