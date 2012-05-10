@@ -104,11 +104,11 @@
 
     <shape name="titleBar" >
         <shape name="titleSh" from="basebackground">
-            <area>0,0,350,40</area>
+            <area>0,0,501,40</area>
         </shape>
 
         <textarea name="pagetitle" from="basetextarea">
-            <area>0,0,350,40</area>
+            <area>0,0,500,40</area>
             <font>fontBaseLarge</font>
             <value>Title</value>
             <align>allcenter</align>
@@ -474,7 +474,7 @@
             </state>
             <state name="disabled" from="selected">
                 <shape name="cboxSel">
-                    <area>0,0,0,0</area>
+                    <alpha>20</alpha>
                 </shape>
                 <textarea name="text">
                     <alpha>60</alpha>
@@ -516,8 +516,6 @@
         <buttonarea>0,20,100%,100%-40</buttonarea>
 
         <drawfrombottom>yes</drawfrombottom>
-        <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
-        <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
         <statetype name="buttonitem">
             <area>0,0,100%,30</area>
             <state name="selectedactive">
@@ -607,8 +605,9 @@
             <drawfrombottom>yes</drawfrombottom>
             <showarrow>no</showarrow>
             <wrapstyle>selection</wrapstyle>
-            <triggerevent context="Global" action="BACK">LEFT</triggerevent>
+            <!--            <triggerevent context="Global" action="BACK">LEFT</triggerevent> -->
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <triggerevent context="Global" action="LEFT">BACK</triggerevent> 
             <statetype name="buttonitem">
                 <area>0,0,100%,30</area>
                 <state name="active">
@@ -722,7 +721,7 @@
         <textarea name="message" from="basetextarea">
             <area>20,10,600,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>fontDescription</font>
         </textarea>
 
         <textedit name="input" from="basetextedit">
