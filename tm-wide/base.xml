@@ -569,11 +569,17 @@
         <shape name="t" from="popupBg">
             <area>320,110,640,500</area>
         </shape>
-        <textarea name="messagearea">
-            <area>320,110,640,220</area>
+        <textarea name="title">
+            <area>320,110,640,60</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
             <font>fontBaseLarge</font>
+        </textarea>
+        <textarea name="messagearea">
+            <area>320,170,640,160</area>
+            <multiline>yes</multiline>
+            <align>top,center</align>
+            <font>fontDescription</font>
         </textarea>
         <buttonlist name="list" from="basePopuButtonlist">
             <area>320,330,640,280</area>
@@ -587,47 +593,25 @@
     <window name="MythDialogBox">
         <area>0,0,100%,100%</area>
         <shape name="t" from="popupBg">
-            <area>0,0,100%,100%</area>
-            <textarea name="title" >
-                <font>fontBaseLarge</font>
-            </textarea>
+            <area>320,110,640,500</area>
         </shape>
-
-        <textarea name="messagearea" from="basetextarea">
-            <area>0,50,640,210</area>
+        <textarea name="title">
+            <area>320,110,640,60</area>
             <multiline>yes</multiline>
+            <align>allcenter</align>
             <font>fontBaseLarge</font>
-            <align>top,center</align>
         </textarea>
-
-        <buttonlist name="list" from="basebuttonlist">
-            <area>100,320,1080,350</area>
-            <drawfrombottom>yes</drawfrombottom>
-            <showarrow>no</showarrow>
-            <wrapstyle>selection</wrapstyle>
-            <!--            <triggerevent context="Global" action="BACK">LEFT</triggerevent> -->
-            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
-            <triggerevent context="Global" action="LEFT">BACK</triggerevent> 
+        <textarea name="messagearea">
+            <area>320,170,640,160</area>
+            <multiline>yes</multiline>
+            <align>top,center</align>
+            <font>fontDescription</font>
+        </textarea>
+        <buttonlist name="list" from="basePopuButtonlist">
+            <area>320,330,640,280</area>
+            <buttonarea>0,0,640,100%</buttonarea>
             <statetype name="buttonitem">
-                <area>0,0,100%,30</area>
-                <state name="active">
-                    <area>0,0,100%,30</area>
-                    <textarea name="buttontext">
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedinactive">
-                    <area>0,0,100%,30</area>
-                    <textarea name="buttontext">
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <area>0,0,100%,30</area>
-                    <textarea name="buttontext">
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
+                <area>0,0,640,30</area>    
             </statetype>
         </buttonlist>
     </window>
