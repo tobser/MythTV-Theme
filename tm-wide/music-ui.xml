@@ -4,9 +4,8 @@
     <window name="miniplayer">
         <area>80,0,100%-80,200</area>
         <animation  trigger="AboutToShow">
-            <section centre="topleft" duration="220">
-                <!--                <position start="80,-200" end="80,0" duration="200"/> -->
-                    <angle start="180" end="0"/>
+            <section duration="220">
+                <position start="80,-200" end="80,0" duration="200"/>
             </section>
         </animation>
         <animation trigger="AboutToHide">
@@ -74,6 +73,53 @@
 
         <progressbar name="progress" from="tm_progressbarBase">
             <area>320,160,100%-40,25</area>
+        </progressbar>
+
+    </window>
+
+    <window name="volume_popup">
+        <area>0,600,100%,120</area>
+        <animation  trigger="AboutToShow">
+            <section duration="220">
+                <position start="0,720" end="0,600" />
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section centre="topright" duration="220">
+                <!-- <angle start="0" end="-180"/> -->
+                <position start="0,600" end="0,720" />
+            </section>
+        </animation>
+        <shape name="t" from="tm_popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="volume" from="tm_basetextarea">
+            <area>20,10,100%-20,40</area>
+            <multiline>yes</multiline>
+            <font>tm_fontBase</font>
+            <align>allcenter</align>
+            <template>Volume %VOLUME%%</template>
+        </textarea>
+
+        <statetype name="mutestate">
+            <area>20,10,100%-20,40</area>
+            <state name="off" />
+            <state name="on" >
+                <area>0,0,100%,100%</area>
+                <textarea name="mstate" from="tm_basetextarea">
+                    <area>0,0,100%,100%</area>
+                    <multiline>yes</multiline>
+                    <font>tm_fontBaseLarge</font>
+                    <align>left,vcenter</align>
+                    <value>Mute</value>
+                </textarea>
+            </state>
+
+        </statetype>
+
+        <progressbar name="volumeprogress" from="tm_progressbarBase">
+            <area>60,65,1160,30</area>
         </progressbar>
 
     </window>
