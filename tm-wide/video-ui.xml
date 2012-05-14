@@ -5,19 +5,19 @@
     <!-- "I"-> Video Info -> View Cast --> 
     <window name="castpopup">
         <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
 
-        <textarea name="label" from="basetextarea">
+        <textarea name="label" from="tm_basetextarea">
             <area>0,0,640,80</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <multiline>yes</multiline>
             <value>Cast Members</value>
         </textarea>
 
-        <buttonlist name="cast" from="basePopuButtonlist">
+        <buttonlist name="cast" from="tm_basePopuButtonlist">
             <area>0,100,100%,400</area>
             <buttonarea>0,0,100%,100%</buttonarea>
             <wrapstyle>selection</wrapstyle>
@@ -27,19 +27,19 @@
     <!-- "I"-> Video Info -> View Full Plot --> 
     <window name="descriptionpopup">
         <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
 
-        <textarea name="label" from="basetextarea">
+        <textarea name="label" from="tm_basetextarea">
             <area>0,0,640,80</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <multiline>yes</multiline>
             <value>Full Plot</value>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>20,100,100%-20,380</area>
             <multiline>yes</multiline>
             <align>vcenter, justify</align>
@@ -49,7 +49,7 @@
     <!-- "I"-> Video Info -> View Details --> 
     <window name="itemdetailpopup">
         <area>100,36,1080,100%-36</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
         <imagetype name="banner" >
@@ -57,49 +57,49 @@
             <preserveaspect>no</preserveaspect>
             <alpha>255</alpha>
         </imagetype> 
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>20,205,100%-20,60</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>vcenter</align>
         </textarea>
-        <textarea name="episode" from="basetextarea">
+        <textarea name="episode" from="tm_basetextarea">
             <area>20,260,100%,40</area>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <template>%SEASON%%x|EPISODE| % %SUBTITLE%</template>
             <value></value>
         </textarea>
 
-        <textarea name="length" from="basetextarea">
+        <textarea name="length" from="tm_basetextarea">
             <area>760,260,300,40</area>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <align>right</align>
         </textarea>
 
  
-        <textarea name="genres" from="basetextarea">
+        <textarea name="genres" from="tm_basetextarea">
             <area>20,300,100%-20,35</area>
             <template>%GENRES% %COUNTRIES% %YEAR%%, Userrating: |USERRATING%%, Directed by: |DIRECTOR%</template>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>20,335,100%-20,290</area>
             <multiline>yes</multiline>
             <align>justify</align>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <template>%DESCRIPTION% \n\n%Cast: |CAST%</template>
         </textarea>
 
-        <button name="play_button" from="basebutton">
+        <button name="play_button" from="tm_basebutton">
             <area>50%-120,100%-45,120,40</area>
             <value>Play</value>
         </button>
 
-        <button name="done_button" from="basebutton">
+        <button name="done_button" from="tm_basebutton">
             <area>50%,100%-45,120,40</area>
             <value>Done</value>
         </button>
@@ -108,24 +108,24 @@
     <!-- "M"-> "Settings" -> "Player Settings" --> 
     <window name="playersettings">
         <area>100,36,1080,100%-36</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>-1,20,100%,40</area>
             <value>Player Settings</value>
             <align>allcenter</align>
-            <font>baselarge</font>
+            <font>tm_baselarge</font>
         </textarea>
 
-        <textarea name="default_text" from="basetextarea">
+        <textarea name="default_text" from="tm_basetextarea">
             <area>40,95,200,40</area>
             <align>right,vcenter</align>
             <value>Default Player:</value>
         </textarea>
 
-        <textedit name="defaultplayer" from="basetextedit">
+        <textedit name="defaultplayer" from="tm_basetextedit">
             <area>250,95,790,40</area>
         </textedit>
 
@@ -134,7 +134,7 @@
             <value>DVD Player:</value>
         </textarea>
 
-        <textedit name="dvdplayer" from="basetextedit">
+        <textedit name="dvdplayer" from="tm_basetextedit">
             <area>250,145,790,40</area>
         </textedit>
 
@@ -143,7 +143,7 @@
             <value>DVD Drive:</value>
         </textarea>
 
-        <textedit name="dvddrive" from="basetextedit">
+        <textedit name="dvddrive" from="tm_basetextedit">
             <area>250,195,790,40</area>
         </textedit>
 
@@ -152,7 +152,7 @@
             <value>Blu-ray Mount:</value>
         </textarea>
 
-        <textedit name="bluraymount" from="basetextedit">
+        <textedit name="bluraymount" from="tm_basetextedit">
             <area>250,245,790,40</area>
         </textedit>
 
@@ -161,18 +161,18 @@
             <value>Blu-ray Region:</value>
         </textarea>
 
-        <buttonlist name="blurayregionlist" from="scheduleList">
+        <buttonlist name="blurayregionlist" from="tm_scheduleList">
             <area>250,295,790,40</area>
             <buttonarea>0,0,100%,100%</buttonarea>
         </buttonlist>
 
-        <checkbox name="altcheck" from="checkboxBase">
+        <checkbox name="altcheck" from="tm_checkboxBase">
             <area>250,345,790,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -193,17 +193,17 @@
             <value>Alternate Player:</value>
         </textarea>
 
-        <textedit name="altplayer" from="basetextedit">
+        <textedit name="altplayer" from="tm_basetextedit">
             <area>250,395,790,40</area>
         </textedit>
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>50,450,100%-50,120</area>
             <align>vcenter</align>
             <multiline>true</multiline>
         </textarea>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>400,100%-60,120,40</area>
             <value>OK</value>
         </button>
@@ -219,22 +219,22 @@
     <!-- "M"-> "Settings" -> "Metadata Settings" --> 
     <window name="metadatasettings">
         <area>-1,-1,900,640</area>
-        <shape name="t" from="popupBg" />
+        <shape name="t" from="tm_popupBg" />
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>-1,20,100%,40</area>
             <value>Video Metadata Settings</value>
             <align>allcenter</align>
-            <font>baselarge</font>
+            <font>tm_baselarge</font>
         </textarea>
 
-        <checkbox name="autometaupdatecheck" from="checkboxBase">
+        <checkbox name="autometaupdatecheck" from="tm_checkboxBase">
             <area>150,120,600,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -244,7 +244,7 @@
                 <state type="half" from="full" />
             </statetype>
         </checkbox>
-        <textarea name="autometa_text" from="basetextarea">
+        <textarea name="autometa_text" from="tm_basetextarea">
             <area>185,120,530,40</area>
             <align>allcenter</align>
             <value>Perform metadata update after video scan</value>
@@ -279,17 +279,17 @@
             <area>210,360,200,40</area>
             <value>Trailers to Play:</value>
         </textarea>
-        <spinbox name="trailernum" from="spinboxBase">
+        <spinbox name="trailernum" from="tm_spinboxBase">
             <area>410,360,120,40</area>
         </spinbox>
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>50,420,100%-50,150</area>
             <align>vcenter</align>
             <multiline>true</multiline>
         </textarea>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>310,100%-60,120,40</area>
             <value>OK</value>
         </button>
@@ -304,16 +304,16 @@
     <!-- "M"-> "Settings" -> "File Type Settings" --> 
     <window name="file_associations">
         <area>-1,-1,900,640</area>
-        <shape name="t" from="popupBg" />
+        <shape name="t" from="tm_popupBg" />
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>-1,20,100%,40</area>
             <value>MythVideo File Associations</value>
             <align>allcenter</align>
-            <font>baselarge</font>
+            <font>tm_baselarge</font>
         </textarea>
 
-        <textarea name="extension_text" from="basetextarea">
+        <textarea name="extension_text" from="tm_basetextarea">
             <area>40,120,200,40</area>
             <value>Extension:</value>
             <align>right,vcenter</align>
@@ -328,15 +328,15 @@
                 <area>0,0,600,40</area>
                 <state name="selectedactive">
                     <area>0,0,600,40</area>
-                    <shape name="borderSh" from="shapeSelected"/>
-                    <textarea name="buttontext" from="basetextarea">
+                    <shape name="borderSh" from="tm_shapeSelected"/>
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>0,0,100%,40</area>
                     </textarea>
                 </state>
                 <state name="selectedinactive"> 
                     <area>0,0,600,40</area>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>0,0,100%,40</area>
                     </textarea>
@@ -347,7 +347,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>0,0,40,40</area>
                         <value>&lt;</value>
@@ -358,7 +358,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>560,0,40,40</area>
                         <value>&gt;</value>
@@ -371,17 +371,17 @@
             <area>40,180,200,40</area>
             <value>Command:</value>
         </textarea>
-        <textedit name="command" from="basetextedit">
+        <textedit name="command" from="tm_basetextedit">
             <area>250,180,600,40</area>
         </textedit>
 
-        <checkbox name="default_check" from="checkboxBase">
+        <checkbox name="default_check" from="tm_checkboxBase">
             <area>250,240,600,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -391,7 +391,7 @@
                 <state type="half" from="full" />
             </statetype>
         </checkbox>
-        <textarea name="default_text" from="basetextarea">
+        <textarea name="default_text" from="tm_basetextarea">
             <area>285,240,530,40</area>
             <align>allcenter</align>
             <value>Use default player</value>
@@ -406,13 +406,13 @@
         </textarea>
 
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>50,360,100%-50,210</area>
             <align>vcenter</align>
             <multiline>true</multiline>
         </textarea>
 
-        <button name="new_button" from="basebuttonBorder">
+        <button name="new_button" from="tm_basebuttonBorder">
             <area>250,100%-60,120,40</area>
             <value>New</value>
         </button>
@@ -432,48 +432,48 @@
     <!-- "M"-> "Filter Display" --> 
     <window name="filter">
         <area>100,36,1080,100%-36</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>20,20,100%-20,60</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <value>Video List Filters</value>
         </textarea>
 
-        <textarea name="numvideos_text" from="basetextarea">
+        <textarea name="numvideos_text" from="tm_basetextarea">
             <area>20,80,100%-20, 40</area>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <align>allcenter</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
 
 
         <!-- Widgets -->
-        <textedit name="textfilter_input" from="basetextedit">
+        <textedit name="textfilter_input" from="tm_basetextedit">
             <area>315,140,450,40</area>
         </textedit>
-        <textarea name="textfilter_text" from="basetextarea">
+        <textarea name="textfilter_text" from="tm_basetextarea">
             <area>315,140,450,40</area>
             <value>Text Filter</value>
             <align>allcenter</align>
             <alpha>60</alpha>
         </textarea>
 
-        <buttonlist name="category_select" from="scheduleList">
+        <buttonlist name="category_select" from="tm_scheduleList">
             <area>50,200,480,40</area>
             <buttonarea>0,0,100%,100%</buttonarea>
             <statetype name="buttonitem" >
                 <area>0,0,100%,40</area>
                 <state name="selectedinactive"  from="active">
                     <area>0,0,100%,40</area>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <template>Category: %1</template>
                         <area>0,0,100%,40</area>
@@ -482,7 +482,7 @@
                 <state name="active" from="selectedinactive" />
                 <state name="selectedactive" from="selectedinactive">
                     <area>0,0,100%,40</area>
-                    <shape name="act" from="shapeSelected" >
+                    <shape name="act" from="tm_shapeSelected" >
                         <area>0,0,100%,40</area>
                     </shape>
                 </state>
@@ -498,7 +498,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>0,0,40,40</area>
                         <value>&lt;</value>
@@ -510,7 +510,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>440,0,40,40</area>
                         <value>&gt;</value>
@@ -695,7 +695,7 @@
             </statetype>
         </buttonlist>
 
-        <button name="done_button" from="basebuttonBorder">
+        <button name="done_button" from="tm_basebuttonBorder">
             <area>260,100%-60,240,40</area>
             <value>Done</value>
         </button>
@@ -709,12 +709,12 @@
 
     <!-- Manager View -->
     <window name="manager">
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Manage Videos</value>
             </textarea>
         </shape>
-        <shape name="topBox" from="basebackground" >
+        <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>
             <fill color="#000000" alpha="100" />
         </shape>
@@ -723,7 +723,7 @@
             <area>0,36,100%,200</area>
             <multiline>yes</multiline>
             <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
         </textarea>
     
@@ -735,7 +735,7 @@
                 If you would like to have this view themed, please send patches 
                 or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -749,7 +749,7 @@
                 Select "Switch to List View".\n
                 (You should also Disable "Flat View")
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -770,13 +770,13 @@
 
     <!-- Browse View -->
     <window name="browser">
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Browse Videos</value>
             </textarea>
         </shape>
 
-        <shape name="topBox" from="basebackground" >
+        <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>
             <fill color="#000000" alpha="100" />
         </shape>
@@ -785,7 +785,7 @@
             <area>0,36,100%,200</area>
             <multiline>yes</multiline>
             <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
         </textarea>
     
@@ -797,7 +797,7 @@
                 If you would like to have this view themed, please send patches 
                 or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -811,7 +811,7 @@
                 Select "Switch to List View".\n
                 (You should also Disable "Flat View")
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -831,13 +831,13 @@
 
     <!-- Gallery View -->
     <window name="gallery">
-        <shape name="programguideTitle" from="titleBar">
+        <shape name="programguideTitle" from="tm_titleBar">
             <textarea name="pagetitle">
                 <value>Video Gallery</value>
             </textarea>
         </shape>
 
-        <shape name="topBox" from="basebackground" >
+        <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>
             <fill color="#000000" alpha="100" />
         </shape>
@@ -846,7 +846,7 @@
             <area>0,36,100%,200</area>
             <multiline>yes</multiline>
             <value>This view mode is not themed.\nPlease swich to "List View" mode.</value>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
         </textarea>
     
@@ -858,7 +858,7 @@
                 If you would like to have this view themed, please send patches 
                 or a reasonable amount of beer to get me going... (see themeinfo.xml file for contact information).
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -872,7 +872,7 @@
                 Select "Switch to List View".\n
                 (You should also Disable "Flat View")
             </value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -890,6 +890,7 @@
         </buttonlist>
 
     </window>
+    -->
 
     <!-- List View -->
     <window name="tree">
@@ -899,13 +900,13 @@
             <alpha>60</alpha>
         </imagetype>
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Videolist</value>
             </textarea>
         </shape>
 
-        <shape name="topBox" from="basebackground" >
+        <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>
             <fill color="#000000" alpha="100" />
         </shape>
@@ -918,7 +919,7 @@
         <buttontree name="videos">
             <area>40,70,1200,280</area>
             <numlists>2</numlists>
-            <buttonlist name="listtemplate" from="basebuttonlist" >
+            <buttonlist name="listtemplate" from="tm_basebuttonlist" >
                 <triggerevent context="Global" action="INFO">RIGHT</triggerevent>
                 <area>0,0,1200,280</area>
                 <buttonarea>0,0,1200,280</buttonarea>
@@ -940,33 +941,33 @@
             </buttonlist>
         </buttontree>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>40,360,530,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
 
-        <textarea name="##x##" from="basetextarea">
+        <textarea name="##x##" from="tm_basetextarea">
             <area>40,400,80,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <value></value>
         </textarea>
 
-        <textarea name="subtitle" from="basetextarea">
+        <textarea name="subtitle" from="tm_basetextarea">
             <area>120,400,580,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
 
-        <textarea name="length" from="basetextarea">
+        <textarea name="length" from="tm_basetextarea">
             <area>700,400,290,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>right</align>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>40,440,955,260</area>
             <align>justify</align>
             <multiline>yes</multiline>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <cutdown>yes</cutdown>
         </textarea>
 
@@ -976,7 +977,7 @@
         </textarea>
 
 
-        <shape name="coverartBackground" from="basebackground">
+        <shape name="coverartBackground" from="tm_basebackground">
             <area>1015,350,250,280</area>
         </shape>
         <imagetype name="coverart">
@@ -984,7 +985,7 @@
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
-        <shape name="watchedstateBackground" from="basebackground" >
+        <shape name="watchedstateBackground" from="tm_basebackground" >
             <area>1015,625,250,80</area>
         </shape>
         <statetype name="watchedstate" >
@@ -992,7 +993,7 @@
 
             <state name="yes">
                 <area>0,0,100%,100%</area>
-                <textarea name="watched" from="basetextarea">
+                <textarea name="watched" from="tm_basetextarea">
                     <area>0,0,100%,100%</area>
                     <value>watched</value>
                     <align>allcenter</align>
@@ -1000,7 +1001,7 @@
             </state>
 
             <state name="no" from="yes">
-                <textarea name="unwatched" from="basetextarea">
+                <textarea name="unwatched" from="tm_basetextarea">
                     <area>0,0,100%,100%</area>
                     <value>new</value>
                     <align>allcenter</align>
@@ -1012,13 +1013,13 @@
     <window name="file_associations">
         <area>0,42,1280,515</area>
 
-        <textarea name="extension_text" from="basetextarea">
+        <textarea name="extension_text" from="tm_basetextarea">
             <area>300,97,200,30</area>
             <value>Extension:</value>
             <align>right,vcenter</align>
         </textarea>
 
-        <buttonlist name="extension_select" from="baseselector">
+        <buttonlist name="extension_select" from="tm_baseselector">
             <position>520,95</position>
         </buttonlist>
 
@@ -1027,7 +1028,7 @@
             <value>Command:</value>
         </textarea>
 
-        <textedit name="command" from="basetextedit">
+        <textedit name="command" from="tm_basetextedit">
             <position>520,155</position>
         </textedit>
 
@@ -1036,7 +1037,7 @@
             <value>Use default player:</value>
         </textarea>
 
-        <checkbox name="default_check" from="basecheckbox">
+        <checkbox name="default_check" from="tm_basecheckbox">
             <position>520,215</position>
         </checkbox>
 
@@ -1045,21 +1046,21 @@
             <value>Ignore:</value>
         </textarea>
 
-        <checkbox name="ignore_check" from="basecheckbox">
+        <checkbox name="ignore_check" from="tm_basecheckbox">
             <position>520,275</position>
         </checkbox>
 
-        <button name="new_button" from="basewidebutton">
+        <button name="new_button" from="tm_basewidebutton">
             <position>453,385</position>
             <value>New</value>
         </button>
 
-        <button name="delete_button" from="basewidebutton">
+        <button name="delete_button" from="tm_basewidebutton">
             <position>453,442</position>
             <value>Delete</value>
         </button>
 
-        <button name="done_button" from="basewidebutton">
+        <button name="done_button" from="tm_basewidebutton">
             <position>453,500</position>
             <value>Save</value>
         </button>
@@ -1068,60 +1069,60 @@
 
    <!-- "I"-> Change Video Details -> Edit Details --> 
    <window name="edit_metadata">
-        <shape name="mtitle" from="titleBar" >
+        <shape name="mtitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Edit Metadata</value>
             </textarea>
         </shape>
 
-        <shape name="topBox" from="basebackground" >
+        <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,100%</area>
             <fill color="#000000" alpha="100" />
         </shape>
 
-        <textarea name="mTitle" from="basetextarea">
+        <textarea name="mTitle" from="tm_basetextarea">
             <area>40,70,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>vcenter</align>
             <value>Title</value>
         </textarea>
-        <textedit name="title_edit" from="basetextedit">
+        <textedit name="title_edit" from="tm_basetextedit">
             <area>120,70,500,40</area>
         </textedit>
 
-        <textarea name="mSubtitle" from="basetextarea">
+        <textarea name="mSubtitle" from="tm_basetextarea">
             <area>40,125,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>vcenter</align>
             <value>Subitle</value>
         </textarea>
-        <textedit name="subtitle_edit" from="basetextedit">
+        <textedit name="subtitle_edit" from="tm_basetextedit">
             <area>120,125,500,40</area>
         </textedit>
 
-        <textarea name="mSeason" from="basetextarea">
+        <textarea name="mSeason" from="tm_basetextarea">
             <area>40,180,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>vcenter</align> 
             <value>Season</value>
         </textarea>
-        <spinbox name="season" from="spinboxBase">
+        <spinbox name="season" from="tm_spinboxBase">
             <area>120,180,120,40</area>
             <layout>horizontal</layout>
         </spinbox>
 
-        <textarea name="mEpi" from="basetextarea">
+        <textarea name="mEpi" from="tm_basetextarea">
             <area>270,180,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Episode</value>
         </textarea>
-        <spinbox name="episode" from="spinboxBase">
+        <spinbox name="episode" from="tm_spinboxBase">
             <area>370,180,140,40</area>
             <layout>horizontal</layout>
         </spinbox>
 
-        <textedit name="description_edit" from="basetextedit">
+        <textedit name="description_edit" from="tm_basetextedit">
             <area>640,70,600,150</area>
             <statetype name="background">
                 <area>0,0,100%,150</area>
@@ -1136,25 +1137,25 @@
                 </state>
                 <state name="inactive" from="active" />
             </statetype>
-            <textarea name="text" from="basetextarea">
+            <textarea name="text" from="tm_basetextarea">
                 <area>12,10,100%-12,100%-10</area>
                 <align>left,vcenter</align>
                 <multiline>yes</multiline>
             </textarea>
         </textedit>
 
-        <textarea name="mInet" from="basetextarea">
+        <textarea name="mInet" from="tm_basetextarea">
             <area>40,235,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>vcenter</align>
             <value>Intref</value>
         </textarea>
-        <textedit name="inetref_edit" from="basetextedit">
+        <textedit name="inetref_edit" from="tm_basetextedit">
             <area>120,235,180,40</area>
         </textedit>
 
 
-        <buttonlist name="level_select" from="scheduleList">
+        <buttonlist name="level_select" from="tm_scheduleList">
             <area>320,235,300,40</area>
             <buttonarea>0,0,300,40</buttonarea>
             <layout>horizontal</layout>
@@ -1163,7 +1164,7 @@
                 <area>0,0,100%,40</area>
                 <state name="active">
                     <area>0,0,100%,40</area>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <template>Parental %1</template>
                         <area>0,0,100%,40</area>
@@ -1171,7 +1172,7 @@
                 </state>
                 <state name="selectedactive" from="active">
                     <area>0,0,100%,40</area>
-                    <shape name="act" from="shapeSelected" >
+                    <shape name="act" from="tm_shapeSelected" >
                         <area>0,0,100%,40</area>
                     </shape>
                 </state>
@@ -1188,7 +1189,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>0,0,40,40</area>
                         <value>&lt;</value>
@@ -1200,7 +1201,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>260,0,40,40</area>
                         <value>&gt;</value>
@@ -1216,7 +1217,7 @@
                 <area>0,0,100%,40</area>
                 <state name="active">
                     <area>0,0,100%,40</area>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <template>Category %1</template>
                         <area>0,0,100%,40</area>
@@ -1224,7 +1225,7 @@
                 </state>
                 <state name="selectedactive" from="active">
                     <area>0,0,100%,40</area>
-                    <shape name="act" from="shapeSelected" >
+                    <shape name="act" from="tm_shapeSelected" >
                         <area>0,0,100%,40</area>
                     </shape>
                 </state>
@@ -1239,7 +1240,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>560,0,40,40</area>
                         <value>&gt;</value>
@@ -1248,13 +1249,13 @@
             </statetype>
         </buttonlist>
 
-        <checkbox name="watched_check" from="checkboxBase">
+        <checkbox name="watched_check" from="tm_checkboxBase">
             <area>40,290,260,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -1264,9 +1265,9 @@
                 <state type="half" from="full" />
             </statetype>
         </checkbox>
-        <textarea name="watched_t" from="basetextarea">
+        <textarea name="watched_t" from="tm_basetextarea">
             <area>75,290,190,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Watched</value>
         </textarea>
@@ -1286,7 +1287,7 @@
                 <area>0,0,100%,40</area>
                 <state name="active">
                     <area>0,0,100%,40</area>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <template>Play Next: %1</template>
                         <area>0,0,100%,40</area>
@@ -1294,7 +1295,7 @@
                 </state>
                 <state name="selectedactive" from="active">
                     <area>0,0,100%,40</area>
-                    <shape name="act" from="shapeSelected" >
+                    <shape name="act" from="tm_shapeSelected" >
                         <area>0,0,100%,40</area>
                     </shape>
                 </state>
@@ -1309,7 +1310,7 @@
                 <state type="off">
                 </state>
                 <state type="full" >
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <align>allcenter</align>
                         <area>560,0,40,40</area>
                         <value>&gt;</value>
@@ -1318,26 +1319,26 @@
             </statetype>
         </buttonlist>
 
-        <textarea name="play_edit_t" from="basetextarea">
+        <textarea name="play_edit_t" from="tm_basetextarea">
             <area>40,345,140,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <cutdown>yes</cutdown>
             <align>vcenter</align>
             <value>Play Command</value>
         </textarea>
 
-        <textedit name="player_edit" from="basetextedit">
+        <textedit name="player_edit" from="tm_basetextedit">
             <area>200,345,420,40</area>
         </textedit>
 
     <!-- Trailer -->
-        <button name="trailer_button" from="basebuttonBorder">
+        <button name="trailer_button" from="tm_basebuttonBorder">
             <area>640,345,600,40</area>
          </button>
 
-        <textarea name="trailer_text" from="basetextarea">
+        <textarea name="trailer_text" from="tm_basetextarea">
               <area>645,345,590,40</area>
-              <font>fontBaseTiny</font>
+              <font>tm_fontBaseTiny</font>
               <template>Change Trailer (%1)</template>
               <value>No Trailer Assosiated</value>
               <cutdown>yes</cutdown>
@@ -1352,15 +1353,15 @@
             <preserveaspect>yes</preserveaspect>
             <alpha>180</alpha>
         </imagetype>
-        <shape name="fanartBgShape" from="basebackground">
+        <shape name="fanartBgShape" from="tm_basebackground">
             <area>16,400,400,260</area>
             <fill color="#000000" alpha="0" />
         </shape>
-        <button name="fanart_button" from="basebuttonBorder">
+        <button name="fanart_button" from="tm_basebuttonBorder">
             <area>41,560,350,40</area>
             <value>Find Local Fanart</value>
         </button>
-        <button name="net_fanart_button" from="basebuttonBorder">
+        <button name="net_fanart_button" from="tm_basebuttonBorder">
             <area>41,600,350,40</area>
             <value>Find Online Fanart</value>
         </button>
@@ -1373,11 +1374,11 @@
         <shape name="coverBg" from="fanartBgShape">
             <area>432,400,400,260,</area>
         </shape>
-        <button name="coverart_button" from="basebuttonBorder">
+        <button name="coverart_button" from="tm_basebuttonBorder">
             <area>457,560,350,40</area>
             <value>Find Local Coverart</value>
         </button>
-        <button name="net_coverart_button" from="basebuttonBorder">
+        <button name="net_coverart_button" from="tm_basebuttonBorder">
             <area>457,600,350,40</area>
             <value>Find Online Coverart</value>
         </button>
@@ -1390,16 +1391,16 @@
         <shape name="bannerBG" from="fanartBgShape">
             <area>848,400,400,260</area>
         </shape>
-        <button name="banner_button" from="basebuttonBorder">
+        <button name="banner_button" from="tm_basebuttonBorder">
             <area>873,560,350,40</area>
             <value>Find Local Bannerart</value>
         </button>
-        <button name="net_banner_button" from="basebuttonBorder">
+        <button name="net_banner_button" from="tm_basebuttonBorder">
             <area>873,600,350,40</area>
             <value>Find Online Bannerart</value>
         </button>
         
-        <button name="done_button" from="basebuttonBorder">
+        <button name="done_button" from="tm_basebuttonBorder">
             <area>520,100%-60,240,40</area>
             <value>Done</value>
         </button>
@@ -1409,65 +1410,65 @@
     <window name="metadatasettings">
         <area>0,42,1280,555</area>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>251,70,774,90</area>
             <value>Video Metadata Settings</value>
             <align>hcenter,vcenter</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
 
-        <checkbox name="autometaupdatecheck" from="basecheckbox">
+        <checkbox name="autometaupdatecheck" from="tm_basecheckbox">
             <position>435,207</position>
         </checkbox>
 
-        <textarea name="autometacheck_text" from="basetextarea">
+        <textarea name="autometacheck_text" from="tm_basetextarea">
             <area>475,205,500,30</area>
             <value>Perform metadata update after video scan</value>
             <align>left,vcenter</align>
         </textarea>
 
-        <checkbox name="unknownfilecheck" from="basecheckbox">
+        <checkbox name="unknownfilecheck" from="tm_basecheckbox">
             <position>435,267</position>
         </checkbox>
 
-        <textarea name="unknownfilecheck_text" from="basetextarea">
+        <textarea name="unknownfilecheck_text" from="tm_basetextarea">
             <area>475,265,400,30</area>
             <value>Display unknown file types</value>
             <align>left,vcenter</align>
         </textarea>
 
-        <checkbox name="treeloadsmetacheck" from="basecheckbox">
+        <checkbox name="treeloadsmetacheck" from="tm_basecheckbox">
             <position>435,327</position>
         </checkbox>
 
-        <textarea name="treeloadsmetacheck_text" from="basetextarea">
+        <textarea name="treeloadsmetacheck_text" from="tm_basetextarea">
             <area>475,325,400,30</area>
             <value>Enable metadata in file browse mode</value>
             <align>left,vcenter</align>
         </textarea>
 
-        <checkbox name="randomtrailercheck" from="basecheckbox">
+        <checkbox name="randomtrailercheck" from="tm_basecheckbox">
             <position>435,392</position>
         </checkbox>
 
-        <textarea name="trailercheck_text" from="basetextarea">
+        <textarea name="trailercheck_text" from="tm_basetextarea">
             <area>475,390,400,30</area>
             <value>Enable random trailer playback</value>
             <align>left,vcenter</align>
         </textarea>
 
-        <spinbox name="trailernum" from="spinboxBase">
+        <spinbox name="trailernum" from="tm_spinboxBase">
             <position>435,450</position>
             <template type="zero">Play %n trailer(s)</template>
             <template type="positive">Play %n trailer(s)</template>
         </spinbox>
 
-        <button name="cancel" from="basebutton">
+        <button name="cancel" from="tm_basebutton">
             <position>363,520</position>
             <value>Cancel</value>
         </button>
 
-        <button name="ok" from="basebutton">
+        <button name="ok" from="tm_basebutton">
             <position>693,520</position>
             <value>OK</value>
         </button>

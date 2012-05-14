@@ -6,7 +6,7 @@
 <!-- MythPopupBox - the OSD menu.  -->
     <window name="MythPopupBox" >
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>390,110,500,400</area>
          </shape>
 
@@ -14,7 +14,7 @@
              <area>395,110,490,150</area>
              <multiline>yes</multiline>
              <align>allcenter</align>
-             <font>fontBaseLarge</font>
+             <font>tm_fontBaseLarge</font>
          </textarea>
 
          <buttonlist name="list">
@@ -29,24 +29,24 @@
                  <area>0,0,100%,30</area>
                  <state name="selectedactive">
                      <area>0,0,100%,30</area>
-                     <shape name="sel" from="shapeSelected" />
-                     <textarea name="buttontext" from="basetextarea">
+                     <shape name="sel" from="tm_shapeSelected" />
+                     <textarea name="buttontext" from="tm_basetextarea">
                          <area>30,0,100%-30,30</area>
                          <align>center,vcenter</align>
                          <cutdown>yes</cutdown>
                      </textarea>
                      <imagetype name="buttonarrow">
                          <area>100%-30,0,30,30</area>
-                         <textarea name="arrow" from="basetextarea">
-                             <font>fontLeftRightArrow</font>
+                         <textarea name="arrow" from="tm_basetextarea">
+                             <font>tm_fontLeftRightArrow</font>
                              <align>allcenter</align>
                              <value>></value>
                          </textarea>
                      </imagetype>
                  </state>
-                 <state name="active" from="selectedactive">
+                 <state name="active" from="tm_selectedactive">
                      <area>0,0,100%,30</area>
-                     <shape name="sel" from="shapeSelected" >
+                     <shape name="sel" from="tm_shapeSelected" >
                      <area>0,0,0,0</area>
                  </shape>
                  </state>
@@ -57,9 +57,9 @@
                  <state type="off" />
                  <state type="full">
                      <area>0,0,100%,20</area>
-                     <textarea name="arrow" from="basetextarea">
+                     <textarea name="arrow" from="tm_basetextarea">
                          <align>top,center</align>
-                         <font>fontUpDownArrowPop</font>
+                         <font>tm_fontUpDownArrowPop</font>
                          <value>ˇ</value>
                      </textarea>
                  </state>
@@ -71,76 +71,76 @@
 <!-- osd_message - The OSD text message/notification popup.  -->
     <window name="osd_message">
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
 
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,0,980,40</area>
         </shape>
-        <textarea name="message_text" from="basetextarea" >
+        <textarea name="message_text" from="tm_basetextarea" >
             <area>0,0,980,40</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
     </window>
 
 <!-- osd_input - This window displays the channel number being input during a channel change.  -->
     <window name="osd_input" >
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,0,980,40</area>
         </shape>
-        <textarea  name="osd_number_entry" from="basetextarea" >
+        <textarea  name="osd_number_entry" from="tm_basetextarea" >
             <area>0,0,980,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
     </window>
 
 <!-- osd_status - The "overall status" window, which usually displays playback progress.  -->
     <window name="osd_status" >
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
 
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,600,100%,120</area>
         </shape>
         
-        <textarea name="title" from="basetextarea" >
+        <textarea name="title" from="tm_basetextarea" >
             <area>20,600,350,60</area>
             <multiline>true</multiline>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>vcenter</align>
         </textarea>
 
-        <textarea name="playedtime" from="basetextarea" >
+        <textarea name="playedtime" from="tm_basetextarea" >
             <area>0,600,1260,60</area>
             <multiline>true</multiline>
             <align>right,vcenter</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
              <template>%DESCRIPTION%</template>
         </textarea>
 
-        <progressbar name="position" from="progressbarBase">
+        <progressbar name="position" from="tm_progressbarBase">
             <area>60,665,1160,30</area>
         </progressbar>
     </window>
@@ -148,37 +148,37 @@
 <!-- program_info - The Program Information window.  -->
     <window name="program_info" >
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
 
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,500,100%,220</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>20,505,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>vcenter</align>
         </textarea>
         <textarea name="lentime">
             <area>500,505,760,40</area>
             <align>right,vcenter</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <template></template>
             <template>%STARTTIME% - %ENDTIME%</template>
         </textarea>
 
-        <shape name="iconShape" from="popupBg">
+        <shape name="iconShape" from="tm_popupBg">
             <area>20,547,205,150</area>
         </shape>
         <textarea name="callsign">
             <area>20,692,205,30</area>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>allcenter</align>
         </textarea>
         <imagetype name="iconpath" depends="channum">
@@ -190,115 +190,117 @@
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
-        <textarea name="subtitle" from="basetextarea">
+        <textarea name="subtitle" from="tm_basetextarea">
             <area>235,545,1000,30</area>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>vcenter</align>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>235,575,1000,150</area>
             <multiline>yes</multiline>
             <align>justify</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
     </window>
 
 <!-- browse_info (c&p from program_info) -  The OSD window displayed during channel browsing.  -->
     <window name="browse_info">
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,500,100%,220</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>20,505,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>vcenter</align>
         </textarea>
         <textarea name="lentime">
             <area>500,505,760,40</area>
             <align>right,vcenter</align>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <template>%STARTTIME% - %ENDTIME%</template>
         </textarea>
 
-        <shape name="iconShape" from="popupBg">
+        <shape name="iconShape" from="tm_popupBg">
             <area>20,547,205,150</area>
         </shape>
         <textarea name="callsign">
             <area>20,692,205,30</area>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>allcenter</align>
         </textarea>
         <imagetype name="iconpath">
             <area>30,557,185,130</area>
         </imagetype>
 
-        <textarea name="subtitle" from="basetextarea">
+        <textarea name="subtitle" from="tm_basetextarea">
             <area>235,545,1000,30</area>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>vcenter</align>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>235,575,1000,150</area>
             <multiline>yes</multiline>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>justify</align>
             <template>%DESCRIPTION%</template>
-            <align></align>
         </textarea>
     </window>
 
-<!-- osd_program_editor - The recording editor window -->
-    <window name="osd_program_editor" >
+<!-- osd_program_editor - The recording editor window 
+     <window name="osd_program_editor" >
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
 
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,0,980,40</area>
         </shape>
-        <textarea name="sorrytext" from="basetextarea" >
+        <textarea name="sorrytext" from="tm_basetextarea" >
             <area>0,0,980,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <value>Sorry. Program editor not themed :-( </value>
         </textarea>
     </window>
+    -->
 
-<!-- ChannelEditor - The channel details editor -->
+
+<!-- ChannelEditor - The channel details editor 
     <window name="ChannelEditor" >
         <area>0,0,100%,100%</area>
-        <shape name="clockBox" from="popupBg" >
+        <shape name="clockBox" from="tm_popupBg" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </clock>
-        <shape name="bg" from="popupBg" >
+        <shape name="bg" from="tm_popupBg" >
             <area>0,0,980,40</area>
         </shape>
-        <textarea name="sorrytext" from="basetextarea" >
+        <textarea name="sorrytext" from="tm_basetextarea" >
             <area>0,0,980,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <value>Sorry. Channel editor not themed :-( </value>
         </textarea>
     </window>
+    -->
 
 </mythuitheme>

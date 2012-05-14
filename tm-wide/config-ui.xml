@@ -455,13 +455,13 @@
 
     <window name="generalwizard">
 
-        <shape name="mTitle" from="titleBar" >
+        <shape name="mTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>MythTV Configuration Wizard</value>
             </textarea>
         </shape>
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>100,500,1080,100</area>
             <multiline>yes</multiline>
             <font>fontBaseLarge</font>
@@ -469,28 +469,28 @@
         </textarea>
 
 
-        <button name="submit" from="basebuttonBorder">
+        <button name="submit" from="tm_basebuttonBorder">
             <area> 300,200,680,60</area>
             <value>Submit your hardware profile</value>
         </button>
 
-        <button name="view" from="basebuttonBorder">
+        <button name="view" from="tm_basebuttonBorder">
             <area> 300,280,680,60</area>
             <value>View your hardware profile</value>
         </button>
 
-        <button name="delete" from="basebuttonBorder">
+        <button name="delete" from="tm_basebuttonBorder">
             <area>300,360,680,60</area>
             <value>Delete your hardware profile</value>
         </button>
 
 
-        <button name="cancel" from="basebuttonBorder">
+        <button name="cancel" from="tm_basebuttonBorder">
             <area>300,100%-80,250,40</area>
             <value>Cancel</value>
         </button>
 
-        <button name="next" from="basebuttonBorder">
+        <button name="next" from="tm_basebuttonBorder">
             <area>730,100%-80,250,40</area>
             <value>Next</value>
         </button>
@@ -498,18 +498,18 @@
     </window>
 
     <window name="audiowizard">
-        <shape name="mTitle" from="titleBar" >
+        <shape name="mTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Audio Configuration</value>
             </textarea>
         </shape>
 
-        <textarea name="auddev_text" from="basetextarea">
+        <textarea name="auddev_text" from="tm_basetextarea">
             <area>40,70,300,40</area>
             <align>right,vcenter</align>
             <value>Audio Device:</value>
         </textarea>
-        <buttonlist name="audiodevices" from="scheduleList">
+        <buttonlist name="audiodevices" from="tm_scheduleList">
             <area>360,70,700,40</area>
         </buttonlist>
 
@@ -522,17 +522,17 @@
             <position>360,130</position>
         </buttonlist>
         
-        <button name="testspeakers" from="basebuttonBorder">
+        <button name="testspeakers" from="tm_basebuttonBorder">
             <area>360,190,700,40</area>
         </button>
 
-        <checkbox name="ac3check" from="checkboxBase" >
+        <checkbox name="ac3check" from="tm_checkboxBase" >
             <area>360,250,700,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -543,7 +543,7 @@
             </statetype>
         </checkbox>
 
-        <textarea name="ac3text" from="basetextarea" >
+        <textarea name="ac3text" from="tm_basetextarea" >
             <area>360,250,700,40</area>
             <value>My audio subsystem supports Dolby Digital</value>
             <align>allcenter</align>
@@ -587,19 +587,19 @@
         </textarea>
 
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>50,535,1180,120</area>
             <multiline>yes</multiline>
             <font>fontDescription</font>
             <align>top</align>
         </textarea>
 
-        <button name="previous" from="basebuttonBorder">
+        <button name="previous" from="tm_basebuttonBorder">
             <area>300,100%-60,250,40</area>
             <value>Previous</value>
         </button>
 
-        <button name="next" from="basebuttonBorder">
+        <button name="next" from="tm_basebuttonBorder">
             <area>730,100%-60,250,40</area>
             <value>Next</value>
         </button>
@@ -608,23 +608,23 @@
 
     <window name="videowizard">
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Video Configuration</value>
             </textarea>
         </shape>
 
-        <textarea name="prof_text" from="basetextarea">
+        <textarea name="prof_text" from="tm_basetextarea">
             <area>40,173,300,40</area>
             <align>vcenter,right</align>
             <value>Video Playback Profile:</value>
         </textarea>
 
-        <buttonlist name="playbackprofiles" from="scheduleList">
+        <buttonlist name="playbackprofiles" from="tm_scheduleList">
             <area>360,173,700,40</area>
         </buttonlist>
 
-        <button name="testsd" from="basebuttonBorder">
+        <button name="testsd" from="tm_basebuttonBorder">
             <area>360,232,700,40</area>
             <value>Test Standard Definition</value>
         </button>
@@ -634,19 +634,19 @@
             <value>Test High Definition</value>
         </button>
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>200,450,880,120</area>
             <multiline>yes</multiline>
             <font>fontDescription</font>
             <align>top</align>
         </textarea>
 
-        <button name="previous" from="basebuttonBorder">
+        <button name="previous" from="tm_basebuttonBorder">
             <area>300,100%-60,250,40</area>
             <value>Previous</value>
         </button>
 
-        <button name="next" from="basebuttonBorder">
+        <button name="next" from="tm_basebuttonBorder">
             <area>730,100%-60,250,40</area>
             <value>Next</value>
         </button>

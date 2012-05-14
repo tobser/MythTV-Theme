@@ -4,21 +4,21 @@
 
     <window name="keygrabpopup">
         <area>459,110,500,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>18,18,460,380</area>
             <multiline>yes</multiline>
         </textarea>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>0,423,500,40</area>
             <value>OK</value>
         </button>
 
-        <button name="cancel" from="basebuttonBorder">
+        <button name="cancel" from="tm_basebuttonBorder">
             <area>0,460,500,40</area>
             <value>Cancel</value>
         </button>
@@ -27,20 +27,20 @@
 
     <window name="controls">
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Edit Keys</value>
             </textarea>
         </shape>
 
-        <textarea name="leftdesc" from="basetextarea">
+        <textarea name="leftdesc" from="tm_basetextarea">
             <area>64,60,560,60</area>
             <font>fontBaseLarge</font>
             <value>Contexts</value>
             <align>center</align>
         </textarea>
 
-        <buttonlist name="leftlist" from="basebuttonlist">
+        <buttonlist name="leftlist" from="tm_basebuttonlist">
             <area>64,110,550,440</area>
             <buttonarea>0,0,100%,100%</buttonarea>
             <drawfrombottom>no</drawfrombottom>
@@ -74,14 +74,14 @@
             <drawfrombottom>no</drawfrombottom>
         </buttonlist>
 
-        <textarea name="keyButtonsLabel" from="basetextarea">
+        <textarea name="keyButtonsLabel" from="tm_basetextarea">
             <area>65,650,100,40</area>
             <align>right</align>
             <font>fontBaseLarge</font>
             <value>Keys: </value>
         </textarea>
 
-        <button name="action_0" from="basebuttonBorder">
+        <button name="action_0" from="tm_basebuttonBorder">
             <area>191,650,220,40</area>
         </button>
 
@@ -97,7 +97,7 @@
             <area>869,650,220,40</area>
         </button>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>140,540,1000,90</area>
             <multiline>yes</multiline>
             <align>allcenter</align>

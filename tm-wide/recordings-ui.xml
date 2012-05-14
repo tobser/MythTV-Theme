@@ -9,22 +9,22 @@
             <alpha>60</alpha>
         </imagetype>
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Watch Recordings</value>
             </textarea>
         </shape>
 
 
-        <shape name="rightBox" from="basebackground" >
+        <shape name="rightBox" from="tm_basebackground" >
             <area>0,37,100%,370</area>
             <fill color="#000000" alpha="100" />
         </shape>
 
-        <buttonlist name="groups" from="btnListRight">
+        <buttonlist name="groups" from="tm_btnListRight">
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <area>10,90,220,255</area>
-            <shape name="groupBg" from="basebackground">
+            <shape name="groupBg" from="tm_basebackground">
                 <fill color="#000000" alpha="50" />
             </shape>
 
@@ -34,7 +34,7 @@
 
         <buttonlist name="recordings">
             <area>228,50,1042,340</area>
-            <shape name="recBg" from="basebackground" >
+            <shape name="recBg" from="tm_basebackground" >
                 <fill color="#000000" alpha="50" />
             </shape>
             <layout>vertical</layout>
@@ -47,14 +47,14 @@
             <statetype name="buttonitem">
                 <state name="selectedactive">
                     <area>0,0,1042,30</area>
-                    <shape name="selIn" from="basebackground" >
+                    <shape name="selIn" from="tm_basebackground" >
                         <area>0,0,100%,100%</area>
                     </shape>
                     <statetype name="watched">
                         <state name="yes">
                             <textarea name="wa">
                                 <area>15,0,30,30</area>
-                                <font>fontBaseUltraTiny</font>
+                                <font>tm_fontBaseUltraTiny</font>
                                 <value>W</value>
                                 <align>left,vcenter</align>                
                             </textarea>
@@ -65,7 +65,7 @@
                         <state name="yes">
                             <textarea name="wa">
                                 <area>30,0,50,30</area>
-                                <font>fontBaseUltraTiny</font>
+                                <font>tm_fontBaseUltraTiny</font>
                                 <value>P</value>
                                 <align>left,vcenter</align>                
                             </textarea>
@@ -76,7 +76,7 @@
                         <state name="recording">
                             <textarea name="rec">
                                 <area>39,0,50,30</area>
-                                <font>fontBaseUltraTiny</font>
+                                <font>tm_fontBaseUltraTiny</font>
                                 <value>R</value>
                                 <align>left,vcenter</align>                
                             </textarea>
@@ -86,7 +86,7 @@
                         <state name="yes">
                             <textarea name="rec">
                                 <area>48,0,50,30</area>
-                                <font>fontBaseUltraTiny</font>
+                                <font>tm_fontBaseUltraTiny</font>
                                 <value>B</value>
                                 <align>left,vcenter</align>                
                             </textarea>
@@ -117,7 +117,7 @@
                         <fill alpha="0" />
                     </shape>
                 </state>
-                <state name="active" from="selectedactive" >
+                <state name="active" from="tm_selectedactive" >
                     <area>0,0,1042,30</area>
                     <shape name="selIn">
                         <area>0,0,0,0</area>
@@ -126,25 +126,25 @@
             </statetype>
         </buttonlist>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>25,410,885,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>vcenter</align>
         </textarea>
 
-        <textarea name="channel" from="basetextarea">
+        <textarea name="channel" from="tm_basetextarea">
             <area>25,455,160,30</area>
         </textarea>
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>195,455,715,30</area>
             <template>%TIMEDATE%  (%lentime%,  %filesize_str%)</template>
             <align>right</align>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>25,490,890,220</area>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <multiline>yes</multiline>
             <align>justify</align>
             <cutdown>yes</cutdown>
@@ -152,7 +152,7 @@
         </textarea>
 
         <!-- the shape around the preview-->
-        <shape name="video_shape" from="basebackground">
+        <shape name="video_shape" from="tm_basebackground">
             <area>935,410,320,240</area>
             <fill color="#000000" alpha="254" />
         </shape>
@@ -162,7 +162,7 @@
         </imagetype>
 
         <!-- the shape around the video properties -->
-        <shape name="textstuff" from="basebackground">
+        <shape name="textstuff" from="tm_basebackground">
             <area>935,646,320,70</area>
         </shape>
 
@@ -171,31 +171,31 @@
             <showempty>yes</showempty>
             <state name="hd1080">
                 <area>0,0,100%,100%</area>
-                <textarea name="hd1080" from="basetextarea">
+                <textarea name="hd1080" from="tm_basetextarea">
                     <area>0,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>hd1080</value>
                 </textarea>
             </state>
 
             <state name="hd720">
-                <textarea name="hd720" from="basetextarea">
+                <textarea name="hd720" from="tm_basetextarea">
                     <area>80,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>hd720</value>
                 </textarea>
             </state>
             <state name="hdtv">
-                <textarea name="hdtv" from="basetextarea">
+                <textarea name="hdtv" from="tm_basetextarea">
                     <area>12,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>hd</value>
                 </textarea>
             </state>
             <state name="widescreen">
-                <textarea name="widescreen" from="basetextarea">
+                <textarea name="widescreen" from="tm_basetextarea">
                     <area>180,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>wide</value>
                 </textarea>
             </state>
@@ -208,28 +208,28 @@
                 <area>0,0,100%,100%</area>
                 <textarea name="stereo">
                     <area>0,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>stereo</value>
                 </textarea>
             </state>
             <state name="surround"> 
                 <textarea name="surround">
                     <area>60,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>surround</value>
                 </textarea>
             </state>
             <state name="dolby">
                 <textarea name="dolby">
                     <area>120,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>DolbyDigital</value>
                 </textarea>
             </state>
             <state name="mono">
                 <textarea name="mono">
                     <area>180,0,100%,100%</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>mono</value>
                 </textarea>
             </state>
@@ -241,7 +241,7 @@
                 <area>0,0,100%,100%</area>
                 <textarea name="ae">
                     <area>0,0,50,50</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>ae</value>
                 </textarea>
             </state>
@@ -254,7 +254,7 @@
                 <area>0,0,100%,100%</area>
                 <textarea name="cf">
                     <area>0,0,50,50</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>cf</value>
                 </textarea>
             </state>
@@ -268,21 +268,21 @@
                 <area>0,0,100%,100%</area>
                 <textarea name="cc">
                     <area>0,0,50,50</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>cc</value>
                 </textarea>
             </state>
             <state name="subtitles">
                 <textarea name="subtitles">
                     <area>40,0,50,50</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>sub</value>
                 </textarea>
             </state>
             <state name="onscreensub">
                 <textarea name="onscreensub">
                     <area>80,0,50,50</area>
-                    <font>fontBaseTiny</font>
+                    <font>tm_fontBaseTiny</font>
                     <value>oss</value>
                 </textarea>
             </state>
@@ -290,7 +290,7 @@
 
         <textarea name="norecordings">
             <area>20,75,100%,100%</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <value>
             </value>
             <multiline>yes</multiline>
@@ -300,13 +300,13 @@
 
     <window name="iconhelp">
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
          </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>0,0,100%,50</area>
             <value>Status Icons</value>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -478,18 +478,18 @@
 
     <window name="groupselector">
         <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="lable" from="basetextarea">
+        <textarea name="lable" from="tm_basetextarea">
             <area>0,0,640,220</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <value>Select Recordingroup</value>
         </textarea>
 
-        <buttonlist name="groups" from="basePopuButtonlist">
+        <buttonlist name="groups" from="tm_basePopuButtonlist">
              <area>0,220,640,280</area>
              <buttonarea>0,20,640,100%-20</buttonarea>
              <statetype name="buttonitem">
@@ -500,25 +500,25 @@
 
     <window name="changeview">
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
          </shape>
 
-        <textarea name="what" from="basetextarea">
+        <textarea name="what" from="tm_basetextarea">
             <area>320,110,640,120</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <value>Change View</value>
         </textarea>
 
-        <checkbox name="titles" from="checkboxBase" >
+        <checkbox name="titles" from="tm_checkboxBase" >
             <area>440,230,400,40</area>
             <statetype name="background">
                 <area>0,0,100%,100%</area>
                 <state name="selected">
                     <area>0,0,100%,100%</area>
-                    <shape name="cboxSel" from="shapeSelected" />
-                    <shape name="smallBox" from="basebackground" >
+                    <shape name="cboxSel" from="tm_shapeSelected" />
+                    <shape name="smallBox" from="tm_basebackground" >
                         <area>0,0,40,40</area>
                         <fill color="#000000" alpha="0" />
                         <line color="#FFFFFF" alpha="255" width="2"/>
@@ -542,7 +542,7 @@
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -552,7 +552,7 @@
                 <state type="half" from="full" />
             </statetype>
 
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Titles</value>
                 <align>vcenter</align>
@@ -561,7 +561,7 @@
 
         <checkbox name="categories" from="titles" >
             <area>440,275,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Categories</value>
                 <align>vcenter</align>
@@ -570,7 +570,7 @@
 
         <checkbox name="recgroups" from="titles" >
             <area>440,320,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Recording Groups</value>
                 <align>vcenter</align>
@@ -579,7 +579,7 @@
 
         <checkbox name="watchlist" from="titles" >
             <area>440,365,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Watchlist</value>
                 <align>vcenter</align>
@@ -587,7 +587,7 @@
         </checkbox>
         <checkbox name="searches" from="titles" >
             <area>440,410,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Searches</value>
                 <align>vcenter</align>
@@ -595,7 +595,7 @@
         </checkbox>
         <checkbox name="livetv" from="titles" >
             <area>440,455,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Live TV</value>
                 <align>vcenter</align>
@@ -603,14 +603,14 @@
         </checkbox>
         <checkbox name="watched" from="titles" >
             <area>440,500,400,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%,100%</area>
                 <value>Watched</value>
                 <align>vcenter</align>
             </textarea>
         </checkbox>
 
-        <button name="save" from="basebuttonBorder">
+        <button name="save" from="tm_basebuttonBorder">
             <area>570,560,140,40</area>
             <value>Save</value>
         </button>
@@ -618,45 +618,45 @@
 
     <window name="passwordchanger">
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
          </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>320,110,640,170</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <multiline>yes</multiline>
             <value>Change Recording Group Password</value>
         </textarea>
 
-        <textarea name="oldPw" from="basetextarea">
+        <textarea name="oldPw" from="tm_basetextarea">
             <area>320,280,640,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Old Password:</value>
         </textarea>
-        <textedit name="oldpassword" from="basetextedit">
+        <textedit name="oldpassword" from="tm_basetextedit">
             <area>345,325,590,40</area>
             <textarea name="text">
                 <align>allcenter</align>
             </textarea>
         </textedit>
 
-        <textarea name="newPw" from="basetextarea">
+        <textarea name="newPw" from="tm_basetextarea">
             <area>320,370,640,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>NewPassword:</value>
         </textarea>
-        <textedit name="newpassword" from="basetextedit">
+        <textedit name="newpassword" from="tm_basetextedit">
             <area>345,415,590,40</area>
             <textarea name="text">
                 <align>allcenter</align>
             </textarea>
         </textedit>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>520,540,240,40</area>
             <value>ok</value>
         </button>
@@ -665,59 +665,59 @@
     <window name="editmetadata">
         <area>320,110,640,500</area>
         
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
          </shape>
 
-        <textarea name="Heading" from="basetextarea">
+        <textarea name="Heading" from="tm_basetextarea">
             <area>0,0,640,80</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <value>Edit Metadata</value>
         </textarea>
 
-        <textarea name="mTitle" from="basetextarea">
+        <textarea name="mTitle" from="tm_basetextarea">
             <area>20,70,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Title</value>
         </textarea>
-        <textedit name="title" from="basetextedit">
+        <textedit name="title" from="tm_basetextedit">
             <area>120,70,500,40</area>
         </textedit>
 
-        <textarea name="mSubtitle" from="basetextarea">
+        <textarea name="mSubtitle" from="tm_basetextarea">
             <area>20,125,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Subitle</value>
         </textarea>
-        <textedit name="subtitle" from="basetextedit">
+        <textedit name="subtitle" from="tm_basetextedit">
             <area>120,125,500,40</area>
         </textedit>
 
-        <textarea name="mSeason" from="basetextarea">
+        <textarea name="mSeason" from="tm_basetextarea">
             <area>20,180,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align> <value>Season</value>
         </textarea>
-        <spinbox name="season" from="spinboxBase">
+        <spinbox name="season" from="tm_spinboxBase">
             <area>120,180,120,40</area>
             <layout>horizontal</layout>
         </spinbox>
 
-        <textarea name="mEpi" from="basetextarea">
+        <textarea name="mEpi" from="tm_basetextarea">
             <area>270,180,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Episode</value>
         </textarea>
-        <spinbox name="episode" from="spinboxBase">
+        <spinbox name="episode" from="tm_spinboxBase">
             <area>370,180,140,40</area>
             <layout>horizontal</layout>
         </spinbox>
 
-        <textedit name="description" from="basetextedit">
+        <textedit name="description" from="tm_basetextedit">
             <area>20,235,600,150</area>
             <statetype name="background">
                 <area>0,0,100%,150</area>
@@ -732,24 +732,24 @@
                 </state>
                 <state name="inactive" from="active" />
             </statetype>
-            <textarea name="text" from="basetextarea">
+            <textarea name="text" from="tm_basetextarea">
                 <area>12,10,100%-12,100%-10</area>
                 <align>left,vcenter</align>
                 <multiline>yes</multiline>
             </textarea>
         </textedit>
 
-        <textarea name="mInet" from="basetextarea">
+        <textarea name="mInet" from="tm_basetextarea">
             <area>20,400,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Intref</value>
         </textarea>
-        <textedit name="inetref" from="basetextedit">
+        <textedit name="inetref" from="tm_basetextedit">
             <area>120,400,500,40</area>
         </textedit>
         
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>200,450,240,40</area>
             <value>OK</value>
         </button>

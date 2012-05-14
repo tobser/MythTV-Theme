@@ -5,14 +5,14 @@
     <!-- The Non-LiveTV program guide -->
     <window name="programguide">
         <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Programguide</value>
             </textarea>
         </shape>
 
         <!-- this is the background for the information at the bottom -->
-        <shape name="program_background" from="basebackground">
+        <shape name="program_background" from="tm_basebackground">
             <area>25,513,1230,205</area>
         </shape>
 
@@ -22,43 +22,43 @@
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>120,516,770,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="subtitle" from="basetextarea">
+        <textarea name="subtitle" from="tm_basetextarea">
             <area>120,552,770,20</area>
             <align>left,vcenter</align>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </textarea>
 
-       <shape name="title_separator" from="baseSeperator">
+       <shape name="title_separator" from="tm_baseSeperator">
             <area>950,522,1,55</area>
        </shape>
       
-       <shape name="recording_time_separator" from="baseSeperator">
+       <shape name="recording_time_separator" from="tm_baseSeperator">
             <area>40,576,1200,1</area>
         </shape>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>900,516,338,30</area>
             <align>right,vcenter</align>
             <cutdown>yes</cutdown>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
 
-        <textarea name="rectypestatus" from="basetextarea">
+        <textarea name="rectypestatus" from="tm_basetextarea">
             <area>900,552,338,20</area>
             <align>right,vcenter</align>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </textarea>
 
 
         <!-- show the plot of the recording -->
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>40,580,1200,138</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
@@ -68,13 +68,13 @@
 
 
         <!-- this is the background for the entire tv program list -->
-        <shape name="timelist_separator" from="baseSeperator">
+        <shape name="timelist_separator" from="tm_baseSeperator">
             <area>28,85,1224,1</area>
         </shape>
-        <shape name="guidBottomSeperator" from="baseSeperator">
+        <shape name="guidBottomSeperator" from="tm_baseSeperator">
             <area>28,504,1224,1</area>
         </shape>
-        <shape name="programlist_background" from="basebackground">
+        <shape name="programlist_background" from="tm_basebackground">
             <area>25,36,1230,480</area>
         </shape>
 
@@ -90,7 +90,7 @@
                     <imagetype name="buttonbackground">
                         <area>0,0,180,84</area>
                         <filename />
-						<shape name="channelicon_background" from="basebackground">
+						<shape name="channelicon_background" from="tm_basebackground">
                             <area>2,7,56,56</area>
                         </shape>
                     </imagetype>
@@ -99,9 +99,9 @@
                         <area>4,9,51,51</area>
 						<preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>70,0,120,84</area>
-                        <font>fontBase</font>
+                        <font>tm_fontBase</font>
                         <cutdown>no</cutdown>
                         <align>left,vcenter</align>
                     </textarea>
@@ -112,10 +112,10 @@
         </buttonlist>
 
         <!-- shows the channel group in the top left corner -->
-        <textarea name="channelgroup" from="basetextarea">
+        <textarea name="channelgroup" from="tm_basetextarea">
             <area>40,40,176,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
 
         <!-- this is the horizontal list of the time slots -->
@@ -126,7 +126,7 @@
             <buttonarea>0,0,1036,40</buttonarea>
             <statetype name="buttonitem">
                 <area>0,0,258,20</area>
-                <shape name="timeSep" from="baseSeperator">
+                <shape name="timeSep" from="tm_baseSeperator">
                     <area>1,0,1,464</area>
                     <line color="#000000" alpha="45" width="0" />
                 </shape>
@@ -136,9 +136,9 @@
                         <area>0,0,258,40</area>
                         <filename />
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>5,0,258,40</area>
-                        <font>fontBaseLarge</font>
+                        <font>tm_fontBaseLarge</font>
                         <align>vcenter</align>
                     </textarea>
                 </state>
@@ -161,7 +161,7 @@
             <cutdown>yes</cutdown>
             <multiline>yes</multiline>
             <textoffset>6,4</textoffset>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </guidegrid>
 
     </window>
@@ -171,19 +171,19 @@
     <window name="programguide-video">
 
         <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Programguide</value>
             </textarea>
         </shape>
 
         <!-- this is the background for the information at the bottom -->
-        <shape name="program_background" from="basebackground">
+        <shape name="program_background" from="tm_basebackground">
             <area>25,513,1230,205</area>
         </shape>
 
         
-        <shape name="videoBackground" from="basebackground"> 
+        <shape name="videoBackground" from="tm_basebackground"> 
             <area>35,520,286,190</area>
             <fill color="#000000" alpha="255" />
         </shape>
@@ -195,45 +195,45 @@
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>340,518,610,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
         
 
-        <textarea name="subtitle" from="basetextarea">
+        <textarea name="subtitle" from="tm_basetextarea">
             <area>340,552,610,20</area>
             <align>left,vcenter</align>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </textarea>
 
-       <shape name="title_separator" from="baseSeperator">
+       <shape name="title_separator" from="tm_baseSeperator">
             <area>950,522,1,55</area>
        </shape>
       
-       <shape name="recording_time_separator" from="baseSeperator">
+       <shape name="recording_time_separator" from="tm_baseSeperator">
             <area>330,576,910,1</area>
         </shape>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>950,518,310,30</area>
             <align>allcenter</align>
             <cutdown>yes</cutdown>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
         </textarea>
 
-        <textarea name="rectypestatus" from="basetextarea">
+        <textarea name="rectypestatus" from="tm_basetextarea">
             <area>950,552,310,20</area>
             <align>allcenter</align>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </textarea>
 
 
         <!-- show the plot of the recording -->
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>335,580,905,138</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
@@ -244,13 +244,13 @@
 
         <!-- this is the background for the entire tv program list -->
 
-        <shape name="timelist_separator" from="baseSeperator">
+        <shape name="timelist_separator" from="tm_baseSeperator">
             <area>28,85,1224,1</area>
         </shape>
-        <shape name="guidBottomSeperator" from="baseSeperator">
+        <shape name="guidBottomSeperator" from="tm_baseSeperator">
             <area>28,504,1224,1</area>
         </shape>
-        <shape name="programlist_background" from="basebackground">
+        <shape name="programlist_background" from="tm_basebackground">
             <area>25,36,1230,480</area>
         </shape>
 
@@ -265,7 +265,7 @@
                     <imagetype name="buttonbackground">
                         <area>0,0,180,84</area>
                         <filename />
-						<shape name="channelicon_background" from="basebackground">
+						<shape name="channelicon_background" from="tm_basebackground">
                             <area>2,7,56,56</area>
                         </shape>
                     </imagetype>
@@ -274,9 +274,9 @@
                         <area>4,9,51,51</area>
 						<preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>70,0,120,84</area>
-                        <font>fontBase</font>
+                        <font>tm_fontBase</font>
                         <cutdown>no</cutdown>
                         <align>left,vcenter</align>
                     </textarea>
@@ -287,10 +287,10 @@
         </buttonlist>
 
         <!-- shows the channel group in the top left corner -->
-        <textarea name="channelgroup" from="basetextarea">
+        <textarea name="channelgroup" from="tm_basetextarea">
             <area>40,40,176,40</area>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
 
         <!-- this is the horizontal list of the time slots -->
@@ -301,7 +301,7 @@
             <buttonarea>0,0,1036,40</buttonarea>
             <statetype name="buttonitem">
                 <area>0,0,258,20</area>
-                <shape name="timeSep" from="baseSeperator">
+                <shape name="timeSep" from="tm_baseSeperator">
                     <area>1,0,1,464</area>
                     <line color="#000000" alpha="45" width="0" />
                 </shape>
@@ -311,9 +311,9 @@
                         <area>0,0,258,40</area>
                         <filename />
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>5,0,258,40</area>
-                        <font>fontBaseLarge</font>
+                        <font>tm_fontBaseLarge</font>
                         <align>vcenter</align>
                     </textarea>
                 </state>
@@ -336,92 +336,92 @@
             <cutdown>yes</cutdown>
             <multiline>yes</multiline>
             <textoffset>6,4</textoffset>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
         </guidegrid>
     </window>
 
     <window name="scheduleeditor">
         <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Schedule Editor</value>
             </textarea>
         </shape>
 
         <!-- program details: -->
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>100,36,1080,320</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>120,45,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
-        <textarea name="channel" from="basetextarea">
+        <textarea name="channel" from="tm_basetextarea">
             <area>130,90,160,30</area>
         </textarea>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>290,90,480,30</area>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        <shape name="buttonsBg" from="basebackground">
+        <shape name="buttonsBg" from="tm_basebackground">
             <area>250,352,780,360</area>
         </shape>
 
         <!-- options: -->
 
-        <buttonlist name="rules" from="scheduleList">
+        <buttonlist name="rules" from="tm_scheduleList">
             <area>290,360,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
 
-        <button name="schedoptions" from="scheduleButton">
+        <button name="schedoptions" from="tm_scheduleButton">
             <area>290,401,700,40</area>
             <value>Schedule Options</value>
         </button>
 
-        <button name="storeoptions"  from="scheduleButton">
+        <button name="storeoptions"  from="tm_scheduleButton">
             <area>290,440,700,40</area>
             <value>Storage Options</value>
         </button>
 
-        <button name="postprocessing"  from="scheduleButton">
+        <button name="postprocessing"  from="tm_scheduleButton">
             <area>290,480,700,40</area>
             <value>Post Processing</value>
         </button>
 
-        <button name="schedinfo"  from="scheduleButton">
+        <button name="schedinfo"  from="tm_scheduleButton">
             <area>290,520,700,40</area>
             <value>Schedule Info</value>
         </button>
 
-        <button name="preview"  from="scheduleButton">
+        <button name="preview"  from="tm_scheduleButton">
             <area>290,560,700,40</area>
             <value>Preview</value>
         </button>
 
-        <button name="metadata"  from="scheduleButton">
+        <button name="metadata"  from="tm_scheduleButton">
             <area>290,600,700,40</area>
             <value>Metadata Options</value>
         </button>
 
-        <button name="cancel" from="basebuttonBorder">
+        <button name="cancel" from="tm_basebuttonBorder">
             <area>50%-120,660,120,40</area>
             <value>Cancel</value>
         </button>
 
-        <button name="save" from="basebuttonBorder">
+        <button name="save" from="tm_basebuttonBorder">
             <area>50%,660,120,40</area>
             <value>Save</value>
         </button>
@@ -429,77 +429,77 @@
 
     <window name="storageoptionseditor" >
         <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Storage Options</value>
             </textarea>
         </shape>
 
         <!-- program details: -->
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>100,36,1080,320</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>120,45,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
-        <textarea name="channel" from="basetextarea">
+        <textarea name="channel" from="tm_basetextarea">
             <area>130,90,160,30</area>
         </textarea>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>290,90,480,30</area>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        <shape name="buttonsBg" from="basebackground">
+        <shape name="buttonsBg" from="tm_basebackground">
             <area>250,352,780,360</area>
         </shape>
 
         <!-- Options: -->
 
-        <buttonlist name="recprofile" from="scheduleList">
+        <buttonlist name="recprofile" from="tm_scheduleList">
             <area>290,360,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
-        <buttonlist name="recgroup" from="scheduleList">
+        <buttonlist name="recgroup" from="tm_scheduleList">
             <area>290,400,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
-        <buttonlist name="storagegroup" from="scheduleList">
+        <buttonlist name="storagegroup" from="tm_scheduleList">
             <area>290,440,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
-        <buttonlist name="playgroup" from="scheduleList">
+        <buttonlist name="playgroup" from="tm_scheduleList">
             <area>290,480,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
 
-        <spinbox name="maxepisodes" from="spinboxBase">
+        <spinbox name="maxepisodes" from="tm_spinboxBase">
             <area>290,520,700,40</area>
             <layout>horizontal</layout>
             <template type="zero">No episode limit</template>
             <template type="positive">Keep at most %n episode(s)</template>
         </spinbox>
 
-        <buttonlist name="maxnewest" from="scheduleList">
+        <buttonlist name="maxnewest" from="tm_scheduleList">
             <area>290,560,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
         </buttonlist>
 
-        <checkbox name="autoexpire" from="checkboxBase">
+        <checkbox name="autoexpire" from="tm_checkboxBase">
             <area>290,600,700,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                 <value>Autoexpire</value>
                 <align>allcenter</align>
@@ -508,7 +508,7 @@
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -519,7 +519,7 @@
             </statetype>
         </checkbox>
 
-         <button name="back" from="basebuttonBorder">
+         <button name="back" from="tm_basebuttonBorder">
              <area>570,660,140,40</area>
              <value>Back</value>
          </button>
@@ -527,81 +527,81 @@
 
     <window name="scheduleoptionseditor" >
     <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Schedule Options</value>
             </textarea>
         </shape>
 
         <!-- program details: -->
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>100,36,1080,320</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>120,45,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
-        <textarea name="channel" from="basetextarea">
+        <textarea name="channel" from="tm_basetextarea">
             <area>130,90,160,30</area>
         </textarea>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>290,90,480,30</area>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>130,130,1040,210</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        <shape name="buttonsBg" from="basebackground">
+        <shape name="buttonsBg" from="tm_basebackground">
             <area>250,352,780,360</area>
         </shape>
 
         <!-- Options: -->
-        <spinbox name="priority" from="spinboxBase" >
+        <spinbox name="priority" from="tm_spinboxBase" >
             <area>290,360,700,40</area>
             <template type="negative">Reduce priority by %n</template>
             <template type="zero">Normal recording priority</template>
             <template type="positive">Raise priority by %n</template>
             <helptext />
         </spinbox>
-        <spinbox name="input" from="spinboxBase" >
+        <spinbox name="input" from="tm_spinboxBase" >
             <area>290,400,700,40</area>
             <helptext />
         </spinbox>
-        <spinbox name="startoffset" from="spinboxBase" >
+        <spinbox name="startoffset" from="tm_spinboxBase" >
             <area>290,440,700,40</area>
             <template type="negative">Start recording %n minute(s) late</template>
             <template type="zero">Start recording on time</template>
             <template type="positive">Start recording %n minute(s) early</template>
             <helptext />
         </spinbox>
-        <spinbox name="endoffset" from="spinboxBase" >
+        <spinbox name="endoffset" from="tm_spinboxBase" >
             <area>290,480,700,40</area>
             <template type="negative">End recording %n minute(s) early</template>
             <template type="zero">End recording on time</template>
             <template type="positive">End recording %n minute(s) late</template>
             <helptext />
         </spinbox>
-        <spinbox name="dupmethod" from="spinboxBase" >
+        <spinbox name="dupmethod" from="tm_spinboxBase" >
             <area>290,520,700,40</area>
             <helptext />
         </spinbox>
-        <spinbox name="dupscope"  from="spinboxBase" >
+        <spinbox name="dupscope"  from="tm_spinboxBase" >
             <area>290,560,700,40</area>
             <helptext />
         </spinbox>
 
-        <checkbox name="ruleactive" from="checkboxBase" >
+        <checkbox name="ruleactive" from="tm_checkboxBase" >
             <area>290,600,700,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                 <value>Recording Rule Active</value>
                 <align>allcenter</align>
@@ -610,7 +610,7 @@
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -621,7 +621,7 @@
             </statetype>
         </checkbox>
 
-         <button name="back" from="basebuttonBorder">
+         <button name="back" from="tm_basebuttonBorder">
              <area>570,660,140,40</area>
              <value>Back</value>
          </button>
@@ -629,47 +629,47 @@
 
     <window name="postproceditor" >
         <area>0,0,100%,100%</area>
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Postprocessing</value>
             </textarea>
         </shape>
 
         <!-- program details: -->
-        <shape name="asdf" from="basebackground" >
+        <shape name="asdf" from="tm_basebackground" >
             <area>100,36,1080,280</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>120,45,1000,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <cutdown>yes</cutdown>
             <align>allcenter</align>
         </textarea>
 
-        <textarea name="channel" from="basetextarea">
+        <textarea name="channel" from="tm_basetextarea">
             <area>130,90,160,30</area>
         </textarea>
 
-        <textarea name="timedate" from="basetextarea">
+        <textarea name="timedate" from="tm_basetextarea">
             <area>290,90,480,30</area>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>130,130,1040,170</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>justify</align>
             <template>%"|SUBTITLE|" %%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
-        <shape name="buttonsBg" from="basebackground">
+        <shape name="buttonsBg" from="tm_basebackground">
             <area>250,312,780,400</area>
         </shape>
 
         <!-- Options: -->
-         <checkbox name="autocommflag" from="checkboxBase" >
+         <checkbox name="autocommflag" from="tm_checkboxBase" >
             <area>290,320,700,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                  <value>Commercial Flag new recordings</value>
                 <align>allcenter</align>
@@ -678,7 +678,7 @@
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -691,7 +691,7 @@
 
          <checkbox name="metadatalookup" from="autocommflag" >
             <area>290,360,700,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                 <align>allcenter</align>
                 <value>Do Metadata lookup</value>
@@ -701,29 +701,29 @@
 
          <checkbox name="autotranscode" from="autocommflag" >
             <area>290,400,700,40</area>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                 <align>allcenter</align>
                 <value>Transcode new recordings</value>
             </textarea>
         </checkbox>
         
-         <buttonlist name="transcodeprofile" from="scheduleList" >
+         <buttonlist name="transcodeprofile" from="tm_scheduleList" >
             <area>290,440,700,40</area>
             <buttonarea>0,0,700,40</buttonarea>
-            <textarea name="text" from="basetextarea" >
+            <textarea name="text" from="tm_basetextarea" >
                 <area>50,0,100%-50,100%</area>
                 <align>allcenter</align>
             </textarea>
         </buttonlist>
 
-        <checkbox name="userjob1" from="checkboxBase" >
+        <checkbox name="userjob1" from="tm_checkboxBase" >
             <area>290,480,700,40</area>
             <statetype name="checkstate">
                 <area>5,0,30,100%</area>
                 <state type="full">
                     <area>0,0,30,100%</area>
-                    <textarea name="X" from="basetextarea" >
+                    <textarea name="X" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <value>X</value>
                         <align>allcenter</align>
@@ -733,7 +733,7 @@
                 <state type="half" from="full" />
             </statetype>
         </checkbox>
-        <textarea name="userjob1text" from="basetextarea" >
+        <textarea name="userjob1text" from="tm_basetextarea" >
             <area>290,480,700,40</area>
             <align>allcenter</align>
             <value>Userjob 1</value>
@@ -743,7 +743,7 @@
         <checkbox name="userjob2" from="userjob1" >
             <area>290,520,700,40</area>
         </checkbox>
-        <textarea name="userjob2text" from="basetextarea" >
+        <textarea name="userjob2text" from="tm_basetextarea" >
             <area>290,520,700,40</area>
             <align>allcenter</align>
             <value>Userjob 2</value>
@@ -752,7 +752,7 @@
         <checkbox name="userjob3" from="userjob1" >
             <area>290,560,700,40</area>
         </checkbox>
-        <textarea name="userjob3text" from="basetextarea" >
+        <textarea name="userjob3text" from="tm_basetextarea" >
             <area>290,560,700,40</area>
             <align>allcenter</align>
             <value>Userjob 3</value>
@@ -761,13 +761,13 @@
         <checkbox name="userjob4" from="userjob1" >
             <area>290,600,700,40</area>
         </checkbox>
-        <textarea name="userjob4text" from="basetextarea" >
+        <textarea name="userjob4text" from="tm_basetextarea" >
             <area>290,600,700,40</area>
             <align>allcenter</align>
             <value>Userjob 4</value>
         </textarea>
 
-         <button name="back" from="basebuttonBorder">
+         <button name="back" from="tm_basebuttonBorder">
              <area>570,660,140,40</area>
              <value>Back</value>
          </button>
@@ -776,13 +776,13 @@
 
 
      <window name="progdetails" >
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Program Details</value>
             </textarea>
         </shape>
 
-        <shape name="bg" from="basebackground">
+        <shape name="bg" from="tm_basebackground">
             <area>30,37,100%-30,100%-20</area>
             <fill color="#000000" alpha="255" />
         </shape>
@@ -801,64 +801,70 @@
             <alpha>60</alpha>
         </imagetype>
        --> 
-        <shape name="mytitle" from="titleBar" >
+        <shape name="mytitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                <value>Metadata Options</value>
             </textarea>
         </shape>
-        <shape name="rightBox" from="basebackground" >
+        <shape name="rightBox" from="tm_basebackground" >
             <area>0,37,100%,100%</area>
             <fill color="#000000" alpha="100" />
         </shape>
 
-        <textarea name="mInet" from="basetextarea">
+        <textarea name="mInet" from="tm_basetextarea">
             <area>20,70,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Intref</value>
         </textarea>
-        <textedit name="inetref_edit" from="basetextedit">
+        <textedit name="inetref_edit" from="tm_basetextedit">
             <area>120,70,390,40</area>
         </textedit>
 
 
-        <textarea name="mSeason" from="basetextarea">
+        <textarea name="mSeason" from="tm_basetextarea">
             <area>20,125,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align> <value>Season</value>
         </textarea>
-        <spinbox name="season_spinbox" from="spinboxBase">
+        <spinbox name="season_spinbox" from="tm_spinboxBase">
             <area>120,125,120,40</area>
             <layout>horizontal</layout>
         </spinbox>
 
-        <textarea name="mEpi" from="basetextarea">
+        <textarea name="mEpi" from="tm_basetextarea">
             <area>270,125,100,40</area>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
             <value>Episode</value>
         </textarea>
-        <spinbox name="episode_spinbox" from="spinboxBase">
+        <spinbox name="episode_spinbox" from="tm_spinboxBase">
             <area>370,125,140,40</area>
             <layout>horizontal</layout>
         </spinbox>
         
-        <button name="query_button" from="basebuttonBorder">
+        <button name="query_button" from="tm_basebuttonBorder">
             <area>800,90,240,40</area>
             <value>Query All</value>
         </button>
 
+        <!--
+             <button name="custom_query_button" from="tm_basebuttonBorder">
+                     <area>1040,90,240,40</area>
+                <value>Custom Query</value>
+             </button>
+        -->
 
     <!-- fan art -->
-        <shape name="fanartBgShape" from="basebackground">
+        <shape name="fanartBgShape" from="tm_basebackground">
             <area>16,180,400,500</area>
             <fill color="#000000" alpha="0" />
         </shape>
-        <button name="local_fanart_button" from="basebuttonBorder">
+        <button name="local_fanart_button" from="tm_basebuttonBorder">
             <area>41,180,350,40</area>
             <value>Find Local Fanart</value>
         </button>
-        <button name="online_fanart_button" from="basebuttonBorder">
+        <button name="online_fanart_button" from="tm_basebuttonBorder">
             <area>41,220,350,40</area>
             <value>Find Online Fanart</value>
         </button>
@@ -874,11 +880,11 @@
         <shape name="coverBg" from="fanartBgShape">
             <area>432,180,400,500</area>
         </shape>
-        <button name="local_coverart_button" from="basebuttonBorder">
+        <button name="local_coverart_button" from="tm_basebuttonBorder">
             <area>457,180,350,40</area>
             <value>Find Local Coverart</value>
         </button>
-        <button name="online_coverart_button" from="basebuttonBorder">
+        <button name="online_coverart_button" from="tm_basebuttonBorder">
             <area>457,220,350,40</area>
             <value>Find Online Coverart</value>
         </button>
@@ -894,11 +900,11 @@
             <area>848,180,400,500</area>
         </shape>
 
-        <button name="local_banner_button" from="basebuttonBorder">
+        <button name="local_banner_button" from="tm_basebuttonBorder">
             <area>873,180,350,40</area>
             <value>Find Local Bannerart</value>
         </button>
-        <button name="online_banner_button" from="basebuttonBorder">
+        <button name="online_banner_button" from="tm_basebuttonBorder">
             <area>873,220,350,40</area>
             <value>Find Online Bannerart</value>
         </button>
@@ -909,7 +915,7 @@
         </imagetype>
         
 
-        <button name="back" from="basebuttonBorder">
+        <button name="back" from="tm_basebuttonBorder">
             <area>520,680,240,40</area>
             <value>Back</value>
         </button>

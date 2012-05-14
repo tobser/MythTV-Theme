@@ -4,18 +4,18 @@
 
     <window name="status">
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>System Status</value>
             </textarea>
         </shape>
 
-        <shape name="categoryBackground" from="basebackground">
+        <shape name="categoryBackground" from="tm_basebackground">
             <area>20,50,100%-20,60</area>
         </shape>
 
 
-        <buttonlist name="category" from="basebuttonlist">
+        <buttonlist name="category" from="tm_basebuttonlist">
             <area>20,50,100%-20,60</area>
             <layout>horizontal</layout>
             <wrapstyle>selection</wrapstyle>
@@ -52,11 +52,11 @@
         </buttonlist>
 
 
-        <shape name="list_background" from="basebackground">
+        <shape name="list_background" from="tm_basebackground">
             <area>20,130,100%-20,410</area>
         </shape>
 
-        <buttonlist name="log" from="basebuttonlist">
+        <buttonlist name="log" from="tm_basebuttonlist">
             <area>20,130,100%-20,410</area>
             <buttonarea>0,0,100%+5,100%</buttonarea>
             <statetype name="buttonitem">
@@ -73,24 +73,24 @@
             </statetype>
         </buttonlist>
 
-        <textarea name="helptext" from="basetextarea">
+        <textarea name="helptext" from="tm_basetextarea">
             <area>40,560,100%-40,150</area>
             <value>This screen displays the status of various system components</value>
             <multiline>yes</multiline>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
             <align>top,hcenter</align>
         </textarea>
 
     </window>
 
     <window name="standbymode">
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
             <shape name="pupBackground">
                 <alpha>200</alpha>
             </shape>
         </shape>
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <alpha>120</alpha>
             <shape name="titleSh">
                 <alpha>120</alpha>
@@ -111,7 +111,7 @@
                 <area>0,0,100%,100%</area>
                 <textarea name="status">
                     <area>0,0,100%,100%</area>
-                    <font>fontBaseLarge</font>
+                    <font>tm_fontBaseLarge</font>
                     <align>allcenter</align>
                     <value>Backend is idle</value>
                 </textarea>

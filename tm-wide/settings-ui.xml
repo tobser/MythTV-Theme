@@ -3,11 +3,11 @@
 <mythuitheme>
 
     <window name="rawsettingseditor">
-        <shape name="Title" from="titleBar" >
+        <shape name="Title" from="tm_titleBar" >
             <shape name="titleSh">
                 <area>0,0,500,40</area>
             </shape>
-            <textarea name="pagetitle" from="basetextarea">
+            <textarea name="pagetitle" from="tm_basetextarea">
                 <area>0,0,0,0</area>
                 <value></value>
             </textarea>
@@ -15,7 +15,7 @@
 
         <textarea name="heading" >
             <area>0,0,500,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
         </textarea>
 
@@ -32,7 +32,7 @@
                 <area>0,0,880,40</area>
                 <state name="active">
                 <area>0,0,880,40</area>
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                 <area>0,0,880,40</area>
                     <align>allcenter</align>
                 </textarea>
@@ -40,8 +40,8 @@
             <state name="selectedinactive" from="active">
             </state>
             <state name="selectedactive" >
-                <shape name="sel" from="shapeSelected" />
-                <textarea name="buttontext" from="basetextarea">
+                <shape name="sel" from="tm_shapeSelected" />
+                <textarea name="buttontext" from="tm_basetextarea">
                 <area>0,0,880,40</area>
                     <align>allcenter</align>
                 </textarea>
@@ -49,32 +49,32 @@
             </statetype>
         </buttonlist>
 
-        <shape name="label-shape" from="basebackground">
+        <shape name="label-shape" from="tm_basebackground">
             <area>200,480,880,100</area>
         </shape>
 
-        <textarea name="label-text" from="basetextarea">
+        <textarea name="label-text" from="tm_basetextarea">
             <area>200,480,880,100</area>
             <align>allcenter</align>
         </textarea>
 
-        <shape name="valuebackground" from="basebackground">
+        <shape name="valuebackground" from="tm_basebackground">
             <area>200,600,880,40</area>
         </shape>
 
-        <textedit name="settingvalue" from="basetextedit">
+        <textedit name="settingvalue" from="tm_basetextedit">
             <area>200,600,880,40</area>
             <textarea name="text">
                 <area>30,0,820,40</area>
             </textarea>
         </textedit>
 
-        <button name="cancel" from="basebuttonBorder">
+        <button name="cancel" from="tm_basebuttonBorder">
             <area>50%-120,660,120,40</area>
             <value>Cancel</value>
         </button>
 
-        <button name="save" from="basebuttonBorder">
+        <button name="save" from="tm_basebuttonBorder">
             <area>50%,660,120,40</area>
             <value>Save</value>
         </button>
@@ -84,13 +84,13 @@
     <window name="themechooser">
         <area>0,0,100%,100%</area>
 
-        <shape name="programguideTitle" from="titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" >
             <textarea name="pagetitle">
                 <value>Theme Chooser</value>
             </textarea>
         </shape>
 
-        <shape name="preview-shape" from="basebackground">
+        <shape name="preview-shape" from="tm_basebackground">
             <area>660,60,590,410</area>
         </shape>
 
@@ -99,34 +99,34 @@
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
-        <textarea name="name" from="basetextarea">
+        <textarea name="name" from="tm_basetextarea">
             <area>660,480,280,35</area>
             <multiline>no</multiline>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="resolution" from="basetextarea">
+        <textarea name="resolution" from="tm_basetextarea">
             <area>680,515,280,30</area>
             <multiline>no</multiline>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="aspect" from="basetextarea">
+        <textarea name="aspect" from="tm_basetextarea">
             <area>960,515,280,30</area>
             <multiline>no</multiline>
-            <font>fontBaseTiny</font>
+            <font>tm_fontBaseTiny</font>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
         </textarea>
 
-        <textarea name="description" from="basetextarea">
+        <textarea name="description" from="tm_basetextarea">
             <area>660,545,590,155</area>
             <multiline>yes</multiline>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>left,top</align>
             <cutdown>yes</cutdown>
         </textarea>
@@ -149,17 +149,17 @@
                         <alpha>160</alpha>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>250,5,350,100%-5</area>
                         <align>left,vcenter</align>
-                        <font>fontDescription</font>
+                        <font>tm_fontDescription</font>
                     </textarea>
 
                 </state>
 
                 <state name="selectedactive">
                     <area>0,0,600,120</area>
-                    <shape name="background" from="shapeSelected">
+                    <shape name="background" from="tm_shapeSelected">
                         <fill color="#000000" alpha="0" />
                     </shape>
                     <imagetype name="buttonimage">
@@ -167,10 +167,10 @@
                         <alpha>160</alpha>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
+                    <textarea name="buttontext" from="tm_basetextarea">
                         <area>250,5,350,100%-5</area>
                         <align>left,vcenter</align>
-                        <font>fontDescription</font>
+                        <font>tm_fontDescription</font>
                     </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
@@ -186,7 +186,7 @@
                     <filename />
                 </imagetype>
 
-                <shape name="programguideTitle" from="titleBar" >
+                <shape name="programguideTitle" from="tm_titleBar" >
                     <textarea name="pagetitle">
                         <value>Preview</value>
                     </textarea>

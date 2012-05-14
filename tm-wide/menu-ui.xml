@@ -3,7 +3,7 @@
 <mythuitheme>
     <window name="mainmenu">
 
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
              <area>880,40,400,40</area>
         </clock>
 
@@ -20,7 +20,7 @@
         </checkbox>
         -->
 
-        <buttonlist name="menu" from="basebuttonlist">
+        <buttonlist name="menu" from="tm_basebuttonlist">
             <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <layout>vertical</layout>
@@ -36,15 +36,15 @@
                     <textarea name="buttontext">
                         <align>allcenter</align>
                         <area>0,0,100%,60</area>
-                        <font>fontBaseLarge</font>
+                        <font>tm_fontBaseLarge</font>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active">
                     <area>0,0,100%,60</area>
-                    <shape name="sel" from="shapeSelected" />
+                    <shape name="sel" from="tm_shapeSelected" />
                     <textarea name="buttontext">
                         <area>0,0,100%,60</area>
-                        <font>fontBaseLarge</font>
+                        <font>tm_fontBaseLarge</font>
                         <align>allcenter</align>
                         <alpha>255</alpha>
                     </textarea>

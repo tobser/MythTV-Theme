@@ -2,38 +2,38 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
 
-    <fontdef name="fontBase" face="Droid Sans">
+    <fontdef name="tm_fontBase" face="Droid Sans">
         <pixelsize>22</pixelsize>
         <weight>bold</weight>
     </fontdef>
 
-    <fontdef name="fontBaseTiny" from="fontBase">
+    <fontdef name="tm_fontBaseTiny" from="tm_fontBase">
         <pixelsize>18</pixelsize>
     </fontdef>
 
-    <fontdef name="fontBaseUltraTiny" from="fontBase">
+    <fontdef name="tm_fontBaseUltraTiny" from="tm_fontBase">
         <pixelsize>14</pixelsize>
         <weight>normal</weight>
     </fontdef>
 
-    <fontdef name="fontBaseLarge" from="fontBase">
+    <fontdef name="tm_fontBaseLarge" from="tm_fontBase">
         <pixelsize>30</pixelsize>
     </fontdef>
 
-    <fontdef name="fontDescription" from="fontBase">
+    <fontdef name="tm_fontDescription" from="tm_fontBase">
         <pixelsize>26</pixelsize>
     </fontdef>
 
-    <fontdef name="fontUpDownArrow" from="fontBase">
+    <fontdef name="tm_fontUpDownArrow" from="tm_fontBase">
         <weight>normal</weight>
         <stretch>9</stretch>
     </fontdef>
 
-    <fontdef name="fontLeftRightArrow" from="fontUpDownArrow">
+    <fontdef name="tm_fontLeftRightArrow" from="tm_fontUpDownArrow">
         <stretch>3</stretch>
     </fontdef>
 
-    <textarea name="basetextarea">
+    <textarea name="tm_basetextarea">
         <area>0,0,100%,100%</area>
         <font>fontBase</font>
         <multiline>no</multiline>
@@ -41,7 +41,7 @@
     </textarea>
 
 
-    <shape name="basebackground">
+    <shape name="tm_basebackground">
         <area>0,0,100%,100%</area>
         <type>roundbox</type>
         <cornerradius>12</cornerradius>
@@ -49,21 +49,21 @@
         <line color="#FFFFFF" alpha="255" width="2" />
     </shape>
 
-    <shape name="popupBg" >
+    <shape name="tm_popupBg" >
         <area>0,0,100%,100%</area>
-        <shape name="popupBackground" from="basebackground" >
+        <shape name="popupBackground" from="tm_basebackground" >
             <fill color="SteelBlue" alpha="230" />
             <area>0,0,100%,100%</area>
         </shape>
-        <shape name="pupBackground" from="basebackground" >
+        <shape name="pupBackground" from="tm_basebackground" >
             <fill color="#000000" alpha="120" />
             <area>0,0,100%,100%</area>
         </shape>
     </shape>
 
-    <shape name="shapeSelected" from="popupBg">
+    <shape name="tm_shapeSelected" from="tm_popupBg">
         <area>0,0,100%,100%</area>
-        <shape name="darker" from="basebackground" >
+        <shape name="darker" from="tm_basebackground" >
             <fill color="#000000" alpha="80" />
             <area>0,0,100%,100%</area>
         </shape>
@@ -73,19 +73,19 @@
         -->
     </shape>
 
-    <shape name="baseSeperator">
+    <shape name="tm_baseSeperator">
         <area>0,0,0,0</area>
         <line color="#000000" width="0" alpha="200" />
     </shape>
 
-    <clock name="baseclock">
+    <clock name="tm_baseclock">
         <area>780,40,480,40</area>
         <font>fontBase</font>
         <template>%DATE%, %TIME%</template>
         <align>allcenter</align>
     </clock>
 
-    <progressbar name="progressbarBase">
+    <progressbar name="tm_progressbarBase">
         <area>0,0,100%,100%</area>
         <shape name="progressimage" from="basebackground">
             <area>0,0,100%,100%</area>
@@ -102,30 +102,30 @@
 
 
 
-    <shape name="titleBar" >
-        <shape name="titleSh" from="basebackground">
+    <shape name="tm_titleBar" >
+        <shape name="titleSh" from="tm_basebackground">
             <area>0,0,501,40</area>
         </shape>
 
-        <textarea name="pagetitle" from="basetextarea">
+        <textarea name="pagetitle" from="tm_basetextarea">
             <area>0,0,500,40</area>
             <font>fontBaseLarge</font>
             <value>Title</value>
             <align>allcenter</align>
         </textarea>
 
-        <shape name="clockBox" from="basebackground" >
+        <shape name="clockBox" from="tm_basebackground" >
             <area>980,0,300,40</area>
         </shape>
-        <clock name="mclock" from="baseclock">
+        <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
         </clock>
     </shape>
 
 
-    <textedit name="basetextedit">
+    <textedit name="tm_basetextedit">
         <area>0,0,100%,40</area>
-        <shape name="border" from="shapeSelected" >
+        <shape name="border" from="tm_shapeSelected" >
             <area>0,0,100%,100%</area>
             <fill color="#000000" alpha="0" />
         </shape>
@@ -136,7 +136,7 @@
                 <area>0,0,100%,40</area>
             </state>
             <state name="selected" from="active">
-                <shape name="foo" from="shapeSelected" >
+                <shape name="foo" from="tm_shapeSelected" >
                     <area>0,0,100%,100%</area>
                 </shape>
             </state>
@@ -146,7 +146,7 @@
 
         <imagetype name="cursor">
             <area>-4,-10,10,40</area>
-            <textarea name="cursor" from="basetextarea">
+            <textarea name="cursor" from="tm_basetextarea">
                 <area>-4,-10,10,40</area>
                 <value>|</value>
                 <font>fontBaseLarge</font>
@@ -154,21 +154,21 @@
             </textarea>
         </imagetype>
 
-        <textarea name="text" from="basetextarea">
+        <textarea name="text" from="tm_basetextarea">
             <area>30,0,100%-30,40</area>
             <align>left,vcenter</align>
         </textarea>
 
     </textedit>
 
-    <spinbox name="spinboxBase">
+    <spinbox name="tm_spinboxBase">
         <area>0,0,100%,100%</area>
         <layout>horizontal</layout>
         <statetype name="buttonitem">
             <area>0,0,100%,100%</area>
             <state name="selectedactive">
                 <area>0,0,100%,100%</area>
-                <shape name="sele" from="shapeSelected" >
+                <shape name="sele" from="tm_shapeSelected" >
                     <area>0,0,100%,100%</area>
                 </shape>
                 <textarea name="buttontext">
@@ -191,7 +191,7 @@
             <area>100%-40,0,40,40</area>
             <state type="full">
                 <area>100%-40,0,40,40</area>
-                <textarea name="arrow" from="basetextarea">
+                <textarea name="arrow" from="tm_basetextarea">
                     <area>0,0,40,40</area>
                     <align>allcenter</align>
                     <value>&gt;</value>
@@ -202,7 +202,7 @@
         <statetype name="downscrollarrow">
             <area>0,0,40,40</area>
             <state type="full">
-                <textarea name="arrow" from="basetextarea">
+                <textarea name="arrow" from="tm_basetextarea">
                     <area>0,0,40,40</area>
                     <align>allcenter</align>
                     <value>&lt;</value>
@@ -212,14 +212,14 @@
         </statetype>
     </spinbox>
 
-    <button name="basebutton">
+    <button name="tm_basebutton">
         <area>0,0,100%,100%</area>
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
             <state name="selected">
                 <area>0,0,100%,100%</area>
-                <shape name="background" from="shapeSelected" />
-                <textarea name="text" from="basetextarea" >
+                <shape name="background" from="tm_shapeSelected" />
+                <textarea name="text" from="tm_basetextarea" >
                     <align>allcenter</align>
                 </textarea>
             </state>
@@ -239,24 +239,24 @@
         </statetype>
     </button>
 
-    <button name="basebuttonBorder">
+    <button name="tm_basebuttonBorder">
         <area>0,0,100%,100%</area>
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
-            <shape name="border" from="basebackground">
+            <shape name="border" from="tm_basebackground">
                 <fill alpha="0" />
             </shape>
             <state name="selected">
                 <area>0,0,100%,100%</area>
-                <shape name="selShape" from="shapeSelected" />
-                <textarea name="text" from="basetextarea" >
+                <shape name="selShape" from="tm_shapeSelected" />
+                <textarea name="text" from="tm_basetextarea" >
                     <area>0,0,100%,100%</area>
                     <align>allcenter</align>
                 </textarea>
             </state>
             <state name="active">
                 <area>0,0,100%,100%</area>
-                <textarea name="text" from="basetextarea" >
+                <textarea name="text" from="tm_basetextarea" >
                     <align>allcenter</align>
                 </textarea>
             </state>
@@ -271,19 +271,19 @@
     </button>
 
 
-    <button name="scheduleButton" from="basebutton">
+    <button name="tm_scheduleButton" from="tm_basebutton">
         <area>0,0,60%,40</area>
         <statetype name="buttonstate">
             <area>0,0,100%,100%</area>
             <state name="active">
                 <area>0,0,100%,100%</area>
-                <textarea name="text" from="basetextarea" >
+                <textarea name="text" from="tm_basetextarea" >
                     <area>4,2,100%-4,100%-2</area>
                     <align>allcenter</align>
                 </textarea>
             </state>
             <state name="selected" from="active">
-                <shape name="background" from="shapeSelected" />
+                <shape name="background" from="tm_shapeSelected" />
                 <textarea name="selectedText" from="text" />
             </state>
             <state name="disabled">
@@ -298,7 +298,7 @@
 
     </button>
 
-    <buttonlist name="basebuttonlist">
+    <buttonlist name="tm_basebuttonlist">
         <area>0,0,100%,100%</area>
         <layout>vertical</layout>
         <wrapstyle>selection</wrapstyle>
@@ -308,15 +308,15 @@
             <area>0,0,100%,100%</area>
             <state name="selectedactive">
                 <area>0,0,100%,100%</area>
-                <shape name="sel" from="shapeSelected" />
-                <textarea name="buttontext" from="basetextarea">
+                <shape name="sel" from="tm_shapeSelected" />
+                <textarea name="buttontext" from="tm_basetextarea">
                     <area>30,0,100%-30,100%</area>
                     <align>left,vcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
                 <imagetype name="buttonarrow">
                     <area>100%-30,0,30,30</area>
-                    <textarea name="arrow" from="basetextarea">
+                    <textarea name="arrow" from="tm_basetextarea">
                         <area>0,0,30,30</area>
                         <align>allcenter</align>
                         <value>&gt;</value>
@@ -328,7 +328,7 @@
                 <shape name="sel" >
                     <area>0,0,0,0</area>
                 </shape>
-                <shape name="sel2" from="basebackground" >
+                <shape name="sel2" from="tm_basebackground" >
                     <fill color="#000000" alpha="0" />
                 </shape>
             </state>
@@ -347,7 +347,7 @@
         </statetype>
     </buttonlist>
 
-    <buttonlist name="btnListRight">
+    <buttonlist name="tm_btnListRight">
         <area>0,0,100%,100%</area>
         <layout>vertical</layout>
         <spacing>1</spacing>
@@ -358,10 +358,10 @@
             <area>0,0,100%,30</area>
             <state name="selectedactive">
                 <area>0,0,100%,30</area>
-                <shape name="sel" from="shapeSelected">
+                <shape name="sel" from="tm_shapeSelected">
                     <area>0,0,100%,30</area>
                 </shape>
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <area>15,0,100%-15,30</area>
                     <align>right, vcenter</align>                
                 </textarea>
@@ -369,13 +369,13 @@
 
             <state name="active">
                 <area>0,0,100%,30</area>
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <area>15,0,100%-15,30</area>
                     <align>right, vcenter</align>                
                 </textarea>
             </state>
             <state name="selectedinactive" from="active">
-                <shape name="sel" from="basebackground" >
+                <shape name="sel" from="tm_basebackground" >
                     <area>0,0,100%,100%</area>
                     <fill color="#000000" alpha="0" />
                 </shape>
@@ -384,7 +384,7 @@
     </buttonlist>
 
 
-    <buttonlist name="scheduleList">
+    <buttonlist name="tm_scheduleList">
         <area>340,360,700,40</area>
         <buttonarea>0,0,700,40</buttonarea>
         <layout>horizontal</layout>
@@ -393,10 +393,10 @@
             <area>0,0,700,40</area>
             <state name="selectedactive" >
                 <area>0,0,700,40</area>
-                <shape name="act" from="shapeSelected" >
+                <shape name="act" from="tm_shapeSelected" >
                     <area>0,0,700,40</area>
                 </shape>
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>0,0,700,40</area>
                 </textarea>
@@ -404,21 +404,21 @@
 
             <state name="active">
                 <area>0,0,700,40</area>
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>0,0,700,40</area>
                 </textarea>
             </state>
 
             <state name="selectedinactive"  from="active">
-                <textarea name="buttontext"  from="basetextarea">
+                <textarea name="buttontext"  from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>0,0,700,40</area>
                 </textarea>
             </state>
 
             <state name="inactive"  from="active">
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>0,0,700,40</area>
                 </textarea>
@@ -430,7 +430,7 @@
             <state type="off">
             </state>
             <state type="full" >
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>0,0,40,40</area>
                     <value>&lt;</value>
@@ -442,7 +442,7 @@
             <state type="off">
             </state>
             <state type="full" >
-                <textarea name="buttontext" from="basetextarea">
+                <textarea name="buttontext" from="tm_basetextarea">
                     <align>allcenter</align>
                     <area>660,0,40,40</area>
                     <value>&gt;</value>
@@ -453,15 +453,15 @@
     </buttonlist>
 
 
-    <checkbox name="checkboxBase">
+    <checkbox name="tm_checkboxBase">
         <area>0,0,100%,100%</area>
 
         <statetype name="background">
             <area>0,0,100%,100%</area>
             <state name="selected">
                 <area>0,0,100%,100%</area>
-                <shape name="cboxSel" from="shapeSelected" />
-                <shape name="smallBox" from="basebackground" >
+                <shape name="cboxSel" from="tm_shapeSelected" />
+                <shape name="smallBox" from="tm_basebackground" >
                     <area>0,0,40,40</area>
                     <fill color="#000000" alpha="0" />
                     <line color="#FFFFFF" alpha="255" width="2"/>
@@ -485,7 +485,7 @@
             <area>5,0,30,100%</area>
             <state type="full">
                 <area>0,0,30,100%</area>
-                <textarea name="X" from="basetextarea" >
+                <textarea name="X" from="tm_basetextarea" >
                     <area>0,0,100%,100%</area>
                     <value>X</value>
                     <align>allcenter</align>
@@ -499,7 +499,7 @@
 
 
     <window name="backgroundwindow">
-        <shape name="backcolor" from="basebackground">
+        <shape name="backcolor" from="tm_basebackground">
             <area>0,0,100%,100%</area>
             <fill color="SteelBlue" />
         </shape>
@@ -508,7 +508,7 @@
 
 
 
-    <buttonlist name="basePopuButtonlist" from="basebuttonlist">
+    <buttonlist name="tm_basePopuButtonlist" from="tm_basebuttonlist">
         <!-- Todo: start with 0,0,100%,100%  -->
         <area>0,0,100%,100%</area>
         <layout>vertical</layout>
@@ -520,15 +520,15 @@
             <area>0,0,100%,30</area>
             <state name="selectedactive">
                 <area>0,0,100%,30</area>
-                <shape name="sel" from="shapeSelected" />
-                <textarea name="buttontext" from="basetextarea">
+                <shape name="sel" from="tm_shapeSelected" />
+                <textarea name="buttontext" from="tm_basetextarea">
                     <area>30,0,100%-30,30</area>
                     <align>allcenter</align>
                     <cutdown>yes</cutdown>
                 </textarea>
                 <imagetype name="buttonarrow">
                     <area>100%-30,0,30,30</area>
-                    <textarea name="arrow" from="basetextarea">
+                    <textarea name="arrow" from="tm_basetextarea">
                         <font>fontLeftRightArrow</font>
                         <align>allcenter</align>
                         <value>></value>
@@ -566,22 +566,22 @@
 
     <window name="MythPopupBox">
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
         </shape>
         <textarea name="title">
             <area>320,110,640,60</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
         <textarea name="messagearea">
             <area>320,170,640,160</area>
             <multiline>yes</multiline>
             <align>top,center</align>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
         </textarea>
-        <buttonlist name="list" from="basePopuButtonlist">
+        <buttonlist name="list" from="tm_basePopuButtonlist">
             <area>320,330,640,280</area>
             <buttonarea>0,0,640,100%</buttonarea>
             <statetype name="buttonitem">
@@ -592,22 +592,22 @@
 
     <window name="MythDialogBox">
         <area>0,0,100%,100%</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
         </shape>
         <textarea name="title">
             <area>320,110,640,60</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
         <textarea name="messagearea">
             <area>320,170,640,160</area>
             <multiline>yes</multiline>
             <align>top,center</align>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
         </textarea>
-        <buttonlist name="list" from="basePopuButtonlist">
+        <buttonlist name="list" from="tm_basePopuButtonlist">
             <area>320,330,640,280</area>
             <buttonarea>0,0,640,100%</buttonarea>
             <statetype name="buttonitem">
@@ -618,17 +618,17 @@
 
     <window name="MythBusyDialog">
         <area>320,235,640,250</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>0,0,100%,160</area>
             <align>allcenter</align>
             <multiline>yes</multiline>
         </textarea>
 
-        <shape name="filled" from="basebackground">
+        <shape name="filled" from="tm_basebackground">
             <area>20,180,60,20</area>
             <type>box</type>
             <fill color="SteelBlue" alpha="220" />
@@ -639,7 +639,7 @@
                 </section>
             </animation>
         </shape>
-        <shape name="barHorizontal" from="basebackground">
+        <shape name="barHorizontal" from="tm_basebackground">
             <type>box</type>
             <area>20,180,100%-20,20</area>
             <fill color="White" alpha="0" />
@@ -649,22 +649,22 @@
 
     <window name="MythProgressDialog">
         <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>0,50,640,210</area>
             <multiline>yes</multiline>
             <font>fontBase</font>
             <align>allcenter</align>
         </textarea>
 
-        <progressbar name="progressbar" from="progressbarBase">
+        <progressbar name="progressbar" from="tm_progressbarBase">
             <area>60,300,520,20</area>
         </progressbar>
 
-        <textarea name="progresstext" from="basetextarea">
+        <textarea name="progresstext" from="tm_basetextarea">
             <area>20,340,600,60</area>
             <align>allcenter</align>
             <value>0%</value>
@@ -673,23 +673,23 @@
 
     <window name="MythConfirmationDialog">
         <area>320,110,640,500</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>0,0,640,420</area>
             <multiline>yes</multiline>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
-        <button name="ok" from="basebutton">
+        <button name="ok" from="tm_basebutton">
             <area>0,420,100%,40</area>
             <value>OK</value>
         </button>
 
-        <button name="cancel" from="basebutton">
+        <button name="cancel" from="tm_basebutton">
             <area>0,460,100%,40</area>
             <value>Cancel</value>
         </button>
@@ -698,24 +698,24 @@
 
     <window name="MythTextInputDialog">
         <area>320,110,640,170</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,170</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>20,10,600,40</area>
             <align>allcenter</align>
             <font>fontDescription</font>
         </textarea>
 
-        <textedit name="input" from="basetextedit">
+        <textedit name="input" from="tm_basetextedit">
             <area>25,55,590,40</area>
             <textarea name="text">
                 <align>allcenter</align>
             </textarea>
         </textedit>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>210,110,220,40</area>
             <value>OK</value>
         </button>
@@ -724,10 +724,10 @@
 
     <window name="MythSearchListDialog" >
         <area>320,100%-110,640,100</area>
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,640,100</area>
         </shape>
-        <textedit name="searchedit" from="basetextedit">
+        <textedit name="searchedit" from="tm_basetextedit">
             <area>25,5,590,40</area>
             <textarea name="text">
                 <align>allcenter</align>
@@ -741,7 +741,7 @@
                     <area>0,0,100%,40</area>
                     <align>allcenter</align>
                     <value>:-)</value>
-                    <font>fontBaseLarge</font>
+                    <font>tm_fontBaseLarge</font>
                 </textarea>
             </state>
             <state name="notfound" from="found" >
@@ -751,12 +751,12 @@
             </state>
         </statetype>
 
-        <button name="prevbutton" from="basebuttonBorder">
+        <button name="prevbutton" from="tm_basebuttonBorder">
             <area>25,45,240,40</area>
             <value>Previous</value>
         </button>
 
-        <button name="nextbutton" from="basebuttonBorder">
+        <button name="nextbutton" from="tm_basebuttonBorder">
             <area>375,45,240,40</area>
             <value>Next</value>
         </button>
@@ -765,29 +765,29 @@
 
 
     <window name="MythSearchDialog">
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
             <shape name="pupBackground">
                 <alpha>200</alpha>
             </shape>
         </shape>
 
-        <shape name="t2" from="popupBg">
+        <shape name="t2" from="tm_popupBg">
             <area>320,110,640,500</area>
         </shape>
 
-        <textarea name="title" from="basetextarea">
+        <textarea name="title" from="tm_basetextarea">
             <area>320,110,100%-320, 80</area>
             <multiline>yes</multiline>
             <align>allcenter</align>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
         </textarea>
 
-        <textedit name="input" from="basetextedit">
+        <textedit name="input" from="tm_basetextedit">
             <area>360,190,100%-360,40</area>
         </textedit>
 
-        <buttonlist name="itemlist" from="basebuttonlist">
+        <buttonlist name="itemlist" from="tm_basebuttonlist">
             <area>360,240,100%,100%-80</area>
             <showarrow>no</showarrow>
             <statetype name="buttonitem">
@@ -819,12 +819,12 @@
             </statetype>
         </buttonlist>
 
-        <button name="ok" from="basebuttonBorder">
+        <button name="ok" from="tm_basebuttonBorder">
             <area>460,530,160,40</area>
             <value>OK</value>
         </button>
 
-        <button name="cancel" from="basebuttonBorder">
+        <button name="cancel" from="tm_basebuttonBorder">
             <area>660,530,160,40</area>
             <value>Cancel</value>
         </button>
@@ -833,11 +833,11 @@
 
     <window name="MythFileBrowser">
         <area>0,0,100%,100%</area>
-        <shape name="mythPopupBox" from="popupBg" >
+        <shape name="mythPopupBox" from="tm_popupBg" >
             <area>30,38,1220,682</area>
         </shape>
 
-        <textedit name="location" from="basetextedit">
+        <textedit name="location" from="tm_basetextedit">
             <area>100,38,1120,40</area>
         </textedit>
 
@@ -868,7 +868,7 @@
                 <state name="selectedinactive" from="active" />
                 <state name="selectedactive" from="active">
                     <area>-40,-40,240,200</area>
-                    <shape name="background" from="shapeSelected">
+                    <shape name="background" from="tm_shapeSelected">
                         <area>0,0,100%,100%</area>
                     </shape>
                     <imagetype name="buttonimage">
@@ -879,7 +879,7 @@
             </statetype>
         </buttonlist>
 
-        <shape name="previewBack" from="shapeSelected">
+        <shape name="previewBack" from="tm_shapeSelected">
             <area>844,100,390,384</area>
         </shape>
 
@@ -888,17 +888,17 @@
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
-        <shape name="inf" from="shapeSelected">
+        <shape name="inf" from="tm_shapeSelected">
             <area>844,500,390,120</area>
         </shape>
 
-        <textarea name="info" from="basetextarea">
+        <textarea name="info" from="tm_basetextarea">
             <area>844,500,390,120</area>
             <align>allcenter</align>
         </textarea>
 
 
-        <button name="home" from="basebuttonBorder">
+        <button name="home" from="tm_basebuttonBorder">
             <area>844,100%-70,120,40</area>
             <value>Home</value>
         </button>
@@ -918,11 +918,11 @@
     <window name="videowindow">
         <area>320,235,640,250</area>
 
-        <shape name="t" from="popupBg">
+        <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
 
-        <textarea name="message" from="basetextarea">
+        <textarea name="message" from="tm_basetextarea">
             <area>0,0,100%,180</area>
             <multiline>yes</multiline>
             <font>fontBaseLarge</font>
@@ -930,7 +930,7 @@
             <value>Please Wait...</value>
         </textarea>
 
-        <shape name="filled" from="basebackground">
+        <shape name="filled" from="tm_basebackground">
             <area>20,180,60,20</area>
             <type>box</type>
             <fill color="SteelBlue" alpha="220" />
@@ -941,7 +941,7 @@
                 </section>
             </animation>
         </shape>
-        <shape name="barHorizontal" from="basebackground">
+        <shape name="barHorizontal" from="tm_basebackground">
             <type>box</type>
             <area>20,180,100%-20,20</area>
             <fill color="White" alpha="0" />
@@ -951,7 +951,7 @@
 
     <window name="MythMetadataResults">
         <area>-1,-1,940,640</area>
-        <shape name="mythPopupBox" from="popupBg" />
+        <shape name="mythPopupBox" from="tm_popupBg" />
 
         <buttonlist name="results">
             <area>50,50,900,600</area>
@@ -976,7 +976,7 @@
                         <area>4,4,152,152</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="resolution" from="basetextarea">
+                    <textarea name="resolution" from="tm_basetextarea">
                         <area>0,0,100%,100%-4</area>
                         <align>hcenter,bottom</align>
                         <font>fontBaseTiny</font>
@@ -985,7 +985,7 @@
                 <state name="selectedinactive" from="active" />
                 <state name="selectedactive" from="active">
                     <area>-40,-40,240,200</area>
-                    <shape name="background" from="shapeSelected">
+                    <shape name="background" from="tm_shapeSelected">
                         <area>0,0,100%,100%</area>
                     </shape>
                     <imagetype name="buttonimage">
@@ -999,7 +999,7 @@
 
     <window name="MythArtworkResults">
         <area>-1,-1,1000,700</area>
-        <shape name="mythPopupBox" from="popupBg" />
+        <shape name="mythPopupBox" from="tm_popupBg" />
 
         <buttonlist name="results">
             <area>50,50,900,650</area>
@@ -1024,7 +1024,7 @@
                         <area>4,4,152,152</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
-                    <textarea name="title" from="basetextarea">
+                    <textarea name="title" from="tm_basetextarea">
                         <area>0,0,100%,100%-4</area>
                         <align>hcenter,bottom</align>
                         <font>fontBaseTiny</font>
@@ -1033,7 +1033,7 @@
                 <state name="selectedinactive" from="active" />
                 <state name="selectedactive" from="active">
                     <area>-40,-40,240,200</area>
-                    <shape name="background" from="shapeSelected">
+                    <shape name="background" from="tm_shapeSelected">
                         <area>0,0,100%,100%</area>
                     </shape>
                     <imagetype name="buttonimage">
