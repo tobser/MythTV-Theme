@@ -35,7 +35,7 @@
 
     <textarea name="tm_basetextarea">
         <area>0,0,100%,100%</area>
-        <font>fontBase</font>
+        <font>tm_fontBase</font>
         <multiline>no</multiline>
         <align>left</align>
     </textarea>
@@ -80,7 +80,7 @@
 
     <clock name="tm_baseclock">
         <area>780,40,480,40</area>
-        <font>fontBase</font>
+        <font>tm_fontBase</font>
         <template>%DATE%, %TIME%</template>
         <align>allcenter</align>
     </clock>
@@ -109,7 +109,7 @@
 
         <textarea name="pagetitle" from="tm_basetextarea">
             <area>0,0,500,40</area>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <value>Title</value>
             <align>allcenter</align>
         </textarea>
@@ -149,7 +149,7 @@
             <textarea name="cursor" from="tm_basetextarea">
                 <area>-4,-10,10,40</area>
                 <value>|</value>
-                <font>fontBaseLarge</font>
+                <font>tm_fontBaseLarge</font>
                 <align>allcenter</align>
             </textarea>
         </imagetype>
@@ -173,7 +173,7 @@
                 </shape>
                 <textarea name="buttontext">
                     <area>0,0,100%,100%</area>
-                    <font>fontBase</font>
+                    <font>tm_fontBase</font>
                     <cutdown>yes</cutdown>
                     <value>test text</value>
                     <align>allcenter</align>
@@ -529,7 +529,7 @@
                 <imagetype name="buttonarrow">
                     <area>100%-30,0,30,30</area>
                     <textarea name="arrow" from="tm_basetextarea">
-                        <font>fontLeftRightArrow</font>
+                        <font>tm_fontLeftRightArrow</font>
                         <align>allcenter</align>
                         <value>></value>
                     </textarea>
@@ -556,7 +556,7 @@
                 <area>0,0,100%,20</area>
                 <textarea name="arrow" from="basetextarea">
                     <align>top,center</align>
-                    <font>fontUpDownArrowPop</font>
+                    <font>tm_fontUpDownArrowPop</font>
                     <value>ˇ</value>
                 </textarea>
             </state>
@@ -656,7 +656,7 @@
         <textarea name="message" from="tm_basetextarea">
             <area>0,50,640,210</area>
             <multiline>yes</multiline>
-            <font>fontBase</font>
+            <font>tm_fontBase</font>
             <align>allcenter</align>
         </textarea>
 
@@ -705,7 +705,7 @@
         <textarea name="message" from="tm_basetextarea">
             <area>20,10,600,40</area>
             <align>allcenter</align>
-            <font>fontDescription</font>
+            <font>tm_fontDescription</font>
         </textarea>
 
         <textedit name="input" from="tm_basetextedit">
@@ -925,7 +925,7 @@
         <textarea name="message" from="tm_basetextarea">
             <area>0,0,100%,180</area>
             <multiline>yes</multiline>
-            <font>fontBaseLarge</font>
+            <font>tm_fontBaseLarge</font>
             <align>allcenter</align>
             <value>Please Wait...</value>
         </textarea>
@@ -979,7 +979,7 @@
                     <textarea name="resolution" from="tm_basetextarea">
                         <area>0,0,100%,100%-4</area>
                         <align>hcenter,bottom</align>
-                        <font>fontBaseTiny</font>
+                        <font>tm_fontBaseTiny</font>
                     </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
@@ -1027,7 +1027,7 @@
                     <textarea name="title" from="tm_basetextarea">
                         <area>0,0,100%,100%-4</area>
                         <align>hcenter,bottom</align>
-                        <font>fontBaseTiny</font>
+                        <font>tm_fontBaseTiny</font>
                     </textarea>
                 </state>
                 <state name="selectedinactive" from="active" />
