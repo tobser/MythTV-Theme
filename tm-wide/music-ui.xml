@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "../mythuitheme.dtd">
+<mythuitheme>
+    <window name="miniplayer">
+        <area>80,0,100%-80,200</area>
+        <animation  trigger="AboutToShow">
+            <section centre="topleft" duration="220">
+                <!--                <position start="80,-200" end="80,0" duration="200"/> -->
+                    <angle start="180" end="0"/>
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section centre="topright" duration="220">
+                <!-- <angle start="0" end="-180"/> -->
+                <position start="80,0" end="80,-200" />
+            </section>
+        </animation>
+
+        <shape name="t" from="tm_popupBg">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="mPl" from="tm_basetextarea">
+            <area>-60,70,200,60</area>
+            <animation trigger="AboutToShow">
+                <section>
+                    <angle start="-90" end="-90"/>
+                </section>
+            </animation>
+            <value>MiniPlayer</value>
+            <font>tm_fontBaseLarge</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <shape name="iconShape" from="tm_popupBg">
+            <area>100,5,190,190</area>
+        </shape>
+        <imagetype name="coverart">
+            <area>112,17,166,166</area>
+            <textarea name="nocov" from="tm_basetextarea" >
+                <area>0,0,100%,100%</area>
+                <align>allcenter</align>
+                <alpha>40</alpha>
+                <value>cover missing </value>
+        </textarea>
+        </imagetype>
+
+        <textarea name="title" from="tm_basetextarea">
+            <area>320,15,400,40</area>
+            <font>tm_fontBaseLarge</font>
+        </textarea>
+
+        <textarea name="artist" from="tm_basetextarea">
+            <area>340,55,400,35</area>
+            <font>tm_fontBase</font>
+        </textarea>
+
+        <textarea name="album" from="artist">
+            <area>340,90,400,35</area>
+        </textarea>
+
+        <textarea name="volume" from="tm_basetextarea">
+            <area>320,135,250,25</area>
+            <font>tm_fontBaseTiny</font>
+            <template>Volume: %VOLUME%%</template>
+        </textarea>
+
+
+        <textarea name="time" from="tm_basetextarea">
+            <area>320,135,100%-40,25</area>
+            <align>right</align>
+        </textarea>
+
+
+        <progressbar name="progress" from="tm_progressbarBase">
+            <area>320,160,100%-40,25</area>
+        </progressbar>
+
+    </window>
+
+</mythuitheme>
