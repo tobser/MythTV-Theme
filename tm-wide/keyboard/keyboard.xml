@@ -3,28 +3,28 @@
     <window name="keyboard">
 
         <area>0,0,552,208</area>
-        <shape name="bg" from="popupBg" />
+        <shape name="bg" from="tm_popupBg" />
 
         <!-- top row -->
         <button name="key_1" >
             <area>10,10,35,35</area>
             <statetype name="buttonstate">
                 <area>0,0,100%,100%</area>
-                <shape name="border" from="basebackground">
+                <shape name="border" from="tm_basebackground">
                     <fill alpha="0" />
                 </shape>
                 <state name="selected">
                     <area>-5,-5,100%+5,100%+5</area>
-                    <shape name="selShape" from="shapeSelected" />
-                    <textarea name="text" from="basetextarea" >
+                    <shape name="selShape" from="tm_shapeSelected" />
+                    <textarea name="text" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <align>allcenter</align>
-                        <font>fontBaseLarge</font>
+                        <font>tm_fontBaseLarge</font>
                     </textarea>
                 </state>
                 <state name="active">
                     <area>0,0,100%,100%</area>
-                    <textarea name="text" from="basetextarea" >
+                    <textarea name="text" from="tm_basetextarea" >
                         <area>0,0,100%,100%</area>
                         <align>allcenter</align>
                     </textarea>
