@@ -44,7 +44,7 @@
                          </textarea>
                      </imagetype>
                  </state>
-                 <state name="active" from="tm_selectedactive">
+                 <state name="active" from="selectedactive">
                      <area>0,0,100%,30</area>
                      <shape name="sel" from="tm_shapeSelected" >
                      <area>0,0,0,0</area>
