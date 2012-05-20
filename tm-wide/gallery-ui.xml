@@ -27,39 +27,40 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,170,150</area>
-                    <shape name="background" />
-                    <statetype name="nodetype">
-                        <state name="folder">
-                            <textarea name="buttontext">
-                                <area>5,5,100%-5,100%-5</area>
-                                <font>tm_fontBaseTiny</font>
-                                <align>allcenter</align>
-                            </textarea>
-                        </state>
-                        <state name="upfolder" from="folder">
-                        </state>
-                        <state name="subfolder" from="folder">
-                        </state>
-                        <state name="executable" from="folder">
-                        </state>
-                        <state name="file" from="folder">
-                        </state>
-                    </statetype>
+                    <textarea name="buttontext" depends="!buttonimage">
+                        <area>5,5,100%-5,100%-5</area>
+                        <font>tm_fontBaseTiny</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
                     <imagetype name="buttonimage">
                         <area>5,5,100%-5,100%-5</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
                 </state>
                 <state name="selectedinactive" from="active" />
-                <state name="selectedactive" from="active">
+                <state name="selectedactive"> 
                     <area>-40,-20,240,200</area>
                     <shape name="background" from="tm_shapeSelected">
                         <area>0,0,100%,100%</area>
                     </shape>
+                    <textarea name="buttontext" depends="!buttonimage">
+                        <area>5,5,100%-5,100%-5</area>
+                        <font>tm_fontBaseTiny</font>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
                     <imagetype name="buttonimage">
                         <area>12,12,100%-12,100%-12</area>
                         <preserveaspect>true</preserveaspect>
                     </imagetype>
+                    <textarea name="childcount">
+                        <area>12,12,100%-12,100%-12</area>
+                        <font>tm_fontBaseTiny</font>
+                        <multiline>yes</multiline>
+                        <template>%1 Elements</template>
+                        <align>bottom,hcenter</align>
+                    </textarea>
                 </state>
             </statetype>
         </buttonlist>
