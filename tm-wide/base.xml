@@ -101,8 +101,16 @@
     </progressbar>
 
 
+        <shape name="tm_FanartWidgetBackground" from="tm_basebackground">
+            <area>0,0,10,10</area>
+            <fill color="SteelBlue" alpha="120" />
+            <line alpha="0" width="0" />
+        </shape>
 
-    <shape name="tm_titleBar" >
+    <shape name="tm_titleBarFanart" >
+        <shape name="fanartBg1" from="tm_FanartWidgetBackground">
+            <area>0,0,501,40</area>
+        </shape>
         <shape name="titleSh" from="tm_basebackground">
             <area>0,0,501,40</area>
         </shape>
@@ -114,12 +122,24 @@
             <align>allcenter</align>
         </textarea>
 
+        <shape name="fanartBg2" from="tm_FanartWidgetBackground">
+            <area>980,0,300,40</area>
+        </shape>
         <shape name="clockBox" from="tm_basebackground" >
             <area>980,0,300,40</area>
         </shape>
         <clock name="mclock" from="tm_baseclock">
             <area>980,0,300,40</area>
         </clock>
+    </shape>
+
+    <shape name="tm_titleBar" from="tm_titleBarFanart">
+         <shape name="fanartBg1">
+             <area>0,0,0,0</area>
+        </shape>
+         <shape name="fanartBg2">
+             <area>0,0,0,0</area>
+        </shape>
     </shape>
 
 
@@ -566,6 +586,12 @@
 
     <window name="MythPopupBox">
         <area>0,0,100%,100%</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
         </shape>
@@ -592,6 +618,21 @@
 
     <window name="MythDialogBox">
         <area>0,0,100%,100%</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+
+        <animation trigger="AboutToHide">
+            <section duration="120">
+                <alpha start="255" end="0" easingcurve="InQuart"/>
+                <zoom start="100" end="0" easingcurve="InQuart"/>
+            </section>
+        </animation>
+
         <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
         </shape>
@@ -618,6 +659,12 @@
 
     <window name="MythBusyDialog">
         <area>320,235,640,250</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
         </shape>
@@ -649,6 +696,12 @@
 
     <window name="MythProgressDialog">
         <area>320,110,640,500</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
@@ -673,6 +726,12 @@
 
     <window name="MythConfirmationDialog">
         <area>320,110,640,500</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>0,0,640,500</area>
         </shape>
@@ -698,6 +757,12 @@
 
     <window name="MythTextInputDialog">
         <area>320,110,640,170</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>0,0,640,170</area>
         </shape>
@@ -724,6 +789,12 @@
 
     <window name="MythSearchListDialog" >
         <area>320,100%-110,640,100</area>
+        <animation trigger="AboutToShow">
+            <section duration="120">
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+                <zoom start="0" end="100" easingcurve="OutQuart"/>
+            </section>
+        </animation>
         <shape name="t" from="tm_popupBg">
             <area>0,0,640,100</area>
         </shape>
