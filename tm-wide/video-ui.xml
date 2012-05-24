@@ -894,17 +894,28 @@
 
     <!-- List View -->
     <window name="tree">
-	    <imagetype name="fanart">
+
+        <shape name="fanartbackground" from="tm_basebackground" depends="fanart">
+            <fill color="black" alpha="255" />
+        </shape>
+        <imagetype name="fanart">
             <area>0,0,100%,100%</area>
             <preserveaspect>no</preserveaspect>
-            <alpha>60</alpha>
-        </imagetype>
+            <alpha>140</alpha>
+        </imagetype>        
 
-        <shape name="programguideTitle" from="tm_titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" depends="!fanart" >
             <textarea name="pagetitle">
                 <value>Videolist</value>
             </textarea>
         </shape>
+        
+        <shape name="programguideTitleFan" from="tm_titleBarFanart" depends="fanart" > 
+            <textarea name="pagetitle">
+                <value>Videolist</value>
+            </textarea>
+        </shape>
+
 
         <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>

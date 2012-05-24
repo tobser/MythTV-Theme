@@ -3,29 +3,49 @@
 <mythuitheme>
 
     <window name="watchrecordings">
+        <shape name="fanartbackground" from="tm_basebackground" depends="fanart">
+            <fill color="black" alpha="255" />
+        </shape>
+        <imagetype name="fanart">
+            <area>0,0,100%,100%</area>
+            <preserveaspect>no</preserveaspect>
+            <alpha>140</alpha>
+        </imagetype>        
+        <!--
 	    <imagetype name="fanart">
             <area>0,0,100%,100%</area>
             <preserveaspect>no</preserveaspect>
             <alpha>60</alpha>
         </imagetype>
+        -->
 
-        <shape name="programguideTitle" from="tm_titleBar" >
+        <shape name="programguideTitle" from="tm_titleBar" depends="!fanart" >
+            <textarea name="pagetitle">
+                <value>Watch Recordings</value>
+            </textarea>
+        </shape>
+        
+        <shape name="programguideTitleFan" from="tm_titleBarFanart" depends="fanart" > 
             <textarea name="pagetitle">
                 <value>Watch Recordings</value>
             </textarea>
         </shape>
 
 
-        <shape name="rightBox" from="tm_basebackground" >
+        <!--
+        <shape name="topBoxFanartBg" from="tm_FanartWidgetBackground" depends="fanart" >
+            <area>0,37,100%,370</area>
+        </shape>
+        <shape name="topBox" from="tm_basebackground"  depends="!fanart" >
             <area>0,37,100%,370</area>
             <fill color="#000000" alpha="100" />
         </shape>
+        -->
 
         <buttonlist name="groups" from="tm_btnListRight">
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <area>10,90,220,255</area>
-            <shape name="groupBg" from="tm_basebackground">
-                <fill color="#000000" alpha="50" />
+            <shape name="groupBg1" from="tm_basebackground" depends="fanart">
             </shape>
 
             <statetype name="buttonitem" >
@@ -34,8 +54,7 @@
 
         <buttonlist name="recordings">
             <area>228,50,1042,340</area>
-            <shape name="recBg" from="tm_basebackground" >
-                <fill color="#000000" alpha="50" />
+            <shape name="recBg1" from="tm_basebackground" depends="fanart">
             </shape>
             <layout>vertical</layout>
             <spacing>1</spacing>
@@ -47,19 +66,22 @@
             <statetype name="buttonitem">
                 <state name="selectedactive">
                     <area>0,0,1042,30</area>
-                    <shape name="selIn" from="tm_basebackground" >
+                    <shape name="selIn" from="tm_shapeSelected" >
                         <area>0,0,100%,100%</area>
                     </shape>
-                    <statetype name="watched">
-                        <state name="yes">
-                            <textarea name="wa">
-                                <area>15,0,30,30</area>
-                                <font>tm_fontBaseUltraTiny</font>
-                                <value>W</value>
-                                <align>left,vcenter</align>                
-                            </textarea>
+                    
+                    <statetype name="commflagged">
+                        <state name="running" >
+                            <group name="t">
+                                <textarea name="statusimage">
+                                    <area>21,0,30,30</area>
+                                    <font>tm_fontBaseUltraTiny</font>
+                                    <value>C</value>
+                                    <align>left,vcenter</align>                
+                                    <alphapulse min="80" max="255" change="2"/>
+                                </textarea>
+                            </group>
                         </state>
-                        <state name="no"/>
                     </statetype>
                     <statetype name="playlist">
                         <state name="yes">
@@ -72,17 +94,18 @@
                         </state>
                         <state name="no"/>
                     </statetype>
-                    <statetype name="jobstate">
-                        <state name="recording">
-                            <textarea name="rec">
-                                <area>39,0,50,30</area>
-                                <font>tm_fontBaseUltraTiny</font>
-                                <value>R</value>
-                                <align>left,vcenter</align>                
-                            </textarea>
-                        </state>
-                    </statetype>
-                    <statetype name="bookmark">
+                            <statetype name="jobstate">
+                            <state name="recording">
+                                <textarea name="rec">
+                                    <area>39,0,50,30</area>
+                                    <font>tm_fontBaseUltraTiny</font>
+                                    <value>R</value>
+                                    <align>left,vcenter</align>                
+                                    <alphapulse min="80" max="255" change="2"/>
+                                </textarea>
+                            </state>
+                        </statetype>
+                        <statetype name="bookmark">
                         <state name="yes">
                             <textarea name="rec">
                                 <area>48,0,50,30</area>
@@ -287,6 +310,36 @@
                 </textarea>
             </state>
         </statetype>
+        <statetype name="watched" >
+            <area>1015,350,250,370</area>
+            <state name="yes">
+                <area>0,0,250,370</area>
+                <shape name="coverTheCover" from="tm_basebackground">
+                    <area>935,410,320,240</area>
+                    <fill color="#000000" alpha="170" />
+                </shape>
+
+                <group name="rotate">
+                    <animation trigger="AboutToShow">
+                        <section>
+                            <angle start="-45" end="-45"/>
+                        </section>
+                    </animation>
+                    <area>-90,220,500,80</area>
+                    <shape name="watchedstateBackground" from="tm_basebackground" >
+                        <fill color="Red" alpha="200" />
+                    </shape>
+                    <textarea name="wated" from="tm_basetextarea">
+                        <value>watched</value>
+                        <align>allcenter</align>
+                        <font>tm_fontDescription</font>
+                    </textarea>
+                </group>
+            </state>
+
+            <state name="no">
+            </state>
+        </statetype>
 
         <textarea name="norecordings">
             <area>20,75,100%,100%</area>
@@ -340,13 +393,6 @@
                                 <area>0,0,120,40</area>
                                 <align>right,vcenter</align>
                                 <value>ae</value>
-                            </textarea>
-                        </state>
-                        <state name="processing">
-                            <textarea name="statusimage">
-                                <area>0,0,120,40</area>
-                                <align>right,vcenter</align>
-                                <value>pr</value>
                             </textarea>
                         </state>
                         <state name="bookmark">
