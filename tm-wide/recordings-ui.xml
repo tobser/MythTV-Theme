@@ -3,14 +3,25 @@
 <mythuitheme>
 
     <window name="watchrecordings">
-        <shape name="fanartbackground" from="tm_basebackground" depends="fanart">
-            <fill color="black" alpha="255" />
-        </shape>
         <imagetype name="fanart">
+            <animation trigger="AboutToShow">
+                <section duration="600">
+                    <alpha start="0" end="255" />
+                </section>
+            </animation>
             <area>0,0,100%,100%</area>
-            <preserveaspect>no</preserveaspect>
-            <alpha>140</alpha>
+            <preserveaspect>yes</preserveaspect>
+            <!--            <alpha>140</alpha>
+                            -->
         </imagetype>        
+        <shape name="fanartbackground" from="tm_basebackground" depends="fanart">
+            <fill color="black" alpha="100" />
+            <animation trigger="AboutToShow">
+                <section duration="600">
+                    <alpha start="0" end="100" />
+                </section>
+            </animation>
+        </shape>
         <!--
 	    <imagetype name="fanart">
             <area>0,0,100%,100%</area>

@@ -900,7 +900,7 @@
         </shape>
         <imagetype name="fanart">
             <area>0,0,100%,100%</area>
-            <preserveaspect>no</preserveaspect>
+            <preserveaspect>yes</preserveaspect>
             <alpha>140</alpha>
         </imagetype>        
 
@@ -920,6 +920,9 @@
         <shape name="topBox" from="tm_basebackground" >
             <area>0,36,100%,318</area>
             <fill color="#000000" alpha="100" />
+        </shape>
+        <shape name="videoBg1" from="tm_basebackground" depends="fanart">
+            <area>0,36,100%,318</area>
         </shape>
 
 
