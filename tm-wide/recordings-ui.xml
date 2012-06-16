@@ -23,7 +23,7 @@
             </animation>
         </shape>
         <!--
-	    <imagetype name="fanart">
+        <imagetype name="fanart">
             <area>0,0,100%,100%</area>
             <preserveaspect>no</preserveaspect>
             <alpha>60</alpha>
@@ -35,7 +35,7 @@
                 <value>Watch Recordings</value>
             </textarea>
         </shape>
-        
+
         <shape name="programguideTitleFan" from="tm_titleBarFanart" depends="fanart" > 
             <textarea name="pagetitle">
                 <value>Watch Recordings</value>
@@ -80,7 +80,19 @@
                     <shape name="selIn" from="tm_shapeSelected" >
                         <area>0,0,100%,100%</area>
                     </shape>
-                    
+
+                    <statetype name="watched">
+                        <state name="yes">
+                            <textarea name="a">
+                                <area>8,0,50,30</area>
+                                <font>tm_fontBaseUltraTiny</font>
+                                <value>W</value>
+                                <align>left,vcenter</align>                
+                            </textarea>
+                        </state>
+                        <state name="no"/>
+                    </statetype>
+
                     <statetype name="commflagged">
                         <state name="running" >
                             <group name="t">
@@ -97,7 +109,7 @@
                     <statetype name="playlist">
                         <state name="yes">
                             <textarea name="wa">
-                                <area>30,0,50,30</area>
+                                <area>39,0,50,30</area>
                                 <font>tm_fontBaseUltraTiny</font>
                                 <value>P</value>
                                 <align>left,vcenter</align>                
@@ -105,18 +117,18 @@
                         </state>
                         <state name="no"/>
                     </statetype>
-                            <statetype name="jobstate">
-                            <state name="recording">
-                                <textarea name="rec">
-                                    <area>39,0,50,30</area>
-                                    <font>tm_fontBaseUltraTiny</font>
-                                    <value>R</value>
-                                    <align>left,vcenter</align>                
-                                    <alphapulse min="80" max="255" change="2"/>
-                                </textarea>
-                            </state>
-                        </statetype>
-                        <statetype name="bookmark">
+                    <statetype name="jobstate">
+                        <state name="recording">
+                            <textarea name="rec">
+                                <area>30,0,50,30</area>
+                                <font>tm_fontBaseUltraTiny</font>
+                                <value>R</value>
+                                <align>left,vcenter</align>                
+                                <alphapulse min="80" max="255" change="2"/>
+                            </textarea>
+                        </state>
+                    </statetype>
+                    <statetype name="bookmark">
                         <state name="yes">
                             <textarea name="rec">
                                 <area>48,0,50,30</area>
@@ -365,7 +377,7 @@
     <window name="iconhelp">
         <area>0,0,100%,100%</area>
         <shape name="t" from="tm_popupBg">
-         </shape>
+        </shape>
 
         <textarea name="title" from="tm_basetextarea">
             <area>0,0,100%,50</area>
@@ -547,9 +559,9 @@
         </textarea>
 
         <buttonlist name="groups" from="tm_basePopuButtonlist">
-             <area>0,220,640,280</area>
-             <buttonarea>0,20,640,100%-20</buttonarea>
-             <statetype name="buttonitem">
+            <area>0,220,640,280</area>
+            <buttonarea>0,20,640,100%-20</buttonarea>
+            <statetype name="buttonitem">
                 <area>0,0,640,30</area>    
             </statetype>
         </buttonlist>
@@ -559,7 +571,7 @@
         <area>0,0,100%,100%</area>
         <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
-         </shape>
+        </shape>
 
         <textarea name="what" from="tm_basetextarea">
             <area>320,110,640,120</area>
@@ -677,7 +689,7 @@
         <area>0,0,100%,100%</area>
         <shape name="t" from="tm_popupBg">
             <area>320,110,640,500</area>
-         </shape>
+        </shape>
 
         <textarea name="title" from="tm_basetextarea">
             <area>320,110,640,170</area>
@@ -721,10 +733,10 @@
 
     <window name="editmetadata">
         <area>320,110,640,500</area>
-        
+
         <shape name="t" from="tm_popupBg">
             <area>0,0,100%,100%</area>
-         </shape>
+        </shape>
 
         <textarea name="Heading" from="tm_basetextarea">
             <area>0,0,640,80</area>
@@ -805,7 +817,7 @@
         <textedit name="inetref" from="tm_basetextedit">
             <area>120,400,500,40</area>
         </textedit>
-        
+
         <button name="ok" from="tm_basebuttonBorder">
             <area>200,450,240,40</area>
             <value>OK</value>
