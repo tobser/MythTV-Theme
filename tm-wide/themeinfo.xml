@@ -5,6 +5,7 @@
     <types>
         <type>UI</type>
         <type>OSD</type>
+        <type>Menu</type>
     </types>
 
     <aspect>16:9</aspect>

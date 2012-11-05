@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="LIBRARY">
+
+    <button>
+        <type>TV_WATCH_RECORDINGS</type>
+        <text>Watch Recordings</text>
+        <description>Browse your recordings</description>
+        <action>TV_WATCH_RECORDING</action>
+    </button>
+
+    <button>
+        <type>VIDEO_BROWSER</type>
+        <text>Watch Videos</text>
+        <description>Browse your video library</description>
+        <action>JUMP Video Default</action>
+    </button>
+
+    <button>
+        <type>MUSIC_PLAY</type>
+        <text>Listen to Music</text>
+        <description>Browse your music library</description>
+        <action>JUMP Play music</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>IMAGES</type>
+        <text>Image Gallery</text>
+        <description>Look at Pictures</description>
+        <action>PLUGIN mythgallery</action>
+        <depends>mythgallery</depends>
+    </button>
+
+    <button>
+        <type>TV_WATCH_TV</type>
+        <text>Watch TV</text>
+        <description>Watch live television</description>
+        <action>TV_WATCH_LIVE</action>
+    </button>
+
+    <button>
+        <type>MENU</type>
+        <text>Other</text>
+        <action>MENU mainmenu_default.xml</action>
+        <description>switch to the default menu</description>
+    </button>
+
+</mythmenu>
