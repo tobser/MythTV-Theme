@@ -16,10 +16,11 @@
         <name>Tobias D. Maier</name>
 
         <email>diespambox@gmx.net</email>
+        
     </author>
 
     <version>
-        <major>25</major>
+        <major>27</major>
         <minor>0</minor>
     </version>
 
@@ -27,5 +28,6 @@
         <thumbnail name="preview">preview.png</thumbnail>
 
         <description>A simple plain theme. Nothing fancy. Probably some of the screens are broken because I don't use them or even don't know how to get there... (Patches welcome :-)</description>
+        <attribute>Icon Sad (error.png) designed by Dy Sahagun from The Noun Project</attribute> 
     </detail>
 </themeinfo>
