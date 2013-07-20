@@ -4,59 +4,21 @@
 
     <window name="watchrecordings">
         <imagetype name="fanart">
-            <animation trigger="AboutToShow">
-                <section duration="600">
-                    <alpha start="0" end="255" />
-                </section>
-            </animation>
-            <area>0,0,100%,100%</area>
-            <preserveaspect>yes</preserveaspect>
-            <!--            <alpha>140</alpha>
-                            -->
-        </imagetype>        
-        <shape name="fanartbackground" from="tm_basebackground" depends="fanart">
-            <fill color="black" alpha="100" />
-            <animation trigger="AboutToShow">
-                <section duration="600">
-                    <alpha start="0" end="100" />
-                </section>
-            </animation>
-        </shape>
-        <!--
-        <imagetype name="fanart">
             <area>0,0,100%,100%</area>
             <preserveaspect>no</preserveaspect>
             <alpha>60</alpha>
         </imagetype>
-        -->
 
-        <shape name="programguideTitle" from="tm_titleBar" depends="!fanart" >
+        <shape name="programguideTitleFan" from="tm_titleBarFanart"  > 
             <textarea name="pagetitle">
                 <value>Watch Recordings</value>
             </textarea>
         </shape>
-
-        <shape name="programguideTitleFan" from="tm_titleBarFanart" depends="fanart" > 
-            <textarea name="pagetitle">
-                <value>Watch Recordings</value>
-            </textarea>
-        </shape>
-
-
-        <!--
-        <shape name="topBoxFanartBg" from="tm_FanartWidgetBackground" depends="fanart" >
-            <area>0,37,100%,370</area>
-        </shape>
-        <shape name="topBox" from="tm_basebackground"  depends="!fanart" >
-            <area>0,37,100%,370</area>
-            <fill color="#000000" alpha="100" />
-        </shape>
-        -->
 
         <buttonlist name="groups" from="tm_btnListRight">
             <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
             <area>10,90,220,255</area>
-            <shape name="groupBg1" from="tm_basebackground" depends="fanart">
+            <shape name="groupBg1" from="tm_basebackground">
             </shape>
 
             <statetype name="buttonitem" >
@@ -65,7 +27,7 @@
 
         <buttonlist name="recordings">
             <area>228,50,1042,340</area>
-            <shape name="recBg1" from="tm_basebackground" depends="fanart">
+            <shape name="recBg1" from="tm_basebackground"> 
             </shape>
             <layout>vertical</layout>
             <spacing>1</spacing>
