@@ -402,8 +402,17 @@
          This is currently used by the MythImage plugin only -->
     <window name="slideshow">
 
+        <area>0,0,1280,720</area>
+
         <!-- the background behind the images (black) -->
-        <!--<shape name="background_shape">
+        <!--
+
+        <shape name="background_shape">
+            <area>0,0,20,20</area>
+            <fill color="#ffffff" alpha="255" />
+            <line color="#ffffff" alpha="255" />
+        </shape>
+             <shape name="background_shape">
             <area>0,0,1280,720</area>
             <fill color="#000000" alpha="255" />
             <line color="#000000" alpha="255" />
@@ -415,16 +424,29 @@
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
         <imagetype name="first_image">
-            <area>2,2,100%-2,100%-2</area>
+            <area>25%,25%,70%,70%</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- this is the image that shown in the background
              when fading is enabled this image is faded in. -->
         <imagetype name="second_image">
-            <area>2,2,100%-2,100%-2</area>
+            <area>25%,25%,70%,70%</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
+jj
+
+
+        <!-- the background behind the images (black) -->
+        <!--<shape name="background_shape">
+            <area>0,0,1280,720</area>
+            <fill color="#000000" alpha="255" />
+            <line color="#000000" alpha="255" />
+            <type>roundbox</type>
+            <cornerradius>2</cornerradius>
+        </shape>
+
+-->
 
         <!-- shows some information if required -->
         <textarea name="status" from="basetextarea">
