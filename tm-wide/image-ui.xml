@@ -403,7 +403,7 @@
     <window name="slideshow">
 
         <!-- the background behind the images (black) -->
-        <shape name="background_shape">
+        <!--<shape name="background_shape">
             <area>0,0,1280,720</area>
             <fill color="#000000" alpha="255" />
             <line color="#000000" alpha="255" />
@@ -411,17 +411,18 @@
             <cornerradius>2</cornerradius>
         </shape>
 
+-->
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
         <imagetype name="first_image">
-            <area>-2,-2,1284,724</area>
+            <area>2,2,100%-2,100%-2</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- this is the image that shown in the background
              when fading is enabled this image is faded in. -->
         <imagetype name="second_image">
-            <area>-2,-2,1284,724</area>
+            <area>2,2,100%-2,100%-2</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
