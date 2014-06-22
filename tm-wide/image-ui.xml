@@ -424,18 +424,16 @@
         <!-- this is the image that shown in the foreground.
              when fading is enabled this image is faded out. -->
         <imagetype name="first_image">
-            <area>25%,25%,70%,70%</area>
+            <area>25%,25%,65%,65%</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <!-- this is the image that shown in the background
              when fading is enabled this image is faded in. -->
         <imagetype name="second_image">
-            <area>25%,25%,70%,70%</area>
+            <area>25%,25%,65%,65%</area>
             <preserveaspect>yes</preserveaspect>
         </imagetype>
-jj
-
 
         <!-- the background behind the images (black) -->
         <!--<shape name="background_shape">
