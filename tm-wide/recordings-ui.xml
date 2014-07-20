@@ -777,8 +777,13 @@
             <value>Intref</value>
         </textarea>
         <textedit name="inetref" from="tm_basetextedit">
-            <area>120,400,500,40</area>
+            <area>120,400,220,40</area>
         </textedit>
+
+        <button name="query_button" from="tm_basebuttonBorder">
+            <area>350,400,220,40</area>
+            <value>Query</value>
+        </button>
 
         <button name="ok" from="tm_basebuttonBorder">
             <area>200,450,240,40</area>
