@@ -90,7 +90,7 @@
                 <alpha>200</alpha>
             </shape>
         </shape>
-        <shape name="programguideTitle" from="tm_titleBar" >
+        <shape name="title" from="tm_titleBar" >
             <alpha>120</alpha>
             <shape name="titleSh">
                 <alpha>120</alpha>
@@ -106,9 +106,9 @@
 
         <statetype name="backendstatus">
             <alpha>120</alpha>
-            <area>0,0,100%,100%</area>
+            <area>0,40,100%,40</area>
             <state name="idle">
-                <area>0,0,100%,100%</area>
+                <area>0,0,100%,40</area>
                 <textarea name="status">
                     <area>0,0,100%,100%</area>
                     <font>tm_fontBaseLarge</font>
@@ -132,6 +132,100 @@
                 </textarea>
             </state>
         </statetype>
+
+
+        <textarea name="currentrecordingheading" depends="currentrecording">
+            <area>20,80,1240,40</area>
+            <font>tm_fontBase</font>
+            <align>vcenter</align>
+            <value>Current Recording(s):</value>
+        </textarea>
+        <textarea name="nothingrecording" depends="!currentrecording">
+            <area>20,120,1240,156</area>
+            <font>tm_fontBase</font>
+            <align>hcenter</align>
+            <alpha>120</alpha>
+            <value>There are no recordings currently taking place</value>
+        </textarea>
+        <buttonlist name="currentrecording">
+            <area>25,120,1220,156</area>
+            <layout>vertical</layout>
+            <spacing>4</spacing>
+            <buttonarea>25,0,100%,100%</buttonarea>
+            <statetype name="buttonitem">
+                <area>25,0,100%,26</area>
+                <state name="active">
+                    <textarea name="shorttimedate">
+                        <font>tm_fontBaseTiny</font>
+                        <align>vcenter</align>
+                        <area>0,1,220,24</area>
+                    </textarea>
+                    <textarea name="channame" from="shorttimedate">
+                        <area>230,1,150,24</area>
+                    </textarea>
+                    <textarea name="titlesubtitle" from="shorttimedate">
+                        <area>380,1,840,24</area>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active"/>
+                <state name="selectedinactive" from="selectedactive" />
+            </statetype>
+        </buttonlist>
+
+
+        <textarea name="nextrecordingheading" depends="nextrecording">
+            <area>20,276,1240,40</area>
+            <font>tm_fontBase</font>
+            <align>vcenter</align>
+            <value>Next recording(s):</value>
+        </textarea>
+        <textarea name="nothingscheduled" depends="!nextrecording">
+            <area>20,316,1240,294</area>
+            <font>tm_fontBase</font>
+            <align>hcenter</align>
+            <alpha>120</alpha>
+            <value>There are no scheduled recordings</value>
+        </textarea>
+        <buttonlist name="nextrecording" from="currentrecording">
+            <area>20,316,1240,294</area>
+        </buttonlist>
+
+        <!--
+scheduled recordings conflict warning
+-->
+        <textarea name="conflictsheading" depends="conflicts">
+            <area>20,610,1240,40</area>
+            <font>tm_fontBase</font>
+            <align>vcenter</align>
+            <value>Schedule conflict(s):</value>
+        </textarea>
+        <textarea name="noconflictsheading" depends="!conflicts">
+            <area>20,650,1240,104</area>
+            <font>tm_fontBase</font>
+            <align>hcenter</align>
+            <alpha>120</alpha>
+            <value>There are no conflicting recordings</value>
+        </textarea>
+        <buttonlist name="conflicts" from="currentrecording">
+            <area>20,650,1240,104</area>
+            <statetype name="buttonitem">
+                <area>0,0,100%,26</area>
+                <state name="active">
+                    <textarea name="shorttimedate" from="shorttimedate">
+                        <font>warning</font>
+                    </textarea>
+                    <textarea name="channame" from="channame">
+                        <font>warning</font>
+                    </textarea>
+                    <textarea name="titlesubtitle" from="titlesubtitle">
+                        <font>warning</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active"/>
+                <state name="selectedinactive" from="selectedactive" />
+            </statetype>
+        </buttonlist>
+
     </window>
 
 </mythuitheme>
