@@ -125,6 +125,13 @@
                         <fill alpha="0" />
                     </shape>
                 </state>
+                <state name="inactive" from="aactive">
+                    <area>0,0,1042,30</area>
+                    <shape name="selIn">
+                        <area>0,0,100%,100%</area>
+                        <fill alpha="0" />
+                    </shape>
+                </state>
                 <state name="active" from="selectedactive" >
                     <area>0,0,1042,30</area>
                     <shape name="selIn">
