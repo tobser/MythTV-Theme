@@ -15,12 +15,6 @@
             <fill color="#000000" alpha="50" />
         </shape>
 
-        <textarea name="breadcrumbs">
-            <area>50,45,1180,30</area>
-            <font>tm_fontBase</font>
-            <cutdown>yes</cutdown>
-        </textarea>
-
 
         <!-- optional - shows current position in grid eg '1 of 123' -->
         <textarea name="position" from="basetextarea">
@@ -289,6 +283,12 @@
              <align>allcenter</align>
          </textarea>
 
+        <textarea name="breadcrumbs">
+            <area>50,45,1180,30</area>
+            <font>tm_fontBase</font>
+            <cutdown>yes</cutdown>
+        </textarea>
+
     </window>
 
 
@@ -403,6 +403,10 @@
     <window name="slideshow">
 
         <area>0,0,1280,720</area>
+        <shape name="rightBox" from="tm_basebackground" >
+            <area>0,0,100%,100%</area>
+            <fill color="#000000" alpha="255" />
+        </shape>
 
         <!-- the background behind the images (black) -->
         <!--
