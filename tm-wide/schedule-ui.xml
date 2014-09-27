@@ -176,27 +176,33 @@
                 <value>Programguide</value>
             </textarea>
         </shape>
+        <!-- shows the channel group in the top left corner -->
+        <textarea name="channelgroup" from="tm_basetextarea">
+            <area>501,0,479,40</area>
+            <align>allcenter</align>
+            <font>tm_fontBaseLarge</font>
+        </textarea>
 
         <!-- this is the background for the information at the bottom -->
         <shape name="program_background" from="tm_basebackground">
-            <area>25,513,1230,205</area>
+            <area>25,413,1230,305</area>
         </shape>
 
         
         <shape name="videoBackground" from="tm_basebackground"> 
-            <area>35,520,286,190</area>
+            <area>35,420,442,290</area>
             <fill color="#000000" alpha="255" />
         </shape>
 
         <!-- the livetv video itself -->
         <imagetype name="video">
-            <area>45,540,265,150</area>
+            <area>45,440,422,250</area>
             <preserveaspect>true</preserveaspect>
         </imagetype>
 
         <!-- shows the title and the plot of the selected video -->
         <textarea name="title" from="tm_basetextarea">
-            <area>340,518,610,30</area>
+            <area>480,418,465,30</area>
             <multiline>no</multiline>
             <align>left,vcenter</align>
             <cutdown>yes</cutdown>
@@ -205,28 +211,28 @@
         
 
         <textarea name="subtitle" from="tm_basetextarea">
-            <area>340,552,610,20</area>
+            <area>480,452,465,20</area>
             <align>left,vcenter</align>
             <font>tm_fontBaseTiny</font>
         </textarea>
 
        <shape name="title_separator" from="tm_baseSeperator">
-            <area>950,522,1,55</area>
+            <area>950,422,1,55</area>
        </shape>
       
        <shape name="recording_time_separator" from="tm_baseSeperator">
-            <area>330,576,910,1</area>
+            <area>330,476,910,1</area>
         </shape>
 
         <textarea name="timedate" from="tm_basetextarea">
-            <area>950,518,310,30</area>
+            <area>950,418,310,30</area>
             <align>allcenter</align>
             <cutdown>yes</cutdown>
             <font>tm_fontBase</font>
         </textarea>
 
         <textarea name="rectypestatus" from="tm_basetextarea">
-            <area>950,552,310,20</area>
+            <area>950,452,310,20</area>
             <align>allcenter</align>
             <font>tm_fontBaseTiny</font>
         </textarea>
@@ -234,7 +240,7 @@
 
         <!-- show the plot of the recording -->
         <textarea name="description" from="tm_basetextarea">
-            <area>335,580,905,138</area>
+            <area>480,480,760,238</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <align>justify</align>
@@ -245,88 +251,92 @@
         <!-- this is the background for the entire tv program list -->
 
         <shape name="timelist_separator" from="tm_baseSeperator">
-            <area>28,85,1224,1</area>
+            <area>28,75,1224,1</area>
         </shape>
-        <shape name="guidBottomSeperator" from="tm_baseSeperator">
+        <!--  <shape name="guidBottomSeperator" from="tm_baseSeperator">
             <area>28,504,1224,1</area>
         </shape>
+        -->
         <shape name="programlist_background" from="tm_basebackground">
-            <area>25,36,1230,480</area>
+            <area>25,36,1230,380</area>
         </shape>
 
         <!-- this is the vertical list of the available channels -->
         <buttonlist name="channellist">
-            <area>30,85,180,420</area>
+            <area>30,75,180,336</area>
             <layout>vertical</layout>
             <spacing>0</spacing>
             <buttonarea>0,0,180,420</buttonarea>
             <statetype name="buttonitem">
                 <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>0,0,180,84</area>
-                        <filename />
-						<shape name="channelicon_background" from="tm_basebackground">
-                            <area>2,7,56,56</area>
-                        </shape>
-                    </imagetype>
                     
                     <imagetype name="channelicon">
-                        <area>4,9,51,51</area>
+                        <area>4,0,60,84</area>
 						<preserveaspect>true</preserveaspect>
                     </imagetype>
                     <textarea name="buttontext" from="tm_basetextarea">
                         <area>70,0,120,84</area>
                         <font>tm_fontBase</font>
                         <cutdown>no</cutdown>
-                        <align>left,vcenter</align>
+                        <align>hcenter,vcenter</align>
+                    </textarea>
+                </state>
+                <state name="inactive">
+                    <imagetype name="channelicon">
+                        <area>4,0,60,84</area>
+                        <alpha>120</alpha>
+						<preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext" from="tm_basetextarea">
+                        <area>70,0,120,84</area>
+                        <alpha>120</alpha>
+                        <font>tm_fontBase</font>
+                        <cutdown>no</cutdown>
+                        <align>hcenter,vcenter</align>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active"/>
-                <state name="selectedinactive" from="active"/>
+                <state name="selectedinactive" from="inactive"/>
             </statetype>
         </buttonlist>
 
-        <!-- shows the channel group in the top left corner -->
-        <textarea name="channelgroup" from="tm_basetextarea">
-            <area>40,40,176,40</area>
-            <align>allcenter</align>
-            <font>tm_fontBaseLarge</font>
-        </textarea>
 
         <!-- this is the horizontal list of the time slots -->
         <buttonlist name="timelist">
-            <area>220,40,1036,40</area>
+            <area>220,40,1036,30</area>
             <layout>horizontal</layout>
             <spacing>0</spacing>
-            <buttonarea>0,0,1036,40</buttonarea>
+            <buttonarea>0,0,1036,30</buttonarea>
             <statetype name="buttonitem">
                 <area>0,0,258,20</area>
                 <shape name="timeSep" from="tm_baseSeperator">
-                    <area>1,0,1,464</area>
+                    <area>1,0,2,370</area>
                     <line color="#000000" alpha="45" width="0" />
                 </shape>
 
                 <state name="active">
                     <imagetype name="buttonbackground">
-                        <area>0,0,258,40</area>
+                        <area>0,0,258,30</area>
                         <filename />
                     </imagetype>
                     <textarea name="buttontext" from="tm_basetextarea">
-                        <area>5,0,258,40</area>
-                        <font>tm_fontBaseLarge</font>
+                        <area>5,0,258,30</area>
+                        <font>tm_fontBase</font>
                         <align>vcenter</align>
+                        <alpha>210</alpha>
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active"/>
-                <state name="selectedinactive" from="active"/>
+                <state name="inactive" from="active" />
+                <state name="selectedinactive" from="active" />
             </statetype>
         </buttonlist>
 
         <!-- this is the list with the tv program -->
         <guidegrid name="guidegrid">
-            <area>225,85,1025,420</area>
+            <area>225,75,1025,336</area>
             <layout>horizontal</layout>
-            <channels>5</channels>
+            <channels>4</channels>
             <timeslots>4</timeslots>
             <solidcolor>#003256</solidcolor>
             <selector type="box" linecolor="#04b404" fillcolor="#0b610b"/>
